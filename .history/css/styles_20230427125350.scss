@@ -10,9 +10,6 @@
   --border-radius-10: 10%;
   --border-1px-gold: 1px solid var(--color-gold);
   --border-2px-gold: 2px solid var(--color-gold);
-
-  --font-family-elegant: "Garamond", "Times New Roman", serif;
-  --font-family-normal: "Arial", "Helvetica", sans-serif;
 }
 
 *, *:before, *:after {
@@ -23,5 +20,4 @@ body {
   margin: 0;
   box-sizing: border-box;
   background-color: var(--color-black);
-  color: var(--color-white);
 }
