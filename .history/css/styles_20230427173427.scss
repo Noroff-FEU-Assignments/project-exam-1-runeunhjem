@@ -26,6 +26,7 @@ body {
   color: var(--color-white);
 }
 
+// h
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -53,8 +54,7 @@ body {
 
 .search-icon, .menu-icon {
   display: flex;
-  justify-content: center;
-  height: 50px;
+  height: 60px;
   align-items: flex-end;
 }
 

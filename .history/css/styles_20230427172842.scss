@@ -30,16 +30,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0em 1em;
+  margin-right: 1em;
   box-sizing: border-box;
   height: 150px;
   gap: 1em;
   img {
     max-height: 100%;
   }
-  .flame-logo {
-    height: 100px;
-  }
+  .flame-logo
 }
 
 .header-text-logo {
@@ -53,8 +51,7 @@ body {
 
 .search-icon, .menu-icon {
   display: flex;
-  justify-content: center;
-  height: 50px;
+  height: 60px;
   align-items: flex-end;
 }
 

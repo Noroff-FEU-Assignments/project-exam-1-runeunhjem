@@ -26,6 +26,10 @@ body {
   color: var(--color-white);
 }
 
+header {
+  display: flex;
+  justify-content: center;
+}
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -34,6 +38,7 @@ body {
   box-sizing: border-box;
   height: 150px;
   gap: 1em;
+  max-width: 1200px;
   img {
     max-height: 100%;
   }
@@ -53,8 +58,7 @@ body {
 
 .search-icon, .menu-icon {
   display: flex;
-  justify-content: center;
-  height: 50px;
+  height: 60px;
   align-items: flex-end;
 }
 

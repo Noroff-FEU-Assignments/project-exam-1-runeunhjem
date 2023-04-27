@@ -28,13 +28,16 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-right: 2em;
+  margin: 0em 1em;
   box-sizing: border-box;
   height: 150px;
   gap: 1em;
 }
 .header-container img {
   max-height: 100%;
+}
+.header-container .flame-logo {
+  height: 100px;
 }
 
 .header-text-logo {
@@ -48,7 +51,8 @@ body {
 
 .search-icon, .menu-icon {
   display: flex;
-  height: 60px;
+  justify-content: center;
+  height: 50px;
   align-items: flex-end;
 }
 
@@ -57,4 +61,5 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100px;
 }/*# sourceMappingURL=styles.css.map */

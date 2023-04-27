@@ -28,12 +28,13 @@ body {
 
 .header-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin: 0em 1em;
   box-sizing: border-box;
   height: 150px;
   gap: 1em;
+  max-width: 1200px;
   img {
     max-height: 100%;
   }
@@ -53,8 +54,7 @@ body {
 
 .search-icon, .menu-icon {
   display: flex;
-  justify-content: center;
-  height: 50px;
+  height: 60px;
   align-items: flex-end;
 }
 
