@@ -28,13 +28,28 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--color-black);
+  margin-right: 2em;
   box-sizing: border-box;
-  width: 100%;
   height: 150px;
+  gap: 1em;
 }
 .header-container img {
-  max-height: 90%;
+  max-height: 100%;
+}
+
+.header-text-logo {
+  display: flex;
+  align-items: flex-start;
+  width: 400px;
+  height: 100px;
+  max-width: 600px;
+  max-height: 100%;
+}
+
+.search-icon, .menu-icon {
+  display: flex;
+  height: 60px;
+  align-items: flex-end;
 }
 
 .head-item {
@@ -42,10 +57,4 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 1em;
-}
-
-.search-icon, .menu-icon {
-  height: 60px;
-  max-height: 100%;
 }/*# sourceMappingURL=styles.css.map */
