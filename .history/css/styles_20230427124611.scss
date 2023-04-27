@@ -8,15 +8,5 @@
 
   --border-radius-50: 50%;
   --border-radius-10: 10%;
-  --border-1px-gold: 1px solid var(--color-gold);
-  --border-2px-gold: 2px solid var(--color-gold);
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-body {
-  margin: 0;
-  box-sizing: border-box;
+  --border-1px: 1px solid var(--color-gold);
 }
