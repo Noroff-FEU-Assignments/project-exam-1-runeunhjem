@@ -156,10 +156,6 @@ main {
    .tablet {
     display: block;
    }
-  .hero-image {
-    background-image: url(../images/hero-image.png);
-    height: 180px;
-   }
 }
 
 @media screen and (max-width: 460px) {
@@ -168,6 +164,5 @@ main {
    }
    .hero-image {
       background-image: url(../images/hero-image.png);
-      height: 100px;
    }
 }

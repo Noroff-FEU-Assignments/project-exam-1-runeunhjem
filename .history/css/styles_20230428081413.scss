@@ -138,15 +138,15 @@ main {
 }
 
 .hero-image {
-  background-image: url(../images/hero-image.png);
+  background-image: url(../images/img_all/sebastian-coman-photography-cQbOSRpElxw-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
-  width: 100vw;
+  width: 80vw;
   height: 279px;
-  // max-height: 270px;
+  
   // max-width: 90vw;
-  // max-height: calc(260px - 10vh);
+  // max-height: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -156,18 +156,10 @@ main {
    .tablet {
     display: block;
    }
-  .hero-image {
-    background-image: url(../images/hero-image.png);
-    height: 180px;
-   }
 }
 
 @media screen and (max-width: 460px) {
    .tablet {
       display: none;
-   }
-   .hero-image {
-      background-image: url(../images/hero-image.png);
-      height: 100px;
    }
 }
