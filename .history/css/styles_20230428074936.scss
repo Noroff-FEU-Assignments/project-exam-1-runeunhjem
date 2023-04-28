@@ -141,11 +141,9 @@ main {
   background-image: url(../images/img_all/sebastian-coman-photography-cQbOSRpElxw-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center bottom;
-  width: 100vw;
-  height: 279px;
-  // max-width: 90vw;
-  // max-height: 100%;
+  width: 970px;
+  height: 400px;
+  max-width: 100%;
 }
 
 @media screen and (max-width: 768px) {

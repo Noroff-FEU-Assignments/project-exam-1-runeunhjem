@@ -121,6 +121,22 @@ img {
   list-style: none;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.hero-image {
+  background-image: url(../images/img_all/sebastian-coman-photography-cQbOSRpElxw-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  width: 100vw;
+  height: 279px;
+}
+
 @media screen and (max-width: 768px) {
   .desktop-only {
     display: none;

@@ -124,29 +124,6 @@ img {
   }
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  // gap: 1em;
-  // margin: 0 1em 0 1em;
-  // box-sizing: border-box;
-  // max-width: 970px;
-  // width: 90vw;
-  // min-height: 100vh;
-}
-
-.hero-image {
-  background-image: url(../images/img_all/sebastian-coman-photography-cQbOSRpElxw-unsplash.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  width: 100vw;
-  height: 279px;
-  // max-width: 90vw;
-  // max-height: 100%;
-}
 
 @media screen and (max-width: 768px) {
    .desktop-only {

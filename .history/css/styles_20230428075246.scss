@@ -139,12 +139,12 @@ main {
 
 .hero-image {
   background-image: url(../images/img_all/sebastian-coman-photography-cQbOSRpElxw-unsplash.jpg);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center bottom;
-  width: 100vw;
+  width: 1094px;
   height: 279px;
-  // max-width: 90vw;
+  max-width: 100%;
   // max-height: 100%;
 }
 
