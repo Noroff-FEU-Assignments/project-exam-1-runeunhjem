@@ -178,6 +178,42 @@ main {
   background-position: center bottom;
   width: 100vw;
   height: 279px;
+  margin-bottom: 2em;
+}
+
+.carousel-home {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 243px;
+  height: 295px;
+  margin-bottom: 2em;
+  gap: 1em;
+}
+
+.post-container {
+  border: var(--border-1px-gold);
+  border-radius: 6px;
+  padding: 0.5em;
+  height: 295px;
+  width: 243px;
+}
+
+.post-image-container {
+  width: 213px;
+  height: 110px;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  background-size: cover;
+  background-position: center center;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.post-title {
+  font-family: var(--font-family-elegant);
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: var(--color-gold);
 }
 
 @media screen and (max-width: 768px) {
