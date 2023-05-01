@@ -188,9 +188,8 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   text-align: center;
-  width: 100%;
-  height: 19vw;
-  margin-bottom: 1em;
+  width: 100vw;
+  height: 15vw;
   background-color: var(--color-burgundy);
   color: var(--color-white);
   border-top: var(--border-2px-gold);
@@ -200,7 +199,7 @@ main {
 .so-god-to-see-you {
   margin: 0.2em auto;
   font-family: var(--font-family-elegant);
-  font-size: 3.6vw;
+  font-size: 3.2vw;
   color: var(--color-gold);
 }
 
@@ -209,27 +208,26 @@ main {
   text-align: left;
   margin: 0.5em auto;
   font-family: var(--font-family-normal);
-  font-size: 1.8vw;
+  font-size: 1.5vw;
 }
 
 .check-latest-posts-note {
   font-family: var(--font-family-normal);
-  font-size: 1.6vw;
+  font-size: 1.3vw;
+  font-style: italic;
 }
 
 .carousel-wrapper {
   position: relative;
   overflow: hidden;
   width: 80vw;
-  margin-bottom: 2em;
+  margin: 2em 0 0em 0;
 }
 
 .carousel-home {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 80vw;
-  margin-bottom: 2em;
   gap: 1em;
 }
 
@@ -237,8 +235,6 @@ main {
   border: var(--border-1px-gold);
   border-radius: 6px;
   padding: 0.5em;
-  height: 295px;
-  width: 243px;
 }
 
 .post-image-container {
