@@ -1,0 +1,218 @@
+:root {
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-grey: #D9D9D9;
+  --color-gold: #C6A777;
+  --color-red: #A60033;
+  --color-burgundy: #5E0A24;
+  --border-radius-50: 50%;
+  --border-radius-10: 10%;
+  --border-1px-gold: 1px solid var(--color-gold);
+  --border-2px-gold: 2px solid var(--color-gold);
+  --font-family-elegant: "Garamond", "Times New Roman", serif;
+  --font-family-normal: "Arial", "Helvetica", sans-serif;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  min-height: 150vh;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0.5em 1em 0.7em 1em;
+  box-sizing: border-box;
+  max-height: 100%;
+  width: 90vw;
+  max-width: 970px;
+  gap: 1em;
+}
+.header-container .flame-logo {
+  max-height: 100px;
+}
+
+.header-text-logo {
+  display: flex;
+  align-items: flex-start;
+}
+
+.search-icon, .menu-icon {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.search-and-menu {
+  gap: 0.5em;
+}
+
+.head-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.nav-container .menu {
+  background-color: var(--color-burgundy);
+  border-top: var(--border-2px-gold);
+  border-bottom: var(--border-2px-gold);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 36px;
+  height: 4vw;
+  max-height: 48px;
+}
+.nav-container ul {
+  display: flex;
+  justify-content: space-around;
+  gap: 1em;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+.nav-container a {
+  font-family: var(--font-family-elegant);
+  font-size: calc(1rem + 0.5vw);
+  color: var(--color-white);
+  text-decoration: none;
+}
+.nav-container .hide {
+  display: none;
+}
+.nav-container a:hover {
+  color: var(--color-gold);
+}
+.nav-container li {
+  list-style: none;
+}
+.nav-container .active {
+  color: var(--color-gold);
+  border-bottom: var(--border-2px-gold);
+}
+
+.search-container {
+  display: none;
+}
+
+.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 970px;
+}
+.show form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+.show form input {
+  text-indent: 0.5em;
+  font-size: 1.2rem;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border: var(--border-1px-gold);
+  min-height: 24px;
+  height: 2vw;
+  min-width: 250px;
+  border-radius: 6px;
+}
+.show form .search-button {
+  border-radius: var(--border-radius-50);
+  padding: 0;
+  margin: 0;
+  background-color: var(--color-burgundy);
+  border: 1px solid var(--color-burgundy);
+  min-height: 24px;
+  height: 2vw;
+}
+.show img {
+  min-height: 24px;
+  height: 2vw;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.hero-image {
+  background-image: url(../images/hero-image.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  width: 100vw;
+  height: 279px;
+  margin-bottom: 2em;
+}
+
+.carousel-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
+  margin-bottom: 2em;
+}
+
+.post-image {
+  width: 213px;
+  height: 110px;
+}
+
+@media screen and (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+  .tablet {
+    display: block;
+  }
+  .hero-image {
+    background-image: url(../images/hero-image.png);
+    height: 180px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .tablet {
+    display: none;
+  }
+  .hero-image {
+    background-image: url(../images/hero-image.png);
+    height: 100px;
+  }
+}/*# sourceMappingURL=styles_20230501095407.css.map */

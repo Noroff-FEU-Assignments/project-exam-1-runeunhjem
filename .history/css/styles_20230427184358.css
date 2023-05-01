@@ -1,0 +1,96 @@
+:root {
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-grey: #D9D9D9;
+  --color-gold: #C6A777;
+  --color-red: #A60033;
+  --color-burgundy: #5E0A24;
+  --border-radius-50: 50%;
+  --border-radius-10: 10%;
+  --border-1px-gold: 1px solid var(--color-gold);
+  --border-2px-gold: 2px solid var(--color-gold);
+  --font-family-elegant: "Garamond", "Times New Roman", serif;
+  --font-family-normal: "Arial", "Helvetica", sans-serif;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0em 1em;
+  box-sizing: border-box;
+  height: 150px;
+  gap: 1em;
+}
+.header-container img {
+  max-height: 100%;
+}
+.header-container .flame-logo {
+  height: 100px;
+}
+
+.header-text-logo {
+  display: flex;
+  align-items: flex-start;
+  width: 400px;
+  height: 100px;
+  max-width: 600px;
+  max-height: 100%;
+}
+
+.search-icon, .menu-icon {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  align-items: flex-end;
+}
+
+.head-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+.main-navigation {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+.main-navigation img {
+  width: 100vw;
+}
+
+.nav-container .menu {
+  height: 40px;
+  background-color: var(--color-burgundy);
+}
+.nav-container ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 0;
+}
+.nav-container a {
+  font-family: var(--font-family-elegant);
+  font-size: 1.5em;
+  color: var(--color-white);
+  text-decoration: none;
+}
+.nav-container li {
+  align-items: center;
+  display: inline-flex;
+  list-style: none;
+}/*# sourceMappingURL=styles_20230427184358.css.map */
