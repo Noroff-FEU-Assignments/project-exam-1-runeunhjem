@@ -1,0 +1,5 @@
+.out-of-view-menu-text {
+  position: absolute;
+  left: -10000px;
+  color: var()
+}
