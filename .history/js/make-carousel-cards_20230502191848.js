@@ -32,6 +32,7 @@ import { getPosts, posts } from "./get-posts.js";
 
   // variables to store touch positions
   let startX, currentX;
+  
 
   // add touch event listeners to the carousel container
   carouselContainer.addEventListener("touchstart", handleTouchStart);

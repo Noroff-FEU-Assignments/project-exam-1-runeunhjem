@@ -6,32 +6,13 @@ import { getPosts, posts } from "./get-posts.js";
   console.log("posts is: ", posts);
 
   const carousel = document.getElementById("carousel-home");
-
-
-  for (const post of posts) {
-    const postContainer = document.createElement("div");
-    postContainer.classList.add("post-container");
-
-    const leftButton = document.querySelector(".carousel-left");
-    const rightButton = document.querySelector(".carousel-right");
-    const cardWidth = 328; // adjust to match your card width
-    let currentPosition = 0;
-
-    leftButton.addEventListener("click", () => {
-      if (currentPosition > 0) {
-        currentPosition--;
-        postContainer.style.transform = `translateX(-${currentPosition * cardWidth * 3}px)`;
-      } else {
-        // jump to end if left arrow is clicked on start
-        currentPosition = Math.ceil((posts.length - 4) / 4);
-        postContainer.style.transform = `translateX(-${currentPosition * cardWidth * 3}px)`;
-      }
-    });
-    // get the carousel container element
+  // get the carousel container element
   const carouselContainer = document.querySelector(".carousel-home");
 
   // variables to store touch positions
   let startX, currentX;
+  let currentPosition = 0;
+  const cardWidth = 328; // adjust to match your card width
 
   // add touch event listeners to the carousel container
   carouselContainer.addEventListener("touchstart", handleTouchStart);
@@ -92,6 +73,26 @@ import { getPosts, posts } from "./get-posts.js";
     startX = null;
     currentX = null;
   };
+
+  for (const post of posts) {
+    const postContainer = document.createElement("div");
+    postContainer.classList.add("post-container");
+
+    const leftButton = document.querySelector(".carousel-left");
+    const rightButton = document.querySelector(".carousel-right");
+    const cardWidth = 328; // adjust to match your card width
+    let currentPosition = 0;
+
+    leftButton.addEventListener("click", () => {
+      if (currentPosition > 0) {
+        currentPosition--;
+        postContainer.style.transform = `translateX(-${currentPosition * cardWidth * 3}px)`;
+      } else {
+        // jump to end if left arrow is clicked on start
+        currentPosition = Math.ceil((posts.length - 4) / 4);
+        postContainer.style.transform = `translateX(-${currentPosition * cardWidth * 3}px)`;
+      }
+    });
 
     rightButton.addEventListener("click", () => {
       const maxPosition = Math.ceil((posts.length - 4) / 4);

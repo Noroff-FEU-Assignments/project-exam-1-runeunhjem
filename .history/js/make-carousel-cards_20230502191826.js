@@ -32,6 +32,8 @@ import { getPosts, posts } from "./get-posts.js";
 
   // variables to store touch positions
   let startX, currentX;
+  let currentPosition = 0;
+  const cardWidth = 328; // adjust to match your card width
 
   // add touch event listeners to the carousel container
   carouselContainer.addEventListener("touchstart", handleTouchStart);
