@@ -43,6 +43,22 @@ import { getPosts, posts } from "./get-posts.js";
       }
     });
 
+    // get the carousel container element
+    const carouselContainer = document.querySelector(".carousel-home");
+
+    // variables to store touch positions
+    let startX, currentX;
+
+    // add touch event listeners to the carousel container
+    carouselContainer.addEventListener("touchstart", handleTouchStart);
+    carouselContainer.addEventListener("touchmove", handleTouchMove);
+    carouselContainer.addEventListener("touchend", handleTouchEnd);
+
+    // function to handle touchstart event
+    function handleTouchStart(event) {
+      startX = event.touches[0].clientX; // store the initial touch position
+    }
+
     // function to handle touchmove event
     function handleTouchMove(event) {
       if (startX === null) {
@@ -52,61 +68,48 @@ import { getPosts, posts } from "./get-posts.js";
       currentX = event.touches[0].clientX; // store the current touch position
       const diffX = startX - currentX; // calculate the distance moved by the finger
 
-      // move each post element individually based on the distance moved
-      const postElements = document.querySelectorAll(".post-container");
-      postElements.forEach((postElement, index) => {
-        postElement.style.transform = `translateX(-${index * cardWidthSwipe * 3 - diffX}px)`;
-      });
+      // move the carousel container based on the distance moved
+      carouselContainer.style.transform = `translateX(-${currentPosition * cardWidthSwipe - diffX}px)`;
     }
 
     // function to handle touchend event
     function handleTouchEnd(event) {
       if (startX === null) {
         return; // exit if touchstart event hasn't been triggered
-      }
+      };
 
       const diffX = startX - currentX; // calculate the distance moved by the finger
 
       // determine whether to move the carousel left or right based on the distance moved
       if (diffX > 50) {
-        // move each post element to the right
+        // move the carousel container to the right
         const maxPosition = Math.ceil((posts.length - 1) / 1);
         if (currentPosition < maxPosition) {
           currentPosition++;
-          const postElements = document.querySelectorAll(".post-container");
-          postElements.forEach((postElement, index) => {
-            postElement.style.transform = `translateX(-${index * cardWidthSwipe * 3 - currentPosition * cardWidthSwipe}px)`;
-          });
+          postContainer.style.transform = `translateX(-${currentPosition * cardWidthSwipe}px)`;
         } else {
           // start over when there are no more posts to slide through
           currentPosition = 0;
-          const postElements = document.querySelectorAll(".post-container");
-          postElements.forEach((postElement, index) => {
-            postElement.style.transform = `translateX(-${index * cardWidthSwipe * 3}px)`;
-          });
-        }
+          postContainer.style.transform = `translateX(0)`;
+        };
       } else if (diffX < -50) {
-        // move each post element to the left
+        // move the carousel container to the left
         if (currentPosition > 0) {
           currentPosition--;
-          const postElements = document.querySelectorAll(".post-container");
-          postElements.forEach((postElement, index) => {
-            postElement.style.transform = `translateX(-${index * cardWidthSwipe * 3 - currentPosition * cardWidthSwipe}px)`;
-          });
+          postContainer.style.transform = `translateX(-${currentPosition * cardWidthSwipe}px)`;
         } else {
           // jump to end if left arrow is clicked on start
           currentPosition = Math.ceil((posts.length - 4) / 4);
-          const postElements = document.querySelectorAll(".post-container");
-          postElements.forEach((postElement, index) => {
-            postElement.style.transform = `translateX(-${index * cardWidthSwipe * 3 - currentPosition * cardWidthSwipe}px)`;
-          });
-        }
-      }
+          postContainer.style.transform = `translateX(-${currentPosition * cardWidthSwipe}px)`;
+        };
+      };
 
       // reset touch positions
       startX = null;
       currentX = null;
-    }
+    };
+
+
 
     const imageContainer = document.createElement("div");
     imageContainer.classList.add("post-image-container");
