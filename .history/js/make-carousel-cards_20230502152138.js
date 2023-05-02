@@ -84,87 +84,7 @@
 //       imageContainer.style.backgroundImage = `url(${image.src})`;
 //     };
 //     image.src = post.image;
-(async function () {
-  await getPosts();
-  console.log("posts is: ", posts);
 
-  const carousel = document.getElementById("carousel-home");
-
-  for (const post of posts) {
-    const postContainer = document.createElement("div");
-    postContainer.classList.add("post-container");
-
-    const leftButton = document.querySelector(".carousel-left");
-    const rightButton = document.querySelector(".carousel-right");
-    const cardWidth = 328; // adjust to match your card width
-    let currentPosition = 0;
-    let startX; // starting X position of touch
-    let diffX = 0; // X difference between start and end of touch
-    let isSwiping = false; // flag to determine if user is swiping
-
-    postContainer.addEventListener("touchstart", (event) => {
-      startX = event.touches[0].clientX; // get starting X position of touch
-      isSwiping = true; // user is swiping
-    });
-
-    postContainer.addEventListener("touchmove", (event) => {
-      if (isSwiping) {
-        const currentX = event.touches[0].clientX; // get current X position of touch
-        diffX = startX - currentX; // calculate X difference between start and end of touch
-        postContainer.style.transform = `translateX(-${currentPosition * cardWidth + diffX}px)`; // move post container
-      }
-    });
-
-    postContainer.addEventListener("touchend", () => {
-      if (isSwiping) {
-        isSwiping = false; // user is no longer swiping
-        if (diffX > 0) {
-          const maxPosition = Math.ceil((posts.length - 1) / 1);
-          if (currentPosition < maxPosition) {
-            currentPosition++;
-          }
-        } else if (diffX < 0) {
-          if (currentPosition > 0) {
-            currentPosition--;
-          }
-        }
-        postContainer.style.transform = `translateX(-${currentPosition * cardWidth}px)`; // move post container to final position
-        diffX = 0; // reset X difference
-      }
-    });
-
-    leftButton.addEventListener("click", () => {
-      if (currentPosition > 0) {
-        currentPosition--;
-        postContainer.style.transform = `translateX(-${currentPosition * cardWidth}px)`;
-      } else {
-        // jump to end if left arrow is clicked on start
-        currentPosition = Math.ceil((posts.length - 1) / 1);
-        postContainer.style.transform = `translateX(-${currentPosition * cardWidth}px)`;
-      }
-    });
-
-    rightButton.addEventListener("click", () => {
-      const maxPosition = Math.ceil((posts.length - 4) / 4);
-      if (currentPosition < maxPosition) {
-        currentPosition++;
-        postContainer.style.transform = `translateX(-${currentPosition * cardWidth * 3}px)`;
-      } else {
-        // start over when there are no more posts to slide through
-        currentPosition = 0;
-        postContainer.style.transform = `translateX(0)`;
-      }
-    });
-
-    const imageContainer = document.createElement("div");
-    imageContainer.classList.add("post-image-container");
-    postContainer.appendChild(imageContainer);
-
-    const image = new Image();
-    image.onload = function () {
-      imageContainer.style.backgroundImage = `url(${image.src})`;
-    };
-    image.src = post.image;
 
     const title = document.createElement("h2");
     title.classList.add("post-title");
@@ -189,7 +109,7 @@
     postContainer.appendChild(added);
 
     carousel.appendChild(postContainer);
-  }
+  };
   const modal = document.getElementById("modal");
   const modalImage = document.getElementById("modal-image");
   const modalClose = document.getElementsByClassName("close")[0];
