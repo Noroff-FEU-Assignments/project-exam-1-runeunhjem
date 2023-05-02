@@ -83,11 +83,6 @@ import { getPosts, posts } from "./get-posts.js";
     }
   });
 
-  // Close the modal when the user clicks the close button
-  modalClose.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
-
   function openModal(imageSrc) {
     modalImage.src = imageSrc;
     modal.style.display = "flex";
@@ -105,6 +100,11 @@ import { getPosts, posts } from "./get-posts.js";
       modalImage.src = postImageUrl;
       modal.style.display = "block";
     });
+  });
+
+  // Close the modal when the user clicks the close button
+  modalClose.addEventListener("click", () => {
+    modal.style.display = "none";
   });
 })();
 

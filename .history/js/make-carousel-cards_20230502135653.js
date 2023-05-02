@@ -83,6 +83,7 @@ import { getPosts, posts } from "./get-posts.js";
     }
   });
 
+
   // Close the modal when the user clicks the close button
   modalClose.addEventListener("click", () => {
     modal.style.display = "none";

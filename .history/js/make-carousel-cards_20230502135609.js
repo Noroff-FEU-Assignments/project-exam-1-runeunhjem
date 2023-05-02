@@ -32,6 +32,11 @@ import { getPosts, posts } from "./get-posts.js";
       if (currentPosition < maxPosition) {
         currentPosition++;
         postContainer.style.transform = `translateX(-${currentPosition * cardWidth * 3}px)`;
+
+          // // Close the modal when the user clicks the close button
+          // modalClose.addEventListener("click", () => {
+          //   modal.style.display = "none";
+          // });
       } else {
         // start over when there are no more posts to slide through
         currentPosition = 0;
@@ -81,11 +86,6 @@ import { getPosts, posts } from "./get-posts.js";
     if (event.target === modal) {
       closeModal();
     }
-  });
-
-  // Close the modal when the user clicks the close button
-  modalClose.addEventListener("click", () => {
-    modal.style.display = "none";
   });
 
   function openModal(imageSrc) {

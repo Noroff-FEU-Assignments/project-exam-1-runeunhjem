@@ -67,6 +67,11 @@ import { getPosts, posts } from "./get-posts.js";
     const date = new Date(post.date);
     const dateString = `${date.toLocaleString("en-us", { month: "short" })} ${date.getDate()}, ${date.getFullYear()}`;
     const added = document.createElement("p");
+
+              // // Close the modal when the user clicks the close button
+              // modalClose.addEventListener("click", () => {
+              //   modal.style.display = "none";
+              // });
     added.classList.add("post-added");
     added.textContent = `Modified: ${dateString}`;
     postContainer.appendChild(added);
@@ -81,11 +86,6 @@ import { getPosts, posts } from "./get-posts.js";
     if (event.target === modal) {
       closeModal();
     }
-  });
-
-  // Close the modal when the user clicks the close button
-  modalClose.addEventListener("click", () => {
-    modal.style.display = "none";
   });
 
   function openModal(imageSrc) {

@@ -1,3 +1,8 @@
+
+  // // Close the modal when the user clicks the close button
+  // modalClose.addEventListener("click", () => {
+  //   modal.style.display = "none";
+  // });
 import { getPosts, posts } from "./get-posts.js";
 
 (async function () {
@@ -81,11 +86,6 @@ import { getPosts, posts } from "./get-posts.js";
     if (event.target === modal) {
       closeModal();
     }
-  });
-
-  // Close the modal when the user clicks the close button
-  modalClose.addEventListener("click", () => {
-    modal.style.display = "none";
   });
 
   function openModal(imageSrc) {
