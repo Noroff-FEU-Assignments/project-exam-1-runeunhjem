@@ -17,7 +17,7 @@ import { getPosts, posts } from "./get-posts.js";
     let currentPosition = 0;
     // const cardWidth = 328; // adjust to match your card width
     // define separate cardWidth variables for swipe and click functions
-    const cardWidthSwipe = 150; // adjust to match your card width for swipe function
+    const cardWidthSwipe = 200; // adjust to match your card width for swipe function
     const cardWidthClick = 328; // adjust to match your card width for click function
 
     leftButton.addEventListener("click", () => {
@@ -44,7 +44,7 @@ import { getPosts, posts } from "./get-posts.js";
     });
 
     // get the carousel container element
-    // const carouselContainer = document.querySelector(".post-container");
+    const carouselContainer = document.querySelector(".carousel-home");
     const carouselContainer = document.querySelector(".carousel-home");
 
     // variables to store touch positions

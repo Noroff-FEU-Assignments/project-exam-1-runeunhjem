@@ -17,7 +17,7 @@ import { getPosts, posts } from "./get-posts.js";
     let currentPosition = 0;
     // const cardWidth = 328; // adjust to match your card width
     // define separate cardWidth variables for swipe and click functions
-    const cardWidthSwipe = 150; // adjust to match your card width for swipe function
+    const cardWidthSwipe = 200; // adjust to match your card width for swipe function
     const cardWidthClick = 328; // adjust to match your card width for click function
 
     leftButton.addEventListener("click", () => {
@@ -44,7 +44,6 @@ import { getPosts, posts } from "./get-posts.js";
     });
 
     // get the carousel container element
-    // const carouselContainer = document.querySelector(".post-container");
     const carouselContainer = document.querySelector(".carousel-home");
 
     // variables to store touch positions
@@ -82,7 +81,7 @@ import { getPosts, posts } from "./get-posts.js";
       const diffX = startX - currentX; // calculate the distance moved by the finger
 
       // determine whether to move the carousel left or right based on the distance moved
-      if (diffX > 50) {
+      if (diffX > 100) {
         // move the carousel container to the right
         const maxPosition = Math.ceil((posts.length - 1) / 1);
         if (currentPosition < maxPosition) {
