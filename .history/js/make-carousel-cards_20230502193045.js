@@ -17,8 +17,8 @@ import { getPosts, posts } from "./get-posts.js";
     let currentPosition = 0;
     // const cardWidth = 328; // adjust to match your card width
     // define separate cardWidth variables for swipe and click functions
-    const cardWidthSwipe = 200; // adjust to match your card width for swipe function
-    const cardWidthClick = 328; // adjust to match your card width for click function
+    const cardWidthSwipe = 328; // adjust to match your card width for swipe function
+    const cardWidthClick = 243; // adjust to match your card width for click function
 
     leftButton.addEventListener("click", () => {
       if (currentPosition > 0) {
@@ -69,7 +69,7 @@ import { getPosts, posts } from "./get-posts.js";
       const diffX = startX - currentX; // calculate the distance moved by the finger
 
       // move the carousel container based on the distance moved
-      carouselContainer.style.transform = `translateX(-${currentPosition * cardWidthSwipe - diffX}px)`;
+      carouselContainer.style.transform = `translateX(-${currentPosition * cardWidth - diffX}px)`;
     }
 
     // function to handle touchend event
@@ -86,7 +86,7 @@ import { getPosts, posts } from "./get-posts.js";
         const maxPosition = Math.ceil((posts.length - 4) / 4);
         if (currentPosition < maxPosition) {
           currentPosition++;
-          postContainer.style.transform = `translateX(-${currentPosition * cardWidthSwipe}px)`;
+          postContainer.style.transform = `translateX(-${currentPosition * cardWidth}px)`;
         } else {
           // start over when there are no more posts to slide through
           currentPosition = 0;
@@ -96,11 +96,11 @@ import { getPosts, posts } from "./get-posts.js";
         // move the carousel container to the left
         if (currentPosition > 0) {
           currentPosition--;
-          postContainer.style.transform = `translateX(-${currentPosition * cardWidthSwipe}px)`;
+          postContainer.style.transform = `translateX(-${currentPosition * cardWidth}px)`;
         } else {
           // jump to end if left arrow is clicked on start
           currentPosition = Math.ceil((posts.length - 4) / 4);
-          postContainer.style.transform = `translateX(-${currentPosition * cardWidthSwipe}px)`;
+          postContainer.style.transform = `translateX(-${currentPosition * cardWidth}px)`;
         }
       }
 

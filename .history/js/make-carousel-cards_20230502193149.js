@@ -100,7 +100,7 @@ import { getPosts, posts } from "./get-posts.js";
         } else {
           // jump to end if left arrow is clicked on start
           currentPosition = Math.ceil((posts.length - 4) / 4);
-          postContainer.style.transform = `translateX(-${currentPosition * cardWidthSwipe}px)`;
+          postContainer.style.transform = `translateX(-${currentPosition * cardWidth}px)`;
         }
       }
 

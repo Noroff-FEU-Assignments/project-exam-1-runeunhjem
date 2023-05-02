@@ -16,100 +16,94 @@ import { getPosts, posts } from "./get-posts.js";
     const rightButton = document.querySelector(".carousel-right");
     let currentPosition = 0;
     // const cardWidth = 328; // adjust to match your card width
-    // define separate cardWidth variables for swipe and click functions
-    const cardWidthSwipe = 200; // adjust to match your card width for swipe function
-    const cardWidthClick = 328; // adjust to match your card width for click function
 
     leftButton.addEventListener("click", () => {
       if (currentPosition > 0) {
         currentPosition--;
-        postContainer.style.transform = `translateX(-${currentPosition * cardWidthClick * 3}px)`;
+        postContainer.style.transform = `translateX(-${currentPosition * cardWidth * 3}px)`;
       } else {
         // jump to end if left arrow is clicked on start
         currentPosition = Math.ceil((posts.length - 4) / 4);
-        postContainer.style.transform = `translateX(-${currentPosition * cardWidthClick * 3}px)`;
+        postContainer.style.transform = `translateX(-${currentPosition * cardWidth * 3}px)`;
       }
     });
+    // get the carousel container element
+  const carouselContainer = document.querySelector(".carousel-home");
+
+  // variables to store touch positions
+  let startX, currentX;
+
+  // add touch event listeners to the carousel container
+  carouselContainer.addEventListener("touchstart", handleTouchStart);
+  carouselContainer.addEventListener("touchmove", handleTouchMove);
+  carouselContainer.addEventListener("touchend", handleTouchEnd);
+
+  // function to handle touchstart event
+  function handleTouchStart(event) {
+    startX = event.touches[0].clientX; // store the initial touch position
+  }
+
+  // function to handle touchmove event
+  function handleTouchMove(event) {
+    if (startX === null) {
+      return; // exit if touchstart event hasn't been triggered
+    }
+
+    currentX = event.touches[0].clientX; // store the current touch position
+    const diffX = startX - currentX; // calculate the distance moved by the finger
+
+    // move the carousel container based on the distance moved
+    carouselContainer.style.transform = `translateX(-${currentPosition * cardWidth - diffX}px)`;
+  }
+
+  // function to handle touchend event
+  function handleTouchEnd(event) {
+    if (startX === null) {
+      return; // exit if touchstart event hasn't been triggered
+    }
+
+    const diffX = startX - currentX; // calculate the distance moved by the finger
+
+    // determine whether to move the carousel left or right based on the distance moved
+    if (diffX > 50) {
+      // move the carousel container to the right
+      const maxPosition = Math.ceil((posts.length - 4) / 4);
+      if (currentPosition < maxPosition) {
+        currentPosition++;
+        postContainer.style.transform = `translateX(-${currentPosition * cardWidth}px)`;
+      } else {
+        // start over when there are no more posts to slide through
+        currentPosition = 0;
+        postContainer.style.transform = `translateX(0)`;
+      };
+    } else if (diffX < -50) {
+      // move the carousel container to the left
+      if (currentPosition > 0) {
+        currentPosition--;
+        postContainer.style.transform = `translateX(-${currentPosition * cardWidth}px)`;
+      } else {
+        // jump to end if left arrow is clicked on start
+        currentPosition = Math.ceil((posts.length - 4) / 4);
+        postContainer.style.transform = `translateX(-${currentPosition * cardWidth}px)`;
+      };
+    };
+
+    // reset touch positions
+    startX = null;
+    currentX = null;
+  };
 
     rightButton.addEventListener("click", () => {
       const maxPosition = Math.ceil((posts.length - 4) / 4);
       if (currentPosition < maxPosition) {
         currentPosition++;
-        postContainer.style.transform = `translateX(-${currentPosition * cardWidthClick * 3}px)`;
+        postContainer.style.transform = `translateX(-${currentPosition * cardWidth * 3}px)`;
       } else {
         // start over when there are no more posts to slide through
         currentPosition = 0;
         postContainer.style.transform = `translateX(0)`;
       }
     });
-
-    // get the carousel container element
-    const carouselContainer = document.querySelector(".carousel-home");
-
-    // variables to store touch positions
-    let startX, currentX;
-
-    // add touch event listeners to the carousel container
-    carouselContainer.addEventListener("touchstart", handleTouchStart);
-    carouselContainer.addEventListener("touchmove", handleTouchMove);
-    carouselContainer.addEventListener("touchend", handleTouchEnd);
-
-    // function to handle touchstart event
-    function handleTouchStart(event) {
-      startX = event.touches[0].clientX; // store the initial touch position
-    }
-
-    // function to handle touchmove event
-    function handleTouchMove(event) {
-      if (startX === null) {
-        return; // exit if touchstart event hasn't been triggered
-      }
-
-      currentX = event.touches[0].clientX; // store the current touch position
-      const diffX = startX - currentX; // calculate the distance moved by the finger
-
-      // move the carousel container based on the distance moved
-      carouselContainer.style.transform = `translateX(-${currentPosition * cardWidthSwipe - diffX}px)`;
-    }
-
-    // function to handle touchend event
-    function handleTouchEnd(event) {
-      if (startX === null) {
-        return; // exit if touchstart event hasn't been triggered
-      }
-
-      const diffX = startX - currentX; // calculate the distance moved by the finger
-
-      // determine whether to move the carousel left or right based on the distance moved
-      if (diffX > 50) {
-        // move the carousel container to the right
-        const maxPosition = Math.ceil((posts.length - 4) / 4);
-        if (currentPosition < maxPosition) {
-          currentPosition++;
-          postContainer.style.transform = `translateX(-${currentPosition * cardWidthSwipe}px)`;
-        } else {
-          // start over when there are no more posts to slide through
-          currentPosition = 0;
-          postContainer.style.transform = `translateX(0)`;
-        }
-      } else if (diffX < -50) {
-        // move the carousel container to the left
-        if (currentPosition > 0) {
-          currentPosition--;
-          postContainer.style.transform = `translateX(-${currentPosition * cardWidthSwipe}px)`;
-        } else {
-          // jump to end if left arrow is clicked on start
-          currentPosition = Math.ceil((posts.length - 4) / 4);
-          postContainer.style.transform = `translateX(-${currentPosition * cardWidthSwipe}px)`;
-        }
-      }
-
-      // reset touch positions
-      startX = null;
-      currentX = null;
-    }
-
-
 
     const imageContainer = document.createElement("div");
     imageContainer.classList.add("post-image-container");
