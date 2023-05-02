@@ -4,6 +4,7 @@
 @import url("categories.css");
 @import url("footer.css");
 @import url("media-queries.css");
+@import url("modal.css");
 main {
   display: flex;
   flex-direction: column;

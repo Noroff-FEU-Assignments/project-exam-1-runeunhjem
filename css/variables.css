@@ -9,6 +9,7 @@
   --border-radius-10: 10%;
   --border-1px-gold: 1px solid var(--color-gold);
   --border-2px-gold: 2px solid var(--color-gold);
+  --border-2px-burgundy: 2px solid var(--color-burgundy);
   --font-family-elegant: "Garamond", "Times New Roman", serif;
   --font-family-normal: "Arial", "Helvetica", sans-serif;
 }

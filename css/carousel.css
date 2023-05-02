@@ -2,9 +2,14 @@
   display: flex;
   justify-content: center;
   position: relative;
-  overflow: hidden;
-  width: 90vw;
   margin: 1em 0 0 0;
+}
+
+.button-wrapper {
+  width: 100%;
+  overflow: visible;
+  position: relative;
+  z-index: 2;
 }
 
 button {
@@ -13,20 +18,22 @@ button {
   top: 50%;
   transform: translateY(-50%);
   z-index: 2;
+  cursor: pointer;
 }
 
 .carousel-left {
   position: absolute;
-  left: 1rem;
+  left: -5rem;
 }
 
 .carousel-right {
   position: absolute;
-  right: 1rem;
+  right: -5rem;
 }
 
 .carousel-home {
   display: flex;
+  z-index: 1;
   justify-content: flex-start;
   overflow: hidden;
   align-items: flex-start;
