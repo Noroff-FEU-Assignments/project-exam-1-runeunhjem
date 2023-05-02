@@ -111,7 +111,7 @@ let startX = null;
       // reset touch positions
       startX = null;
       currentX = null;
-    };
+    }
 
     const imageContainer = document.createElement("div");
     imageContainer.classList.add("post-image-container");

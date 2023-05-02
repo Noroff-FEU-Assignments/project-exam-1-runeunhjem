@@ -105,13 +105,13 @@ let startX = null;
           postElements.forEach((postElement, index) => {
             postElement.style.transform = `translateX(-${index * cardWidthSwipe * 3 - currentPosition * cardWidthSwipe}px)`;
           });
-        };
-      };
+        }
+      }
 
       // reset touch positions
       startX = null;
       currentX = null;
-    };
+    }
 
     const imageContainer = document.createElement("div");
     imageContainer.classList.add("post-image-container");

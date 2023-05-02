@@ -28,7 +28,7 @@ let startX = null;
         // jump to end if left arrow is clicked on start
         currentPosition = Math.ceil((posts.length - 4) / 4);
         postContainer.style.transform = `translateX(-${currentPosition * cardWidthClick * 3}px)`;
-      };
+      }
     });
 
     rightButton.addEventListener("click", () => {
@@ -62,13 +62,13 @@ let startX = null;
       postElements.forEach((postElement, index) => {
         postElement.style.transform = `translateX(-${index * cardWidthSwipe * 3 - diffX}px)`;
       });
-    };
+    }
 
     // function to handle touchend event
     function handleTouchEnd(event) {
       if (startX === null) {
         return; // exit if touchstart event hasn't been triggered
-      };
+      }
 
       const diffX = startX - currentX; // calculate the distance moved by the finger
 
@@ -89,7 +89,7 @@ let startX = null;
           postElements.forEach((postElement, index) => {
             postElement.style.transform = `translateX(-${index * cardWidthSwipe * 3}px)`;
           });
-        };
+        }
       } else if (diffX < -50) {
         // move each post element to the left
         if (currentPosition > 0) {
@@ -105,13 +105,13 @@ let startX = null;
           postElements.forEach((postElement, index) => {
             postElement.style.transform = `translateX(-${index * cardWidthSwipe * 3 - currentPosition * cardWidthSwipe}px)`;
           });
-        };
-      };
+        }
+      }
 
       // reset touch positions
       startX = null;
       currentX = null;
-    };
+    }
 
     const imageContainer = document.createElement("div");
     imageContainer.classList.add("post-image-container");
