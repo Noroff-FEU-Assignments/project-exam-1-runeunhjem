@@ -1,4 +1,4 @@
-import { getPosts, posts } from "./posts.js";
+import { getPosts, posts } from "./get-posts.js";
 
 (async function () {
   await getPosts();
@@ -6,17 +6,38 @@ import { getPosts, posts } from "./posts.js";
 
   const carousel = document.getElementById("carousel-home");
 
+
   for (const post of posts) {
     const postContainer = document.createElement("div");
     postContainer.classList.add("post-container");
 
-    const container = document.createElement("div");
-    container.classList.add("post-image-container");
-    postContainer.appendChild(container);
+    const leftButton = document.querySelector(".carousel-left");
+    const rightButton = document.querySelector(".carousel-right");
+    const cardWidth = 307; // adjust to match your card width
+    let currentPosition = 0;
+
+    leftButton.addEventListener("click", () => {
+      if (currentPosition > 0) {
+        currentPosition--;
+        postContainer.style.transform = `translateX(-${currentPosition * cardWidth * 3}px)`;
+      }
+    });
+
+    rightButton.addEventListener("click", () => {
+      const maxPosition = Math.ceil((posts.length - 4) / 4);
+      if (currentPosition < maxPosition) {
+        currentPosition++;
+        postContainer.style.transform = `translateX(-${currentPosition * cardWidth * 4}px)`;
+      }
+    });
+
+    const imageContainer = document.createElement("div");
+    imageContainer.classList.add("post-image-container");
+    postContainer.appendChild(imageContainer);
 
     const image = new Image();
     image.onload = function () {
-      container.style.backgroundImage = `url(${image.src})`;
+      imageContainer.style.backgroundImage = `url(${image.src})`;
     };
     image.src = post.image;
 
@@ -43,6 +64,7 @@ import { getPosts, posts } from "./posts.js";
     postContainer.appendChild(added);
 
     carousel.appendChild(postContainer);
-  }
+  };
+
 })();
 

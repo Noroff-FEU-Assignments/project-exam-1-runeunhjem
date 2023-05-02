@@ -1,0 +1,97 @@
+@import url('variables.css');
+@import url('header.css');
+@import url('carousel.css');
+@import url('categories.css');
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.hero-image {
+  background-image: url(../images/hero-image.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  width: 100vw;
+  height: 20vw;
+  m
+}
+
+.thank-you-note {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  width: 90vw;
+  height: 18vw;
+  margin: 0 0 1em 0;
+  background-color: var(--color-burgundy);
+  color: var(--color-white);
+  border-top: var(--border-2px-gold);
+  border-bottom: var(--border-2px-gold);
+  transform: scale(0.5);
+}
+
+.so-god-to-see-you {
+  margin: 0.2em 0 0.2em 0;
+  font-family: var(--font-family-elegant);
+  font-size: 3.2vw;
+  // font-size: calc(1rem + 2vw);
+  color: var(--color-gold);
+}
+
+.enjoy-note {
+  width: 60vw;
+  text-align: left;
+  margin: 0.1em auto;
+  font-family: var(--font-family-normal);
+  // font-size: calc(0.8rem + 1.2vw);
+  font-size: 2vw;
+}
+
+.check-latest-posts-note {
+  font-family: var(--font-family-normal);
+  font-size: 1.8vw;
+  font-style: italic;
+}
+
+
+
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 20vw;
+  background-color: var(--color-burgundy);
+  color: var(--color-white);
+  border-top: var(--border-2px-gold);
+  border-bottom: var(--border-2px-gold);
+}
+
+@media screen and (max-width: 768px) {
+   .desktop-only {
+      display: none;
+   }
+   .tablet {
+    display: block;
+   }
+  .hero-image {
+    background-image: url(../images/hero-image.png);
+    height: 180px;
+   }
+}
+
+@media screen and (max-width: 460px) {
+   .tablet {
+      display: none;
+   }
+   .hero-image {
+      background-image: url(../images/hero-image.png);
+      height: 100px;
+   }
+}
