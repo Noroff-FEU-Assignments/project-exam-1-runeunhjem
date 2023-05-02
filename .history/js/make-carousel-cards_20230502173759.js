@@ -6,71 +6,6 @@ import { getPosts, posts } from "./get-posts.js";
   console.log("posts is: ", posts);
 
   const carousel = document.getElementById("carousel-home");
-  // get the carousel container element
-  const carouselContainer = document.querySelector(".carousel-home");
-
-  // variables to store touch positions
-  let startX, currentX;
-
-  // add touch event listeners to the carousel container
-  carouselContainer.addEventListener("touchstart", handleTouchStart);
-  carouselContainer.addEventListener("touchmove", handleTouchMove);
-  carouselContainer.addEventListener("touchend", handleTouchEnd);
-
-  // function to handle touchstart event
-  function handleTouchStart(event) {
-    startX = event.touches[0].clientX; // store the initial touch position
-  }
-
-  // function to handle touchmove event
-  function handleTouchMove(event) {
-    if (startX === null) {
-      return; // exit if touchstart event hasn't been triggered
-    }
-
-    currentX = event.touches[0].clientX; // store the current touch position
-    const diffX = startX - currentX; // calculate the distance moved by the finger
-
-    // move the carousel container based on the distance moved
-    carouselContainer.style.transform = `translateX(-${currentPosition * cardWidth * 3 - diffX}px)`;
-  }
-
-  // function to handle touchend event
-  function handleTouchEnd(event) {
-    if (startX === null) {
-      return; // exit if touchstart event hasn't been triggered
-    }
-
-    const diffX = startX - currentX; // calculate the distance moved by the finger
-
-    // determine whether to move the carousel left or right based on the distance moved
-    if (diffX > 50) {
-      // move the carousel container to the right
-      const maxPosition = Math.ceil((posts.length - 4) / 4);
-      if (currentPosition < maxPosition) {
-        currentPosition++;
-        postContainer.style.transform = `translateX(-${currentPosition * cardWidth * 3}px)`;
-      } else {
-        // start over when there are no more posts to slide through
-        currentPosition = 0;
-        postContainer.style.transform = `translateX(0)`;
-      }
-    } else if (diffX < -50) {
-      // move the carousel container to the left
-      if (currentPosition > 0) {
-        currentPosition--;
-        postContainer.style.transform = `translateX(-${currentPosition * cardWidth * 3}px)`;
-      } else {
-        // jump to end if left arrow is clicked on start
-        currentPosition = Math.ceil((posts.length - 4) / 4);
-        postContainer.style.transform = `translateX(-${currentPosition * cardWidth * 3}px)`;
-      }
-    }
-
-    // reset touch positions
-    startX = null;
-    currentX = null;
-  }
 
   for (const post of posts) {
     const postContainer = document.createElement("div");
@@ -101,7 +36,7 @@ import { getPosts, posts } from "./get-posts.js";
         // start over when there are no more posts to slide through
         currentPosition = 0;
         postContainer.style.transform = `translateX(0)`;
-      }
+      };
     });
 
     const imageContainer = document.createElement("div");
@@ -137,7 +72,7 @@ import { getPosts, posts } from "./get-posts.js";
     postContainer.appendChild(added);
 
     carousel.appendChild(postContainer);
-  }
+  };
   const modal = document.getElementById("modal");
   const modalImage = document.getElementById("modal-image");
   const modalClose = document.getElementsByClassName("close")[0];
@@ -145,7 +80,7 @@ import { getPosts, posts } from "./get-posts.js";
   modal.addEventListener("click", (event) => {
     if (event.target === modal) {
       closeModal();
-    }
+    };
   });
 
   // Close the modal when the user clicks the close button
@@ -156,12 +91,12 @@ import { getPosts, posts } from "./get-posts.js";
   function openModal(imageSrc) {
     modalImage.src = imageSrc;
     modal.style.display = "flex";
-  }
+  };
 
   function closeModal() {
     modal.style.display = "none";
     modalImage.src = "";
-  }
+  };
 
   const postImages = document.querySelectorAll(".post-image-container");
   postImages.forEach((postImage) => {
