@@ -8,42 +8,28 @@ let postsPerSlide = 1;
 //   "(max-width: 1400px)": 1400,
 // };
 
-// const breakpoints = {
-//   small: 576,
-//   medium: 768,
-//   large: 1150,
-//   xlarge: 1400,
-// };
-
-// function handleInitialViewport() {
-//   const viewportWidth = window.innerWidth;
-//   console.log("viewportWidth is: ", viewportWidth);
-//   if (viewportWidth >= breakpoints["(max-width: 576px)"] && viewportWidth < breakpoints["(max-width: 768px)"]) {
-//     handleViewportChange(breakpoints["(max-width: 576px)"]);
-//   } else if (viewportWidth >= breakpoints["(max-width: 768px)"] && viewportWidth < breakpoints["(max-width: 1150px)"]) {
-//     handleViewportChange(breakpoints["(max-width: 768px)"]);
-//   } else if (viewportWidth >= breakpoints["(max-width: 1150px)"] && viewportWidth < breakpoints["(max-width: 1400px)"]) {
-//     handleViewportChange(breakpoints["(max-width: 1150px)"]);
-//   } else {
-//     handleViewportChange(breakpoints["(max-width: 1400px)"]);
-//   }
-// }
-// window.onload = handleInitialViewport();
-window.onload = handleViewportChange();
-
-function handleViewportChange() {
-  const viewportWidth = window.innerWidth;
-
-  if (viewportWidth < 576) {
-    postsPerSlide = 1;
-  } else if (viewportWidth < 768) {
-    postsPerSlide = 2;
-  } else if (viewportWidth < 1150) {
-    postsPerSlide = 3;
-  } else {
-    postsPerSlide = 4;
-  };
+const breakpoints = {
+  small: 576,
+  medium: 768,
+  large: 1150,
+  xlarge: 1400,
 };
+
+function handleInitialViewport() {
+  const viewportWidth = window.innerWidth;
+  console.log("viewportWidth is: ", viewportWidth);
+  if (viewportWidth >= breakpoints["(max-width: 576px)"] && viewportWidth < breakpoints["(max-width: 768px)"]) {
+    handleViewportChange(breakpoints["(max-width: 576px)"]);
+  } else if (viewportWidth >= breakpoints["(max-width: 768px)"] && viewportWidth < breakpoints["(max-width: 1150px)"]) {
+    handleViewportChange(breakpoints["(max-width: 768px)"]);
+  } else if (viewportWidth >= breakpoints["(max-width: 1150px)"] && viewportWidth < breakpoints["(max-width: 1400px)"]) {
+    handleViewportChange(breakpoints["(max-width: 1150px)"]);
+  } else {
+    handleViewportChange(breakpoints["(max-width: 1400px)"]);
+  }
+}
+window.onload = handleInitialViewport();
+
 
 
 // function handleViewportChange(breakpoint) {
@@ -62,25 +48,25 @@ function handleViewportChange() {
 //   };
 // };
 
-// const mediaQueries = Object.keys(breakpoints).map((key) => {
-//   return window.matchMedia(key);
-// });
+const mediaQueries = Object.keys(breakpoints).map((key) => {
+  return window.matchMedia(key);
+});
 
-// mediaQueries.forEach((mediaQuery, index) => {
-//   console.log("mediaQueary is: ", mediaQuery);
-//   mediaQuery.addEventListener("change", (event) => {
-//     if (event.matches) {
-//       handleViewportChange(breakpoints[mediaQuery.media]);
-//       console.log("mediaQuery.media is: ", mediaQuery.media);
-//       console.log("breakpoints[mediaQuery.media] is: ", breakpoints[mediaQuery.media]);
-//       console.log("breakpoints is: ", breakpoints);
-//     };
-//   });
+mediaQueries.forEach((mediaQuery, index) => {
+  console.log("mediaQueary is: ", mediaQuery);
+  mediaQuery.addEventListener("change", (event) => {
+    if (event.matches) {
+      handleViewportChange(breakpoints[mediaQuery.media]);
+      console.log("mediaQuery.media is: ", mediaQuery.media);
+      console.log("breakpoints[mediaQuery.media] is: ", breakpoints[mediaQuery.media]);
+      console.log("breakpoints is: ", breakpoints);
+    };
+  });
 
-//   if (mediaQuery.matches) {
-//     handleViewportChange(breakpoints[mediaQuery.media]);
-//   };
-// });
+  if (mediaQuery.matches) {
+    handleViewportChange(breakpoints[mediaQuery.media]);
+  };
+});
 
 
 let startX = null;

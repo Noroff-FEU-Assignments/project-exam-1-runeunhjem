@@ -8,28 +8,28 @@ let postsPerSlide = 1;
 //   "(max-width: 1400px)": 1400,
 // };
 
-// const breakpoints = {
-//   small: 576,
-//   medium: 768,
-//   large: 1150,
-//   xlarge: 1400,
-// };
+const breakpoints = {
+  small: 576,
+  medium: 768,
+  large: 1150,
+  xlarge: 1400,
+};
 
-// function handleInitialViewport() {
-//   const viewportWidth = window.innerWidth;
-//   console.log("viewportWidth is: ", viewportWidth);
-//   if (viewportWidth >= breakpoints["(max-width: 576px)"] && viewportWidth < breakpoints["(max-width: 768px)"]) {
-//     handleViewportChange(breakpoints["(max-width: 576px)"]);
-//   } else if (viewportWidth >= breakpoints["(max-width: 768px)"] && viewportWidth < breakpoints["(max-width: 1150px)"]) {
-//     handleViewportChange(breakpoints["(max-width: 768px)"]);
-//   } else if (viewportWidth >= breakpoints["(max-width: 1150px)"] && viewportWidth < breakpoints["(max-width: 1400px)"]) {
-//     handleViewportChange(breakpoints["(max-width: 1150px)"]);
-//   } else {
-//     handleViewportChange(breakpoints["(max-width: 1400px)"]);
-//   }
-// }
-// window.onload = handleInitialViewport();
-window.onload = handleViewportChange();
+function handleInitialViewport() {
+  const viewportWidth = window.innerWidth;
+  console.log("viewportWidth is: ", viewportWidth);
+  if (viewportWidth >= breakpoints["(max-width: 576px)"] && viewportWidth < breakpoints["(max-width: 768px)"]) {
+    handleViewportChange(breakpoints["(max-width: 576px)"]);
+  } else if (viewportWidth >= breakpoints["(max-width: 768px)"] && viewportWidth < breakpoints["(max-width: 1150px)"]) {
+    handleViewportChange(breakpoints["(max-width: 768px)"]);
+  } else if (viewportWidth >= breakpoints["(max-width: 1150px)"] && viewportWidth < breakpoints["(max-width: 1400px)"]) {
+    handleViewportChange(breakpoints["(max-width: 1150px)"]);
+  } else {
+    handleViewportChange(breakpoints["(max-width: 1400px)"]);
+  }
+}
+window.onload = handleInitialViewport();
+window.onload = handleInitialViewport();
 
 function handleViewportChange() {
   const viewportWidth = window.innerWidth;
