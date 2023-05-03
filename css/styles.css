@@ -1,5 +1,6 @@
 @import url("variables.css");
 @import url("header.css");
+@import url("loader.css");
 @import url("carousel.css");
 @import url("categories.css");
 @import url("footer.css");
@@ -10,6 +11,15 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
+
+.newest-posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0.5em 0 1em 0;
+  position: static;
 }
 
 .hero-image {

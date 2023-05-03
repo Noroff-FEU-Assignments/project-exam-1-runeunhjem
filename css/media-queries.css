@@ -7,18 +7,13 @@
   }
   .hero-image {
     background-image: url(../images/hero-image.png);
-    height: 180px;
+    height: 16vw;
   }
   .carousel-wrapper {
-    width: 90vw;
-    margin: 1em 0;
     justify-content: center;
   }
   .carousel-wrapper button {
-    display: none;
-  }
-  .button-wrapper {
-    width: 90vw;
+    width: 10vw;
   }
   .carousel-home {
     gap: 0.5em;
@@ -45,16 +40,21 @@
     font-size: 0.6rem;
   }
 }
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 468px) {
   .tablet {
     display: none;
   }
   .hero-image {
-    background-image: url(../images/hero-image.png);
-    height: 100px;
+    height: 12vw;
   }
-  .carousel-wrapper {
-    max-width: 90vw;
+  .carousel-left {
+    left: -3.4rem;
+  }
+  .carousel-right {
+    right: -3.4rem;
+  }
+  .carousel-wrapper button {
+    width: 12vw;
   }
   .post-image-container {
     width: 106.5px;

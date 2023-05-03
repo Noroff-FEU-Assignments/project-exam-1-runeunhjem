@@ -1,0 +1,34 @@
+.loader {
+  display: none;
+  /* Add your loader styles here */
+}
+
+.loader.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+}
+
+.loader-recipes {
+  animation: recipes 0.5s infinite;
+}
+
+@keyframes recipes {
+  0% {
+    content: ".";
+  }
+  33% {
+    content: "..";
+  }
+  66% {
+    content: "...";
+  }
+  66% {
+    content: "...";
+  }
+}

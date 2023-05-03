@@ -2,13 +2,16 @@
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 19; /* Sit on top */
+  z-index: 1; /* Sit on top */
   left: 0;
   top: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: 15;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
 }
 
 /* Modal Content/Box */
@@ -41,7 +44,7 @@
 .close {
   transition: all ease-in-out 0.15s;
   position: absolute;
-  bottom: 0px;
+  bottom: 0.2rem;
   right: 0px;
   z-index: 2;
   cursor: pointer;

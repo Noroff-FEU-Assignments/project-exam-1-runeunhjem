@@ -1,17 +1,11 @@
 .carousel-wrapper {
   display: flex;
+  flex-shrink: 2;
   justify-content: center;
   position: relative;
   margin: 1em 0 0 0;
-}
-
-.button-wrapper {
-  width: 100%;
-  overflow: visible;
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
+  max-width: 95vw;
+  min-height: 100px;
 }
 
 button {
@@ -40,7 +34,7 @@ button {
   overflow: hidden;
   align-items: flex-start;
   gap: 1em;
-  width: 975px;
+  width: 63.5vw;
 }
 
 .post-container {

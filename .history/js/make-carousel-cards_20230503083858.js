@@ -1,0 +1,223 @@
+/////// WORKING 4 AND 4 CARDS CAROUSEL ///////
+import { getPosts, posts } from "./get-posts.js";
+
+const breakpoints = {
+  small: 576,
+  medium: 768,
+  large: 1150,
+  xlarge: 1600,
+};
+
+let postsPerSlide;
+function handleViewportChange(breakpoint) {
+
+  if (breakpoint >= breakpoints.small && breakpoint < breakpoints.medium) {
+    postsPerSlide = 1;
+  } else if (breakpoint >= breakpoints.medium && breakpoint < breakpoints.large) {
+    postsPerSlide = 2;
+  } else if (breakpoint >= breakpoints.large && breakpoint < breakpoints.xlarge) {
+    postsPerSlide = 3;
+  } else {
+    postsPerSlide = 4;
+  }
+
+  // use the postsPerSlide value to update the carousel
+}
+
+const mediaQueries = Object.keys(breakpoints).map((key) => {
+  return window.matchMedia(`(min-width: ${breakpoints[key]}px)`);
+});
+
+mediaQueries.forEach((mediaQuery, index) => {
+  mediaQuery.addEventListener("change", (event) => {
+    if (event.matches) {
+      handleViewportChange(breakpoints[mediaQuery.media]);
+    }
+  });
+
+  if (mediaQuery.matches) {
+    handleViewportChange(breakpoints[mediaQuery.media]);
+  }
+});
+
+let startX = null;
+
+(async function () {
+  await getPosts();
+  console.log("posts is: ", posts);
+
+  const carousel = document.getElementById("carousel-home");
+
+
+  for (const post of posts) {
+    const postContainer = document.createElement("div");
+    postContainer.classList.add("post-container");
+
+    const leftButton = document.querySelector(".carousel-left");
+    const rightButton = document.querySelector(".carousel-right");
+    let currentPosition = 0;
+
+    const cardWidthSwipe = 150; // card width for swipe function
+    const cardWidthClick = 328; // card width for click function
+
+    leftButton.addEventListener("click", () => {
+      if (currentPosition > 0) {
+        currentPosition--;
+        postContainer.style.transform = `translateX(-${currentPosition * cardWidthClick * postsPerSlide}px)`;
+      } else {
+        // jump to end if left arrow is clicked on start
+        currentPosition = Math.ceil((posts.length - 4) / 4);
+        postContainer.style.transform = `translateX(-${currentPosition * cardWidthClick * postsPerSlide}px)`;
+      };
+    });
+
+    rightButton.addEventListener("click", () => {
+      const maxPosition = Math.ceil((posts.length - 4) / 4);
+      if (currentPosition < maxPosition) {
+        currentPosition++;
+        postContainer.style.transform = `translateX(-${currentPosition * cardWidthClick * postsPerSlide}px)`;
+      } else {
+        // start over when there are no more posts to slide through
+        currentPosition = 0;
+        postContainer.style.transform = `translateX(0)`;
+      };
+    });
+
+    // function to handle touchstart event
+    function handleTouchStart(event) {
+      startX = event.touches[0].clientX; // store the initial touch position
+    };
+
+    // function to handle touchmove event
+    function handleTouchMove(event) {
+      if (startX === null) {
+        return; // exit if touchstart event hasn't been triggered
+      };
+
+      currentX = event.touches[0].clientX; // store the current touch position
+      const diffX = startX - currentX; // calculate the distance moved by the finger
+
+      // move each post element individually based on the distance moved
+      const postElements = document.querySelectorAll(".post-container");
+      postElements.forEach((postElement, index) => {
+        postElement.style.transform = `translateX(-${index * cardWidthSwipe * 3 - diffX}px)`;
+      });
+    };
+
+    // function to handle touchend event
+    function handleTouchEnd(event) {
+      if (startX === null) {
+        return; // exit if touchstart event hasn't been triggered
+      };
+
+      const diffX = startX - currentX; // calculate the distance moved by the finger
+
+      // determine whether to move the carousel left or right based on the distance moved
+      if (diffX > 50) {
+        // move each post element to the right
+        const maxPosition = Math.ceil((posts.length - 1) / 1);
+        if (currentPosition < maxPosition) {
+          currentPosition++;
+          const postElements = document.querySelectorAll(".post-container");
+          postElements.forEach((postElement, index) => {
+            postElement.style.transform = `translateX(-${index * cardWidthSwipe * 3 - currentPosition * cardWidthSwipe}px)`;
+          });
+        } else {
+          // start over when there are no more posts to slide through
+          currentPosition = 0;
+          const postElements = document.querySelectorAll(".post-container");
+          postElements.forEach((postElement, index) => {
+            postElement.style.transform = `translateX(-${index * cardWidthSwipe * 3}px)`;
+          });
+        };
+      } else if (diffX < -50) {
+        // move each post element to the left
+        if (currentPosition > 0) {
+          currentPosition--;
+          const postElements = document.querySelectorAll(".post-container");
+          postElements.forEach((postElement, index) => {
+            postElement.style.transform = `translateX(-${index * cardWidthSwipe * 3 - currentPosition * cardWidthSwipe}px)`;
+          });
+        } else {
+          // jump to end if left arrow is clicked on start
+          currentPosition = Math.ceil((posts.length - 4) / 4);
+          const postElements = document.querySelectorAll(".post-container");
+          postElements.forEach((postElement, index) => {
+            postElement.style.transform = `translateX(-${index * cardWidthSwipe * 3 - currentPosition * cardWidthSwipe}px)`;
+          });
+        };
+      };
+
+      // reset touch positions
+      startX = null;
+      currentX = null;
+    };
+
+    const imageContainer = document.createElement("div");
+    imageContainer.classList.add("post-image-container");
+    postContainer.appendChild(imageContainer);
+
+    const image = new Image();
+    image.onload = function () {
+      imageContainer.style.backgroundImage = `url(${image.src})`;
+    };
+    image.src = post.image;
+
+    const title = document.createElement("h2");
+    title.classList.add("post-title");
+    title.textContent = post.title;
+    postContainer.appendChild(title);
+
+    const tagLine = document.createElement("p");
+    tagLine.classList.add("post-tagline");
+    tagLine.textContent = post.shortDescription;
+    postContainer.appendChild(tagLine);
+
+    const tags = document.createElement("p");
+    tags.classList.add("post-tags");
+    tags.textContent = `Tags: ${post.tags.join(", ")}`;
+    postContainer.appendChild(tags);
+
+    const date = new Date(post.date);
+    const dateString = `${date.toLocaleString("en-us", { month: "short" })} ${date.getDate()}, ${date.getFullYear()}`;
+    const added = document.createElement("p");
+    added.classList.add("post-added");
+    added.textContent = `Modified: ${dateString}`;
+    postContainer.appendChild(added);
+
+    carousel.appendChild(postContainer);
+  }
+  const modal = document.getElementById("modal");
+  const modalImage = document.getElementById("modal-image");
+  const modalClose = document.getElementsByClassName("close")[0];
+
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
+
+  // Close the modal when the user clicks the close button
+  modalClose.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  function openModal(imageSrc) {
+    modalImage.src = imageSrc;
+    modal.style.display = "flex";
+  }
+
+  function closeModal() {
+    modal.style.display = "none";
+    modalImage.src = "";
+  }
+
+  const postImages = document.querySelectorAll(".post-image-container");
+  postImages.forEach((postImage) => {
+    postImage.addEventListener("click", () => {
+      const postImageUrl = postImage.style.backgroundImage.slice(5, -2);
+      modalImage.src = postImageUrl;
+      modal.style.display = "block";
+    });
+  });
+})();
