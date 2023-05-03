@@ -4,10 +4,10 @@
   justify-content: center;
   position: relative;
   top: 5rem;
-  font-size: 1.5rem;
+  font-size: 1.5vw;
   font-weight: bold;
-  padding: 0.4rem 0 0.4rem 16%;
-  width: 50%;
+  padding: 0.6rem 0 0.6rem 40%;
+  width: 100%;
   text-align: left;
   color: var(--color-gold);
   border-bottom: var(--border-2px-gold);

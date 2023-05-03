@@ -29,7 +29,7 @@ img {
   align-items: flex-start;
 }
 
-.search-icon, .menu-icon {
+.search-icon, .menu-icon, .searchbar-icon {
   display: flex;
   justify-content: center;
   align-items: flex-end;
