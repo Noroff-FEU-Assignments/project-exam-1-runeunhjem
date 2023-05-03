@@ -46,6 +46,7 @@
   border: var(--border-1px-gold);
   border-radius: 6px;
   padding: 0.5em;
+  max-width: 100%;
 }
 
 .post-image-container {

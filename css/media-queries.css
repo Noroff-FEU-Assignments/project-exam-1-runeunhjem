@@ -19,6 +19,9 @@
     font-size: 2.8vw;
     padding-left: 34%;
   }
+  .post-container {
+    max-width: 100%;
+  }
 }
 @media screen and (max-width: 468px) {
   .tablet {
@@ -35,5 +38,8 @@
   }
   .carousel-wrapper .carousel-left, .carousel-wrapper .carousel-right {
     width: 10vw;
+  }
+  .post-container {
+    max-width: 100%;
   }
 }/*# sourceMappingURL=media-queries.css.map */
