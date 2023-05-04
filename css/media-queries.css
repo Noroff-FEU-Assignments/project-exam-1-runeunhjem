@@ -30,6 +30,10 @@
   .hero-image {
     height: 12vw;
   }
+  .loader {
+    font-size: 4.5vw;
+    padding-left: 24%;
+  }
   .carousel-left {
     left: -3.4rem;
   }
