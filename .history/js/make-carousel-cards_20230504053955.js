@@ -7,11 +7,11 @@ function handleViewportChange() {
   const viewportWidth = window.innerWidth;
   console.log("viewportWidth is: ", viewportWidth);
 
-  if (viewportWidth < 768) {
+  if (viewportWidth < 576) {
     postsPerSlide = 1;
-  } else if (viewportWidth < 1160 && viewportWidth >= 768) {
+  } else if (viewportWidth < 768 && viewportWidth >= 576) {
     postsPerSlide = 2;
-  } else if (viewportWidth < 1540 && viewportWidth >= 1160) {
+  } else if (viewportWidth < 1154 && viewportWidth >= 768) {
     postsPerSlide = 3;
   } else {
     postsPerSlide = 4;
