@@ -56,6 +56,7 @@ main {
 
 @media screen and (max-width: 1168px) {
   .thank-you-note {
+    font-size: 1.5vw;
     padding: 0.3em 5rem;
   }
 }
@@ -75,13 +76,10 @@ main {
     padding-left: 34%;
   }
   .thank-you-note {
-    padding: 0.4rem 1rem;
-  }
-  .thank-you-note h2 {
-    font-size: 3.5vw;
-  }
-  .thank-you-note p {
-    font-size: 1.9vw;
+    width: 100vw;
+    padding: 0.2rem 12vw;
+    margin-top: 0;
+    font-size: 2.4vw;
   }
   .carousel-wrapper .carousel-left, .carousel-wrapper .carousel-right {
     width: 12vw;

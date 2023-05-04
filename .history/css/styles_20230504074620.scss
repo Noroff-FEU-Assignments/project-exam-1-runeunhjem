@@ -81,15 +81,14 @@ main {
 
     .thank-you-note {
       width: 100vw;
-      padding: 0.2rem 12vw;
+      padding: 0.4rem 5rem;
       margin-top: 0;
-      font-size: 2.4vw;
-      // h2 {
-      //    font-size: 3.5vw;
-      // }
-      // p {
-      //     font-size: 1.9vw;
-      // }
+      h2 {
+         font-size: 3.5vw;
+      }
+      p {
+          font-size: 1.9vw;
+      }
    }
 
    .carousel-wrapper {

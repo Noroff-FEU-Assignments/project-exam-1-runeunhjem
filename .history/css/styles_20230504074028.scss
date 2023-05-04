@@ -58,38 +58,35 @@ main {
 
 @media screen and (max-width: 1168px) {
   .thank-you-note {
-    font-size: 1.5vw;
+    width: 100vw
     padding: 0.3em 5rem;
   }
 }
 
 @media screen and (max-width: 768px) {
    .desktop-only {
-     display: none;
+      display: none;
    }
    .tablet {
-     display: block;
-    }
+      display: block;
+   }
   .hero-image {
       background-image: url(../images/hero-image.png);
       height: 16vw;
-    }
+   }
    .loader {
       font-size: 2.8vw;
       padding-left: 34%;
-    }
+   }
 
-    .thank-you-note {
-      width: 100vw;
-      padding: 0.2rem 12vw;
-      margin-top: 0;
-      font-size: 2.4vw;
-      // h2 {
-      //    font-size: 3.5vw;
-      // }
-      // p {
-      //     font-size: 1.9vw;
-      // }
+   .thank-you-note {
+      padding: 0.4rem 1rem;
+      h2 {
+         font-size: 3.5vw;
+      }
+      p {
+          font-size: 1.9vw;
+      }
    }
 
    .carousel-wrapper {

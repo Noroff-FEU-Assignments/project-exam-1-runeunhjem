@@ -58,8 +58,7 @@ main {
 
 @media screen and (max-width: 1168px) {
   .thank-you-note {
-    font-size: 1.5vw;
-    padding: 0.3em 5rem;
+    font-size: 2vw;
   }
 }
 
@@ -81,15 +80,13 @@ main {
 
     .thank-you-note {
       width: 100vw;
-      padding: 0.2rem 12vw;
-      margin-top: 0;
-      font-size: 2.4vw;
-      // h2 {
-      //    font-size: 3.5vw;
-      // }
-      // p {
-      //     font-size: 1.9vw;
-      // }
+      padding: 0.4rem 1rem;
+      h2 {
+         font-size: 3.5vw;
+      }
+      p {
+          font-size: 1.9vw;
+      }
    }
 
    .carousel-wrapper {
