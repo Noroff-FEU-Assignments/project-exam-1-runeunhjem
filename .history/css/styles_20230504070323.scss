@@ -1,0 +1,47 @@
+@import url('variables.css');
+@import url('header.css');
+@import url('loader.css');
+@import url('carousel.css');
+@import url('categories.css');
+@import url('footer.css');
+@import url('media-queries.css');
+@import url('modal.css');
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.hero-image {
+  background-image: url(../images/hero-image.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  width: 100vw;
+  height: 20vw;
+  margin: 0;
+}
+
+.thank-you-note {
+  font-family: var(--font-family-elegant);
+  font-size: 2.5vw;
+  color: var(--color-gold);
+  background-color: var(--color);
+  margin: 0.5em 0 0.5em 0;
+}
+
+.newest-posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0.5em 0 1em 0;
+  position: relative;
+  text-align: left;
+}
+
+
+
+
