@@ -45,7 +45,7 @@ const loader = document.getElementById("loader");
     const cardWidthSwipe = 240; // card width for swipe function
     let cardWidthClick = 246; // card width for click function
     if(viewportWidth < 360) {
-      cardWidthClick = 244; // when there is no gap between cards
+      cardWidthClick = 250; // when there is no gap between cards
     }
 
     leftButton.addEventListener("click", () => {

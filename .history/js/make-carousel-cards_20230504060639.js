@@ -42,10 +42,10 @@ const loader = document.getElementById("loader");
     const rightButton = document.querySelector(".carousel-right");
     let currentPosition = 0;
     const viewportWidth = window.innerWidth;
-    const cardWidthSwipe = 240; // card width for swipe function
+    const cardWidthSwipe = 260; // card width for swipe function
     let cardWidthClick = 246; // card width for click function
-    if(viewportWidth < 360) {
-      cardWidthClick = 244; // when there is no gap between cards
+    if(viewportWidth < 768) {
+      cardWidthClick = 230; // when there is no gap between cards
     }
 
     leftButton.addEventListener("click", () => {
