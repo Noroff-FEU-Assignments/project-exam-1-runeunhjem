@@ -104,13 +104,13 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 970px;
 }
 .show form {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5em;
+  padding-left: 4em;
 }
 .show form input {
   text-indent: 0.5em;
@@ -121,6 +121,7 @@ img {
   min-height: 24px;
   height: 2vw;
   min-width: 250px;
+  width: 30vw;
   border-radius: 6px;
 }
 .show form #search-button {
