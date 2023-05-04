@@ -23,12 +23,10 @@ const loader = document.getElementById("loader");
 
 (async function () {
   loader.classList.add("active"); // Show the loader
-
   const leftButton = document.querySelector(".carousel-left");
   const rightButton = document.querySelector(".carousel-right");
   leftButton.classList.add("hide");
   rightButton.classList.add("hide");
-
   await getPosts();
   console.log("posts is: ", posts);
 
@@ -42,11 +40,8 @@ const loader = document.getElementById("loader");
     const rightButton = document.querySelector(".carousel-right");
     let currentPosition = 0;
 
-    const cardWidthSwipe = 240; // card width for swipe function
+    const cardWidthSwipe = 246; // card width for swipe function
     const cardWidthClick = 246; // card width for click function
-    if(viewportWidth < 768) {
-      const cardWidthClick = 240; // when there is no gap between cards
-    }
 
     leftButton.addEventListener("click", () => {
       if (currentPosition > 0) {
