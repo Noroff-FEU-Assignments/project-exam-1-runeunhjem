@@ -19,3 +19,8 @@ burgerIcon.addEventListener("click", function () {
   }
 });
 
+document.addEventListener("click", function (event) {
+  if (!clonedNav.contains(event.target) && clonedNav.classList.contains("is-open")) {
+    clonedNav.classList.remove("is-open");
+  }
+});

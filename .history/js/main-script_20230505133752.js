@@ -1,3 +1,4 @@
+
 const footerNav = document.querySelector(".footer-nav");
 const clonedNav = footerNav.cloneNode(true);
 const burgerIcon = document.querySelector(".menu-icon");
@@ -18,4 +19,3 @@ burgerIcon.addEventListener("click", function () {
     clonedNav.style.right = `${clonedNavRight}px`;
   }
 });
-

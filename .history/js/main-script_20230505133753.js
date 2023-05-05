@@ -18,4 +18,3 @@ burgerIcon.addEventListener("click", function () {
     clonedNav.style.right = `${clonedNavRight}px`;
   }
 });
-
