@@ -13,7 +13,6 @@ async function getPosts() {
       const tags = item._embedded["wp:term"][1]
         .filter((tag) => tag.name !== "ep1" && tag.name !== "food")
         .map((tag) => tag.name);
-        
       const post = {
         postId: item.id,
         title: item.title.rendered.replace(/&amp;/g, "&"),

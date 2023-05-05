@@ -157,7 +157,7 @@ const loader = document.getElementById("loader");
       modal.style.display = "block";
     });
   });
-  loader.classList.remove("active");
+  loader.classList.remove("active"); // Hide the loader
   leftButton.classList.remove("hide");
   rightButton.classList.remove("hide");
 })();

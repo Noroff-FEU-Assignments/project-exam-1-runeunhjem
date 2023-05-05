@@ -28,7 +28,7 @@ let startX = null;
 const loader = document.getElementById("loader");
 
 (async function () {
-  loader.classList.add("active");
+  loader.classList.add("active"); // Show the loader
 
   const leftButton = document.querySelector(".carousel-left");
   const rightButton = document.querySelector(".carousel-right");
@@ -49,7 +49,7 @@ const loader = document.getElementById("loader");
     let currentPosition = 0;
     const viewportWidth = window.innerWidth;
 
-    let cardWidthClick = 246;
+    let cardWidthClick = 246; // card width for click function
     if(viewportWidth < 768) {
       cardWidthClick = 192;
     }
@@ -59,7 +59,7 @@ const loader = document.getElementById("loader");
         currentPosition--;
         postContainer.style.transform = `translateX(-${currentPosition * cardWidthClick * postsPerSlide}px)`;
       } else {
-
+        
         currentPosition = Math.ceil((posts.length - postsPerSlide) / postsPerSlide);
         postContainer.style.transform = `translateX(-${currentPosition * cardWidthClick * postsPerSlide}px)`;
       }
@@ -157,7 +157,7 @@ const loader = document.getElementById("loader");
       modal.style.display = "block";
     });
   });
-  loader.classList.remove("active");
+  loader.classList.remove("active"); // Hide the loader
   leftButton.classList.remove("hide");
   rightButton.classList.remove("hide");
 })();

@@ -9,11 +9,14 @@ async function getPosts() {
     console.log(result);
 
     for (const item of result) {
-      const categories = item._embedded["wp:term"][0].map((category) => category.name);
-      const tags = item._embedded["wp:term"][1]
-        .filter((tag) => tag.name !== "ep1" && tag.name !== "food")
-        .map((tag) => tag.name);
-        
+      const categoriesResponse = await fetch(item._links["wp:term"][0].href);
+      const categoriesResult = await categoriesResponse.json();
+      const categories = categoriesResult.map((category) => category.name);
+
+      const tagsResponse = await fetch(item._links["wp:term"][1].href);
+      const tagsResult = await tagsResponse.json();
+      const tags = tagsResult.filter((tag) => tag.name !== "ep1" && tag.name !== "food").map((tag) => tag.name);
+
       const post = {
         postId: item.id,
         title: item.title.rendered.replace(/&amp;/g, "&"),
