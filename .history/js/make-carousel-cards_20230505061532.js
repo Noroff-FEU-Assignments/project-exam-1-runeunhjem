@@ -194,7 +194,6 @@ const loader = document.getElementById("loader");
   }
 
   const modal = document.getElementById("modal");
-  const modalContent = document.getElementById("modal-content");
   const modalImage = document.getElementById("modal-image");
   const modalClose = document.getElementsByClassName("close")[0];
 
@@ -209,10 +208,11 @@ const loader = document.getElementById("loader");
   };
 
   window.onclick = function (event) {
-    if (event.target == modalContent) {
+    if (event.target !== modal) {
       modal.style.display = "none";
     }
   };
+
 
   // Close the modal when the user clicks the close button
   modalClose.addEventListener("click", () => {

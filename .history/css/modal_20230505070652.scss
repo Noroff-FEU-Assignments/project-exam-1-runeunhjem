@@ -71,14 +71,6 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 1370px) {
-  .modal-image {
-    left: 82%;
-  }
-  .close {
-    left: 82%;
-  }
-}
 @media screen and (max-width: 1170px) {
   .modal-image {
     left: 69%;
@@ -113,7 +105,7 @@
     width: 40px;
     height: 40px;
     bottom: 0rem;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
 }
 @media screen and (max-width: 468px) {
@@ -124,6 +116,5 @@
     width: 24px;
     height: 24px;
     left: 58%;
-    font-size: 1.4rem;
   }
 }

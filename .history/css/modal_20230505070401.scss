@@ -71,28 +71,12 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 1370px) {
-  .modal-image {
-    left: 82%;
-  }
-  .close {
-    left: 82%;
-  }
-}
 @media screen and (max-width: 1170px) {
   .modal-image {
     left: 69%;
   }
   .close {
-    left: 69%;
-  }
-}
-@media screen and (max-width: 1040px) {
-  .modal-image {
-    left: 69%;
-  }
-  .close {
-    left: 69%;
+    left: 63%;
   }
 }
 
@@ -112,7 +96,7 @@
     left: 63%;
     width: 40px;
     height: 40px;
-    bottom: 0rem;
+    bottom: 0.15rem;
     font-size: 1.8rem;
   }
 }
@@ -124,6 +108,5 @@
     width: 24px;
     height: 24px;
     left: 58%;
-    font-size: 1.4rem;
   }
 }

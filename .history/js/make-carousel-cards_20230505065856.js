@@ -194,7 +194,7 @@ const loader = document.getElementById("loader");
   }
 
   const modal = document.getElementById("modal");
-  const modalContent = document.getElementById("modal-content");
+  const modal = document.getElementById("modal-content");
   const modalImage = document.getElementById("modal-image");
   const modalClose = document.getElementsByClassName("close")[0];
 

@@ -71,59 +71,18 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 1370px) {
-  .modal-image {
-    left: 82%;
-  }
-  .close {
-    left: 82%;
-  }
-}
-@media screen and (max-width: 1170px) {
-  .modal-image {
-    left: 69%;
-  }
-  .close {
-    left: 69%;
-  }
-}
-@media screen and (max-width: 1040px) {
-  .modal-image {
-    left: 69%;
-  }
-  .close {
-    left: 69%;
-  }
-}
-
 @media screen and (max-width: 970px) {
+  // .modal-content {
+  //   padding-bottom: 100%;
+  // }
   .modal-image {
+    top: 50%;
     left: 63%;
+    // transform: translate(-50%, -50%);
   }
   .close {
-    left: 63%;
-  }
-}
-@media screen and (max-width: 670px) {
-  // .modal-image {
-  //   left: 63%;
-  // }
-  .close {
-    left: 63%;
-    width: 40px;
-    height: 40px;
-    bottom: 0rem;
-    font-size: 1.8rem;
-  }
-}
-@media screen and (max-width: 468px) {
-  // .modal-image {
-  //   left: 63%;
-  // }
-  .close {
-    width: 24px;
-    height: 24px;
-    left: 58%;
-    font-size: 1.4rem;
+    width: 30px;
+    height: 30px;
+    font-size: 1.5rem;
   }
 }
