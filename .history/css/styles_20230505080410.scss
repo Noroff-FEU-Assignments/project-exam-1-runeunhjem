@@ -1,0 +1,250 @@
+@import url('variables.css');
+@import url('header.css');
+@import url('loader.css');
+@import url('carousel.css');
+@import url('categories.css');
+@import url('footer.css');
+@import url('modal.css');
+
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.hero-image {
+  background-image: url(../images/hero-image.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  width: 100vw;
+  height: 17vw;
+  margin: 0;
+}
+
+
+
+.thank-you-note {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: var(--font-family-elegant);
+  font-size: 1.2vw;
+  width: 63.5vw;
+  color: var(--color-gold);
+  background-color: var(--color-burgundy);
+  padding: 0.3em 10rem;
+  border-top: var(--border-2px-gold);
+  border-bottom: var(--border-2px-gold);
+  margin: 1.5em 0 0.5em 0;
+  gap: 0.3em;
+  h2 {
+    margin: 0 auto;
+  }
+  p {
+    margin: 0;
+    color: var(--color-white);
+  }
+}
+
+.newest-posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0.5em 0 1em 0;
+  position: relative;
+  text-align: left;
+}
+
+.cloned-nav {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 1%;
+  height: 100%;
+  background-color: #fff;
+  transition: transform 0.3s ease-out;
+  transform: translateY(-100%);
+}
+
+.cloned-nav.is-open {
+  transform: translateY(100px);
+}
+
+
+@media screen and (max-width: 1168px) {
+
+  .show {
+    max-width: 100%;
+    form {
+      padding-left: 2.4em;
+      input {
+        width: 55vw;
+        max-width: 450px;
+      }
+    }
+  }
+  .thank-you-note {
+    font-size: 1.5vw;
+    padding: 0.3em 5rem;
+  }
+  .footer-links {
+    padding: 0 0 0 0em;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+   .desktop-only {
+     display: none;
+   }
+   .tablet {
+     display: block;
+    }
+    .show {
+    max-width: 100%;
+    form {
+      padding-left: 1.5em;
+      input {
+        width: 60vw;
+      }
+    }
+   }
+  .hero-image {
+      background-image: url(../images/hero-image.png);
+      height: 16vw;
+    }
+   .loader {
+      font-size: 2.8vw;
+      padding-left: 34%;
+    }
+
+    .thank-you-note {
+      width: 100vw;
+      padding: 0.2rem 16vw;
+      margin-top: 0;
+      font-size: 2.3vw;
+   }
+
+   .carousel-wrapper {
+     .carousel-left, .carousel-right {
+         width: 12vw;
+     }
+  }
+
+   .carousel-wrapper {
+      justify-content: center;
+   }
+
+   .carousel-home {
+      gap: 1em;
+   }
+
+   .post-container {
+      max-width: 100%;
+  }
+   .post-image-container {
+      width: calc(213px * 0.75);
+      height: calc(110px * 0.75);
+      background-size: cover;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+   }
+
+  .post-title {
+      font-size: 1rem;
+      height: 36px;
+  }
+
+  .post-tagline {
+      font-size: 0.8rem;
+      height: 42px;
+  }
+
+  .post-tags {
+      font-size: 0.7rem;
+      height: 72px;
+  }
+
+  .post-added {
+      font-size: 0.7rem;
+  }
+  footer {
+    ul {
+      padding: 0;
+    }
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    .footer-links {
+      padding: 0 0 0 0em;
+    }
+  }
+  .footer-icons {
+    img {
+      height: 12vw;
+    }
+  }
+  .footer-header {
+    font-size: 6.5vw;
+  }
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    width: 100%;
+  }
+
+}
+
+
+@media screen and (max-width: 468px) {
+   .tablet {
+      display: none;
+   }
+   .show {
+    max-width: 100%;
+    form {
+      padding-left: 1em;
+      input {
+        width: 50vw;
+      }
+    }
+   }
+   .hero-image {
+      height: 22vw;
+   }
+
+   .loader {
+      font-size: 4.5vw;
+      padding-left: 24%;
+   }
+
+   .thank-you-note {
+      padding: 0.2rem 13vw;
+      font-size: 2.6vw;
+   }
+
+   .carousel-left {
+      left: -3.4rem;
+   }
+   .carousel-right {
+      right: -3.4rem;
+   }
+
+   .carousel-wrapper {
+     .carousel-left, .carousel-right {
+        width: 10vw;
+     }
+  }
+  .post-container {
+      max-width: 100%;
+  }
+  .footer-left {
+  justify-content: flex-start;
+  padding-left: 28vw;
+}
+}

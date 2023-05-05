@@ -33,6 +33,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  cursor: pointer;
 }
 
 .search-and-menu {

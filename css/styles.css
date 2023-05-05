@@ -1,5 +1,6 @@
 @import url("variables.css");
 @import url("header.css");
+@import url("cloned-nav.css");
 @import url("loader.css");
 @import url("carousel.css");
 @import url("categories.css");
@@ -20,6 +21,12 @@ main {
   width: 100vw;
   height: 17vw;
   margin: 0;
+}
+
+h4 {
+  margin: 0 auto;
+  padding: 0;
+  font-size: 1.2rem;
 }
 
 .thank-you-note {
