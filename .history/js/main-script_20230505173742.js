@@ -29,34 +29,25 @@ document.body.appendChild(clonedNav);
 
 let isMenuOpen = false;
 
-function openMenu() {
-  isMenuOpen = true;
-  clonedNav.classList.add("is-open");
-  const burgerIconRect = burgerIcon.getBoundingClientRect();
-  const clonedNavRect = clonedNav.getBoundingClientRect();
-  const clonedNavBottom = window.innerHeight - burgerIconRect.bottom;
-  const clonedNavRight = window.innerWidth - burgerIconRect.right;
+burgerIcon.addEventListener("click", function () {
+  isMenuOpen = !isMenuOpen;
+  if (isMenuOpen) {
+    clonedNav.classList.add("is-open");
+    const burgerIconRect = burgerIcon.getBoundingClientRect();
+    const clonedNavRect = clonedNav.getBoundingClientRect();
+    const clonedNavBottom = window.innerHeight - burgerIconRect.bottom;
+    const clonedNavRight = window.innerWidth - burgerIconRect.right;
 
-  clonedNav.style.bottom = `${clonedNavBottom}px`;
-  clonedNav.style.right = `${clonedNavRight}px`;
-}
-
-function closeMenu() {
-  isMenuOpen = false;
-  clonedNav.classList.remove("is-open");
-}
-
-burgerIcon.addEventListener("click", function (event) {
-  event.stopPropagation();
-  if (!isMenuOpen) {
-    openMenu();
+    clonedNav.style.bottom = `${clonedNavBottom}px`;
+    clonedNav.style.right = `${clonedNavRight}px`;
   } else {
-    closeMenu();
+    clonedNav.classList.remove("is-open");
   }
 });
 
 document.addEventListener("click", function (event) {
-  if (isMenuOpen && !clonedNav.contains(event.target)) {
-    closeMenu();
+  if (!clonedNav.contains(event.target) && isMenuOpen) {
+    clonedNav.classList.remove("is-open");
+    isMenuOpen = false;
   }
 });
