@@ -33,6 +33,7 @@
 
 .carousel-home {
   display: flex;
+  max-width: 980px;
   z-index: 1;
   justify-content: flex-start;
   overflow: hidden;
