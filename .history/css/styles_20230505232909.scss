@@ -18,9 +18,10 @@ main {
 
 .hero-image {
   background-image: url(../images/hero-image.png);
-  background-size: 63.5vw;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  transform: scale(0.5);
   width: 100vw;
   height: 17vw;
   margin: 0;
