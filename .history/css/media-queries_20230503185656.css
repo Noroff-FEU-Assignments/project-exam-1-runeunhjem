@@ -1,0 +1,56 @@
+@media screen and (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+  .tablet {
+    display: block;
+  }
+  .hero-image {
+    background-image: url(../images/hero-image.png);
+    height: 16vw;
+  }
+  .carousel-wrapper {
+    justify-content: center;
+  }
+  .carousel-home {
+    gap: 1em;
+  }
+}
+@media screen and (max-width: 468px) {
+  .tablet {
+    display: none;
+  }
+  .hero-image {
+    height: 12vw;
+  }
+  .carousel-left {
+    left: -3.4rem;
+  }
+  .carousel-right {
+    right: -3.4rem;
+  }
+  .carousel-wrapper .carousel-left, .carousel-wrapper .carousel-right {
+    width: 10vw;
+  }
+  .post-image-container {
+    width: 106.5px;
+    height: 55px;
+    background-size: cover;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  }
+  .post-title {
+    font-size: 0.8rem;
+    height: 32px;
+  }
+  .post-tagline {
+    font-size: 0.6rem;
+    height: 34px;
+  }
+  .post-tags {
+    font-size: 0.5rem;
+    height: 40px;
+  }
+  .post-added {
+    font-size: 0.4rem;
+  }
+}/*# sourceMappingURL=media-queries_20230503185656.css.map */

@@ -1,0 +1,49 @@
+@media screen and (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+  .tablet {
+    display: block;
+  }
+  .hero-image {
+    background-image: url(../images/hero-image.png);
+    height: 16vw;
+  }
+  .carousel-wrapper {
+    justify-content: center;
+  }
+  .carousel-home {
+    gap: 1em;
+  }
+  .loader {
+    font-size: 2.8vw;
+    padding-left: 34%;
+  }
+  .post-container {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 468px) {
+  .tablet {
+    display: none;
+  }
+  .hero-image {
+    height: 12vw;
+  }
+  .loader {
+    font-size: 4.5vw;
+    padding-left: 24%;
+  }
+  .carousel-left {
+    left: -3.4rem;
+  }
+  .carousel-right {
+    right: -3.4rem;
+  }
+  .carousel-wrapper .carousel-left, .carousel-wrapper .carousel-right {
+    width: 10vw;
+  }
+  .post-container {
+    max-width: 100%;
+  }
+}/*# sourceMappingURL=media-queries_20230504062440.css.map */

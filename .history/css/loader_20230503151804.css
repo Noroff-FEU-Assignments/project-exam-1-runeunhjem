@@ -1,0 +1,40 @@
+.loader {
+  z-index: 10;
+  position: relative;
+  top: 5rem;
+  font-size: 2.5vw;
+  font-weight: bold;
+  padding: 0.2rem;
+  width: 50%;
+  text-align: left;
+  text-indent: 2rem;
+  color: var(--color-gold);
+  border-bottom: var(--border-2px-gold);
+  border-top: var(--border-2px-gold);
+  background-color: var(--color-burgundy);
+}
+
+.loader.active {
+  display: block;
+}
+
+.loader::after {
+  content: "";
+  width: 80px;
+  animation: recipes 3s infinite;
+}
+
+@keyframes recipes {
+  10% {
+    content: ".";
+  }
+  35% {
+    content: "..";
+  }
+  60% {
+    content: "...";
+  }
+  85% {
+    content: "....";
+  }
+}/*# sourceMappingURL=loader_20230503151804.css.map */

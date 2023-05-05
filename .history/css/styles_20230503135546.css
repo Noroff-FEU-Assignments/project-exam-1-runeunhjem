@@ -1,0 +1,24 @@
+@import url("variables.css");
+@import url("header.css");
+@import url("carousel.css");
+@import url("loader.css");
+@import url("categories.css");
+@import url("footer.css");
+@import url("media-queries.css");
+@import url("modal.css");
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.hero-image {
+  background-image: url(../images/hero-image.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  width: 100vw;
+  height: 20vw;
+  margin: 0;
+}/*# sourceMappingURL=styles_20230503135546.css.map */
