@@ -48,7 +48,7 @@ h4 {
   margin: 0 auto;
 }
 .thank-you-note p {
-  margin: 0;
+  margin: 0 auto;
   color: var(--color-white);
 }
 
@@ -189,8 +189,8 @@ h4 {
     padding-left: 24%;
   }
   .thank-you-note {
-    padding: 0.2rem 13vw;
-    font-size: 3.4vw;
+    padding: 0.4rem 3vw;
+    font-size: 3.2vw;
   }
   .carousel-left {
     left: -3.4rem;
