@@ -7,6 +7,7 @@ searchIcon.addEventListener("click", function () {
   navContainer.classList.toggle("hide");
 });
 
+
 document.addEventListener("click", function (event) {
   if (!searchContainer.contains(event.target) && !searchIcon.contains(event.target)) {
     searchContainer.classList.remove("show");
