@@ -28,10 +28,10 @@ const loader = document.getElementById("loader");
 (async function () {
   loader.classList.add("active");
 
-  const leftButton = document.querySelector(".carousel-left");
-  const rightButton = document.querySelector(".carousel-right");
-  leftButton.classList.add("hide");
-  rightButton.classList.add("hide");
+  // const leftButton = document.querySelector(".carousel-left");
+  // const rightButton = document.querySelector(".carousel-right");
+  // leftButton.classList.add("hide");
+  // rightButton.classList.add("hide");
 
   await getPosts();
   console.log("posts is: ", posts);

@@ -16,15 +16,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Cooking, Chef, Table, Dinner, Dessert, Cousine, Recipes, Food">
-    <meta name="description" content="A blog with recipes for only the best and juiciest dishes">
+    <meta name="description" content="A blog with recipes for only the best and juiciest dishes. Search Results">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/out-of-view-menu-text.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="js/searchbar.js" defer></script>
     <script src="js/make-carousel-cards.js" type="module"></script>
-    <script src="js/menu.js" defer></script>
-    <!-- <script src="js/search-and-filter.js" type="module"></script> -->
-    <title>CHEF'S TABLE | Home</title>
+    <script src="js/main-script.js" defer></script>
+    <script src="js/search-and-filter.js" type="module"></script>
+    <title>CHEF'S TABLE | Search Results</title>
   </head>
   <body>
     <header class="header-desktop header-mobile" aria-label="Header">
@@ -76,67 +76,8 @@
       </nav>
     </header>
     <main class="index" aria-label="Main Section">
-      <div class="hero-image post-preview" id="post-preview"></div>
-      <div class ="thank-you-note">
-        <h2 class="so-god-to-see-you">So good to see you...</h2>
-        <p class="enjoy-note">We try to make food for every pallet, every skill set and every age, so we hope you find that perfect dish and enjoy making it as much as we do.</p>
-        <p class="check-latest-posts-note">Check out these latest recipes:</p>
-      </div>
-      <section class="newest-posts" aria-label="Newest Posts">
-        <div id="loader" class="loader loader-recipes">Loading recipes<span class="loader-recipes"></span></div>
-          <div class="carousel-wrapper">
-            <button class="carousel-left">
-              <img src="images/ico-carousel-arrow-left.svg" alt="Carousel Arrow Left">
-            </button>
-            <div class="carousel-home" id="carousel-home">
-            </div>
-            <button class="carousel-right">
-              <img src="images/ico-carousel-arrow-right.svg" alt="Carousel Arrow right">
-            </button>
-          </div>
-        <div id="modal" class="modal">
-          <div class="modal-content" id="modal-content">
-            <span class="close">&times;</span>
-            <img id="modal-image" class="modal-image" src="images/hero-image.png" alt="Recipe Image">
-          </div>
-        </div>
+      <div class="search-results"></div>
 
-      </section>
-      <section class="categories" id="categories">
-        <h3 class="category-title">Most Popular Categories</h3>
-        <div class="categories-container">
-          <div class="category-container">
-            <a class="category" href="categories.html" aria-label="Pasta">
-              <img src="/images/category-pasta.png" alt="Pasta Category">
-              <h3 class="top5">Pasta</h3>
-            </a>
-          </div>
-          <div class="category-container">
-            <a class="category" href="categories.html" aria-label="Dessert">
-              <img src="/images/category-dessert.png" alt="Dessert Category">
-              <h3 class="top5">Dessert</h3>
-            </a>
-          </div>
-          <div class="category-container">
-            <a class="category" href="categories.html" aria-label="Fish">
-              <img src="/images/category-fish.png" alt="Fish Category">
-              <h3 class="top5">Fish</h3>
-            </a>
-          </div>
-          <div class="category-container">
-            <a class="category" href="categories.html" aria-label="Asian">
-              <img src="/images/category-asian.png" alt="Asian Category">
-              <h3 class="top5">Asian</h3>
-            </a>
-          </div>
-          <div class="category-container">
-            <a class="category" href="categories.html" aria-label="Meat">
-              <img src="/images/category-meat.png" alt="Meat Category">
-              <h3 class="top5">Meat</h3>
-            </a>
-          </div>
-        </div>
-      </section>
     </main>
     <footer class="footer">
       <div class="footer-left">

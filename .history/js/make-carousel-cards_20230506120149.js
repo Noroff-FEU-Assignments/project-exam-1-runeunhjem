@@ -138,10 +138,12 @@ const loader = document.getElementById("loader");
     modal.style.display = "none";
   });
 
+
   function openModal(imageSrc) {
     modalImage.src = imageSrc;
     modal.style.display = "flex";
   };
+
 
   const postImages = document.querySelectorAll(".post-image-container");
   postImages.forEach((postImage) => {

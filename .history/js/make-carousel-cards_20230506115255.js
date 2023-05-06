@@ -23,6 +23,7 @@ window.addEventListener("resize", () => {
   handleViewportChange();
 });
 
+let startX = null;
 const loader = document.getElementById("loader");
 
 (async function () {
@@ -50,16 +51,17 @@ const loader = document.getElementById("loader");
     let cardWidthClick = 246;
     if(viewportWidth < 768) {
       cardWidthClick = 192;
-    };
+    }
 
     leftButton.addEventListener("click", () => {
       if (currentPosition > 0) {
         currentPosition--;
         postContainer.style.transform = `translateX(-${currentPosition * cardWidthClick * postsPerSlide}px)`;
       } else {
+
         currentPosition = Math.ceil((posts.length - postsPerSlide) / postsPerSlide);
         postContainer.style.transform = `translateX(-${currentPosition * cardWidthClick * postsPerSlide}px)`;
-      };
+      }
     });
 
     rightButton.addEventListener("click", () => {
@@ -72,10 +74,11 @@ const loader = document.getElementById("loader");
         console.log("cardWithClick is: ", cardWidthClick);
         console.log("postsPerSlide is: ", postsPerSlide);
       } else {
+
         currentPosition = 0;
         postContainer.style.transform = `translateX(0)`;
         console.log(postContainer.style.transform);
-      };
+      }
     });
 
     const imageContainer = document.createElement("div");
@@ -111,7 +114,7 @@ const loader = document.getElementById("loader");
     postContainer.appendChild(added);
 
     carousel.appendChild(postContainer);
-  };
+  }
 
   const modal = document.getElementById("modal");
   const modalContent = document.getElementById("modal-content");
@@ -121,7 +124,7 @@ const loader = document.getElementById("loader");
   modal.addEventListener("click", (event) => {
     if (event.target === modal) {
       closeModal();
-    };
+    }
   });
   function closeModal() {
     modal.style.display = "none";
@@ -131,17 +134,19 @@ const loader = document.getElementById("loader");
   window.onclick = function (event) {
     if (event.target == modalContent) {
       modal.style.display = "none";
-    };
+    }
   };
 
   modalClose.addEventListener("click", () => {
     modal.style.display = "none";
   });
 
+
   function openModal(imageSrc) {
     modalImage.src = imageSrc;
     modal.style.display = "flex";
   };
+
 
   const postImages = document.querySelectorAll(".post-image-container");
   postImages.forEach((postImage) => {

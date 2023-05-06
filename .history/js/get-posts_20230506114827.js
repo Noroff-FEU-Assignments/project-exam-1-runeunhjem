@@ -1,7 +1,14 @@
-const apiUrl = "https://wordpress.runeunhjem.no/wp-json/wp/v2/posts?per_page=50&_embed=1";
+const apiUrl = `https://wordpress.runeunhjem.no/wp-json/wp/v2/posts?per_page=50&_embed=1&search=${searchTerm}`;
+// const apiUrl = "https://wordpress.runeunhjem.no/wp-json/wp/v2/posts?per_page=50&_embed=1";
+// const apiUrl = "https://wordpress.runeunhjem.no/wp-json/wp/v2/posts?per_page=50";
 let posts = [];
+let searchTerm = searchQuery || "";
+const queryString = document.location.search;
+const params = new URLSearchParams(queryString);
+const searchQuery = params.get("query");
 
-async function getPosts() {
+
+async function getPosts(searchTerm = "") {
   try {
     const response = await fetch(apiUrl);
     const result = await response.json();

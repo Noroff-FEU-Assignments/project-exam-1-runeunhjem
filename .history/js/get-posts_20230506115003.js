@@ -1,5 +1,8 @@
-const apiUrl = "https://wordpress.runeunhjem.no/wp-json/wp/v2/posts?per_page=50&_embed=1";
+const apiUrl = `https://wordpress.runeunhjem.no/wp-json/wp/v2/posts?per_page=50&_embed=1&search=${searchTerm}`;
+// const apiUrl = "https://wordpress.runeunhjem.no/wp-json/wp/v2/posts?per_page=50&_embed=1";
+// const apiUrl = "https://wordpress.runeunhjem.no/wp-json/wp/v2/posts?per_page=50";
 let posts = [];
+
 
 async function getPosts() {
   try {

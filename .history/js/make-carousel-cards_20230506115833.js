@@ -23,6 +23,45 @@ window.addEventListener("resize", () => {
   handleViewportChange();
 });
 
+function setupCarousel(posts) {
+  const leftButton = document.querySelector(".carousel-left");
+  const rightButton = document.querySelector(".carousel-right");
+  let currentPosition = 0;
+  const viewportWidth = window.innerWidth;
+
+  let cardWidthClick = 246;
+  if (viewportWidth < 768) {
+    cardWidthClick = 192;
+  }
+
+  leftButton.addEventListener("click", () => {
+    if (currentPosition > 0) {
+      currentPosition--;
+      postContainer.style.transform = `translateX(-${currentPosition * cardWidthClick * postsPerSlide}px)`;
+    } else {
+      currentPosition = Math.ceil((posts.length - postsPerSlide) / postsPerSlide);
+      postContainer.style.transform = `translateX(-${currentPosition * cardWidthClick * postsPerSlide}px)`;
+    }
+  });
+
+  rightButton.addEventListener("click", () => {
+    const maxPosition = Math.ceil((posts.length - postsPerSlide) / postsPerSlide);
+    if (currentPosition < maxPosition) {
+      currentPosition++;
+      postContainer.style.transform = `translateX(-${currentPosition * cardWidthClick * postsPerSlide}px)`;
+      console.log(postContainer.style.transform);
+      console.log("currentPosition is: ", currentPosition);
+      console.log("cardWithClick is: ", cardWidthClick);
+      console.log("postsPerSlide is: ", postsPerSlide);
+    } else {
+      currentPosition = 0;
+      postContainer.style.transform = `translateX(0)`;
+      console.log(postContainer.style.transform);
+    }
+  });
+}
+
+
 const loader = document.getElementById("loader");
 
 (async function () {
@@ -138,10 +177,12 @@ const loader = document.getElementById("loader");
     modal.style.display = "none";
   });
 
+
   function openModal(imageSrc) {
     modalImage.src = imageSrc;
     modal.style.display = "flex";
   };
+
 
   const postImages = document.querySelectorAll(".post-image-container");
   postImages.forEach((postImage) => {

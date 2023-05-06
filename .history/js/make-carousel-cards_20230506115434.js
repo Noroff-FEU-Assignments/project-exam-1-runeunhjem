@@ -50,7 +50,7 @@ const loader = document.getElementById("loader");
     let cardWidthClick = 246;
     if(viewportWidth < 768) {
       cardWidthClick = 192;
-    };
+    }
 
     leftButton.addEventListener("click", () => {
       if (currentPosition > 0) {
@@ -59,7 +59,7 @@ const loader = document.getElementById("loader");
       } else {
         currentPosition = Math.ceil((posts.length - postsPerSlide) / postsPerSlide);
         postContainer.style.transform = `translateX(-${currentPosition * cardWidthClick * postsPerSlide}px)`;
-      };
+      }
     });
 
     rightButton.addEventListener("click", () => {
@@ -138,10 +138,12 @@ const loader = document.getElementById("loader");
     modal.style.display = "none";
   });
 
+
   function openModal(imageSrc) {
     modalImage.src = imageSrc;
     modal.style.display = "flex";
   };
+
 
   const postImages = document.querySelectorAll(".post-image-container");
   postImages.forEach((postImage) => {

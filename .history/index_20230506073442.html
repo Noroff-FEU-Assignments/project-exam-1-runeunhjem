@@ -20,10 +20,9 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/out-of-view-menu-text.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <script src="js/searchbar.js" defer></script>
+    <script defer src="js/searchbar.js"></script>
     <script src="js/make-carousel-cards.js" type="module"></script>
-    <script src="js/menu.js" defer></script>
-    <!-- <script src="js/search-and-filter.js" type="module"></script> -->
+    <script src="js/main-script.js" type="module"></script>
     <title>CHEF'S TABLE | Home</title>
   </head>
   <body>
@@ -62,7 +61,7 @@
                 <li class="desktop-only"><a href="add-new-post.html">Add New Post</a></li>
               </ul>
               <div class="search-container">
-                <form id="search-form" action="search-results.html" method="get">
+                <form>
                   <input type="text" placeholder="Search..." aria-label="Search for recipes">
                   <button type="submit" class="search-button" id="search-button">
                     <span class="searchbar-icon">
@@ -161,6 +160,13 @@
       </div>
       <div class="footer-center">
         <div class="footer-center-top">
+          <div class="footer-logo">
+            <a href="index.html" aria-label="Home"><span  class="out-of-view-menu-text">Home</span>
+              <img src="images/logo-full-footer.png" alt="Chef's Table Full Logo">
+            </a>
+          </div>
+        </div>
+        <div class="footer-right">
         <h3 class="footer-header">Spread the love:</h3>
           <div class="footer-icons">
             <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><span  class="out-of-view-menu-text">Follow us on Facebook</span>
@@ -176,13 +182,6 @@
         </div>
         <div class="footer-credits">
           <p>All rights reserved © 2023 Chef's Table</p>
-        </div>
-      </div>
-      <div class="footer-right">
-        <div class="footer-logo">
-          <a href="index.html" aria-label="Home"><span  class="out-of-view-menu-text">Home</span>
-            <img src="images/logo-full-footer.png" alt="Chef's Table Full Logo">
-          </a>
         </div>
       </div>
     </footer>

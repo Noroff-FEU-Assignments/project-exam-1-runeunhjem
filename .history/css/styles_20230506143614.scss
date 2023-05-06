@@ -7,12 +7,14 @@
 @import url('footer.css');
 @import url('modal.css');
 
+
+
 main {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  min-height: 50vh;
+  min-height: 100
 }
 
 .hero-image {
