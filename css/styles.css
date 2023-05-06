@@ -1,9 +1,9 @@
 @import url("variables.css");
 @import url("header.css");
 @import url("cloned-nav.css");
+@import url("categories.css");
 @import url("loader.css");
 @import url("carousel.css");
-@import url("categories.css");
 @import url("footer.css");
 @import url("modal.css");
 main {
