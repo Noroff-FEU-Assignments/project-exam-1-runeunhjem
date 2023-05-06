@@ -20,7 +20,7 @@
   text-decoration: none;
   color: var(--color-white);
   font-family: var(--font-family-elegant);
-  font-size: 5.1vw;
+  font-size: 2rem;
   margin: 0;
 }
 .category-container a:hover {
@@ -48,4 +48,10 @@
 }
 .category img:hover {
   transform: scale(1.2);
+}
+
+@media screen and (max-width: 768px) {
+  .categories-container {
+    font-size: 1.2rem;
+  }
 }/*# sourceMappingURL=categories.css.map */

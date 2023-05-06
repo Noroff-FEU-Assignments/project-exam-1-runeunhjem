@@ -19,7 +19,7 @@
     text-decoration: none;
     color: var(--color-white);
     font-family: var(--font-family-elegant);
-    font-size: 2rem;
+    font-size: 3.1vw;
     margin: 0;
   }
   a:hover {
@@ -36,7 +36,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 2rem;
+  width: 10vw;
   margin: 0;
   img {
     width: 25vw;
@@ -48,11 +48,5 @@
   }
   img:hover {
     transform: scale(1.2);
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .categories-container {
-    font-size: 1.rem;
   }
 }

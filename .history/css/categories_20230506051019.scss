@@ -36,7 +36,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 2rem;
+  width: 10vw;
   margin: 0;
   img {
     width: 25vw;
@@ -51,8 +51,8 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1168px) {
   .categories-container {
-    font-size: 1.rem;
+    f
   }
 }

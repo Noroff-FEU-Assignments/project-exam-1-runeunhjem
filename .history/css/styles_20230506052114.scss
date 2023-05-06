@@ -18,17 +18,16 @@ main {
 
 .hero-image {
   background-image: url(../images/hero-image.png);
-  // background-size: cover;
   background-size: 63.5vw;
   background-repeat: no-repeat;
-  // background-position: 50% 35%;
+  background-position: center;
   width: 100vw;
   height: 17vw;
   margin: 0;
 }
 
 h4 {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   font-size: 1.2rem;;
 }
@@ -45,7 +44,7 @@ h4 {
   padding: 0.3em 10rem;
   border-top: var(--border-2px-gold);
   border-bottom: var(--border-2px-gold);
-  margin: 0m 0 0.5em 0;
+  margin: 1.5em 0 0.5em 0;
   gap: 0.3em;
   h2 {
     margin: 0 auto;
@@ -105,7 +104,7 @@ h4 {
     }
    }
   .hero-image {
-      // background-image: url(../images/hero-image.png);
+      background-image: url(../images/hero-image.png);
       height: 16vw;
     }
    .loader {
@@ -227,7 +226,7 @@ h4 {
 
    .carousel-wrapper {
      .carousel-left, .carousel-right {
-        width: 10vw;
+        // width: 10vw;
      }
   }
   .post-container {
