@@ -182,7 +182,7 @@ h4 {
     width: 50vw;
   }
   .hero-image {
-    width: 100vw;
+    background-size: 100vw;
     height: 32vw;
   }
   .loader {
