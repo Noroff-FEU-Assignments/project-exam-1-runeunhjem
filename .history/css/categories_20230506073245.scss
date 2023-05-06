@@ -57,10 +57,13 @@
 }
 
 @media screen and (max-width: 768px) {
+  .categories-container {
+
+  }
   .category-title {
   font-size: 6vw;
-  }
-  .top5, h3 {
-    font-size: 5vw;
-  }
+}
+.top5, h3 {
+  font-size: 5vw;
+}
 }
