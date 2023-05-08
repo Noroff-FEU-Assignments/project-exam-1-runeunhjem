@@ -5,7 +5,7 @@ async function init() {
 let postsPerSlide = 1;
 let viewportWidth = window.innerWidth;
 let currentPosition = 0;
-
+let intervalId = null; // Declare the interval ID
 window.onload = handleViewportChange();
 
 function handleViewportChange() {

@@ -1,11 +1,11 @@
 import { getPosts, posts } from "./get-posts.js";
-
+import { startCarousel } from "./carousel.js";
 async function init() {
-  await getPosts();
+  await getPosts(); // Wait for data to be fetched before proceeding
 let postsPerSlide = 1;
 let viewportWidth = window.innerWidth;
 let currentPosition = 0;
-
+let intervalId = null; // Declare the interval ID
 window.onload = handleViewportChange();
 
 function handleViewportChange() {
@@ -176,6 +176,6 @@ const loader = document.getElementById("loader");
   leftButton.classList.remove("hide");
   rightButton.classList.remove("hide");
 })();
+startCarousel();
 };
-
 init();

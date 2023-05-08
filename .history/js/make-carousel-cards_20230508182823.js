@@ -1,11 +1,12 @@
 import { getPosts, posts } from "./get-posts.js";
+import { startCarousel } from "./carousel.js";
 
 async function init() {
-  await getPosts();
+  await getPosts(); // Wait for data to be fetched before proceeding
 let postsPerSlide = 1;
 let viewportWidth = window.innerWidth;
 let currentPosition = 0;
-
+let intervalId = null; // Declare the interval ID
 window.onload = handleViewportChange();
 
 function handleViewportChange() {
@@ -115,23 +116,23 @@ const loader = document.getElementById("loader");
       const currentSlideElement = document.getElementById("current-slide");
       currentSlideElement.textContent = currentPosition + 1;
     });
+    startCarousel();
+    // rightButton.addEventListener("click", () => {
+    //   const maxPosition = Math.ceil((posts.length - postsPerSlide) / postsPerSlide);
+    //   if (currentPosition < maxPosition) {
+    //     currentPosition++;
+    //     postContainer.style.transform = `translateX(-${currentPosition * cardWidthClick * postsPerSlide}px)`;
 
-    rightButton.addEventListener("click", () => {
-      const maxPosition = Math.ceil((posts.length - postsPerSlide) / postsPerSlide);
-      if (currentPosition < maxPosition) {
-        currentPosition++;
-        postContainer.style.transform = `translateX(-${currentPosition * cardWidthClick * postsPerSlide}px)`;
+    //     const currentSlideElement = document.getElementById("current-slide");
+    //     currentSlideElement.textContent = currentPosition + 1;
+    //   } else {
+    //     currentPosition = 0;
+    //     postContainer.style.transform = `translateX(0)`;
 
-        const currentSlideElement = document.getElementById("current-slide");
-        currentSlideElement.textContent = currentPosition + 1;
-      } else {
-        currentPosition = 0;
-        postContainer.style.transform = `translateX(0)`;
-
-        const currentSlideElement = document.getElementById("current-slide");
-        currentSlideElement.textContent = 1;
-      };
-    });
+    //     const currentSlideElement = document.getElementById("current-slide");
+    //     currentSlideElement.textContent = 1;
+    //   };
+    // });
   };
 
   const modal = document.getElementById("modal");
@@ -177,5 +178,5 @@ const loader = document.getElementById("loader");
   rightButton.classList.remove("hide");
 })();
 };
-
 init();
+// startCarousel();
