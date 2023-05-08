@@ -17,6 +17,7 @@ main {
 
 
 .back-to-top-button {
+
   position: fixed;
   bottom: 100px;
   right: 30px;
@@ -217,10 +218,7 @@ h4 {
   .footer-right {
     width: 100%;
   }
-  .back-to-top-button {
-    padding: 5px;
 
-  }
 }
 
 
@@ -268,7 +266,7 @@ h4 {
       max-width: 100%;
   }
   .footer-left {
-    justify-content: flex-start;
-    padding-left: 28vw;
-  }
+  justify-content: flex-start;
+  padding-left: 28vw;
+}
 }

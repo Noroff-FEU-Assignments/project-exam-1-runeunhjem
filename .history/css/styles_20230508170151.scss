@@ -218,6 +218,14 @@ h4 {
     width: 100%;
   }
   .back-to-top-button {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    z-index: 99;
+    background-color: var(--color-burgundy);
+    color: var(--color-gold);
+    border: var(--border-1px-gold);
+    cursor: pointer;
     padding: 5px;
 
   }

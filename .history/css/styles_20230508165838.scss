@@ -218,8 +218,11 @@ h4 {
     width: 100%;
   }
   .back-to-top-button {
-    padding: 5px;
-
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
   }
 }
 

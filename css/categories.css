@@ -51,7 +51,7 @@
   transition: all 0.2s ease-in-out;
 }
 .category img:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 @media screen and (max-width: 768px) {

@@ -1,8 +1,8 @@
 import { getPosts, posts } from "./get-posts.js";
 
 const loader = document.getElementById("loader");
-async function init() {
   loader.classList.add("active");
+async function init() {
   await getPosts(); // Wait for data to be fetched before proceeding
   // console.log("posts is: ", posts);
   // console.log("posts is: ", posts);
@@ -84,6 +84,5 @@ async function init() {
     resultCount.textContent = `Found ${matchingPosts.length} recipes:`;
     searchResults.prepend(resultCount);
   };
-  loader.classList.remove("active");
 };
 init();

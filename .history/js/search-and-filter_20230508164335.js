@@ -84,6 +84,5 @@ async function init() {
     resultCount.textContent = `Found ${matchingPosts.length} recipes:`;
     searchResults.prepend(resultCount);
   };
-  loader.classList.remove("active");
 };
 init();
