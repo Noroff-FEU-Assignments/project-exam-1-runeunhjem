@@ -90,4 +90,13 @@
   font-family: var(--font-family-normal);
   font-size: 0.7rem;
   margin: 0;
+}
+
+.carousel-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5em 0 0 0;
+  gap: 0.5em;
+  font-size: 1.1rem;
 }/*# sourceMappingURL=carousel.css.map */

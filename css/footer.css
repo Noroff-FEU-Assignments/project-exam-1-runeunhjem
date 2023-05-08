@@ -94,8 +94,16 @@ footer img:hover {
   width: 200px;
   color: var(--color-gold);
 }
+.footer-links .menu-header:hover {
+  border: none;
+  background-color: transparent;
+  color: var(--color-white);
+}
 .footer-links .active {
   color: var(--color-gold);
+  border: var(--border-1px-gold);
+  border-radius: 6px;
+  cursor: default;
 }
 
 .footer-center {
