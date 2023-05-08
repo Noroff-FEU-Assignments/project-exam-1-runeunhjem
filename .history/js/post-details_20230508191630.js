@@ -1,0 +1,1 @@
+import { getP } from "./api.js";

@@ -58,7 +58,6 @@ footer img:hover {
 .footer-links ul li {
   align-items: center;
   gap: 0.2em;
-  width: 150px;
   height: 2em;
 }
 .footer-links .to-top {
@@ -81,7 +80,7 @@ footer img:hover {
   color: var(--color-white);
   text-decoration: none;
 }
-.footer-links li:hover {
+.footer-links li:hover, .footer-links .active {
   width: 150px;
   color: var(--color-gold);
   background-color: var(--color-black-60);
@@ -90,18 +89,16 @@ footer img:hover {
 }
 .footer-links a:hover {
   text-indent: -1px;
-  width: 200px;
+  width: 150px;
   color: var(--color-gold);
 }
-.footer-links .menu-header:hover {
+.footer-links .menu-header:hover, .footer-links .active:hover {
   border: none;
+  text-indent: 0px;
   background-color: transparent;
   color: var(--color-white);
 }
 .footer-links .active {
-  color: var(--color-gold);
-  border: var(--border-1px-gold);
-  border-radius: var(--border-radius-6px);
   cursor: default;
 }
 

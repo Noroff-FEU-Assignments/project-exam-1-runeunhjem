@@ -1,0 +1,1 @@
+import { getPosts, posts } from "./api.js";
