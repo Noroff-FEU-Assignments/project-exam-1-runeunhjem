@@ -41,13 +41,27 @@
   gap: 1em;
   width: 63.5vw;
 }
+.carousel-home a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+.carousel-home a:hover {
+  background-color: var(--color-burgundy);
+}
 
 .post-container {
-  transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.3s;
   border: var(--border-1px-gold);
   border-radius: 6px;
   padding: 0.5em;
   max-width: 100%;
+}
+
+.post-container:hover {
+  border: var(--border-1px-gold);
+  background-color: var(--color-burgundy);
+  border-radius: 6px;
+  box-shadow: 0 0 10px 0 var(--color-gold);
 }
 
 .post-image-container {
@@ -60,6 +74,7 @@
   background-repeat: no-repeat;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
+  cursor: pointer;
 }
 
 .post-title {
