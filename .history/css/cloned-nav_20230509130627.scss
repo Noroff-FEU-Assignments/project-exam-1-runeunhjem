@@ -46,34 +46,29 @@
     text-decoration: none;
   }
 
-  li:hover, .active {
+  li:hover {
     width: 150px;
     color: var(--color-gold);
     background-color: var(--color-black-60);
     border: var(--border-1px-gold);
     border-radius: var(--border-radius-6px);
   }
-
-  a:hover {
-    text-indent: -1px;
-    width: 150px;
-    color: var(--color-gold);
-  }
-  .menu-header:hover, .active:hover {
+  .menu-header:hover {
     border: none;
-    text-indent: 0px;
     background-color: transparent;
     color: var(--color-white);
   }
 
+  a:hover {
+    text-indent: -1px;
+  }
+
   .active {
-    border: 1px solid transparent;
+    color: var(--color-gold);
+    background-color: var(--color-black-60));
     border-bottom: var(--border-1px-gold);
-    background-color: transparent;
-    // color: var(--color-gold);
-    // border-radius: var(--border-radius-6px);
+    border-radius: var(--border-radius-6px);
     cursor: default;
-    // width: 150px;
   }
 }
 

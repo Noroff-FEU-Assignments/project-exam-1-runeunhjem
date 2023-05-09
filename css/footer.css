@@ -102,6 +102,9 @@ footer img:hover {
   color: var(--color-white);
 }
 .footer-links .active {
+  border: 1px solid transparent;
+  border-bottom: var(--border-1px-gold);
+  background-color: transparent;
   cursor: default;
 }
 

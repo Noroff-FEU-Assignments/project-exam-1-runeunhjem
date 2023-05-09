@@ -44,25 +44,28 @@
   color: var(--color-white);
   text-decoration: none;
 }
-.cloned-nav li:hover {
+.cloned-nav li:hover, .cloned-nav .active {
   width: 150px;
   color: var(--color-gold);
   background-color: var(--color-black-60);
   border: var(--border-1px-gold);
   border-radius: var(--border-radius-6px);
 }
-.cloned-nav .menu-header:hover {
+.cloned-nav a:hover {
+  text-indent: -1px;
+  width: 150px;
+  color: var(--color-gold);
+}
+.cloned-nav .menu-header:hover, .cloned-nav .active:hover {
   border: none;
+  text-indent: 0px;
   background-color: transparent;
   color: var(--color-white);
 }
-.cloned-nav a:hover {
-  text-indent: -1px;
-}
 .cloned-nav .active {
-  color: var(--color-gold);
-  border: var(--border-1px-gold);
-  border-radius: var(--border-radius-6px);
+  border: 1px solid transparent;
+  border-bottom: var(--border-1px-gold);
+  background-color: transparent;
   cursor: default;
 }
 

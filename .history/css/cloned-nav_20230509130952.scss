@@ -67,9 +67,9 @@
   }
 
   .active {
-    border: 1px solid transparent;
+    border: none;
     border-bottom: var(--border-1px-gold);
-    background-color: transparent;
+    background-color: var(--color-black-60);
     // color: var(--color-gold);
     // border-radius: var(--border-radius-6px);
     cursor: default;

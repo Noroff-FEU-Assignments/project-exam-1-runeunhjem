@@ -110,8 +110,8 @@ footer {
   .active {
     border: 1px solid transparent;
     border-bottom: var(--border-1px-gold);
-    background-color: transparent;
-    cursor: default;
+    background-color: transparent;cursor: default;
+    // width: 150px;
   }
 }
 
