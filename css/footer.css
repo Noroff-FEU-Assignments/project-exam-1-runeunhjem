@@ -50,10 +50,11 @@ footer img:hover {
   height: 100%;
   width: 150px;
   gap: 0.5em;
-  padding: 0 0 0 7em;
+  padding: 0 0 0 0;
 }
 .footer-links ul {
   list-style: none;
+  padding-left: 0;
 }
 .footer-links ul li {
   align-items: center;
