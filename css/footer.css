@@ -48,7 +48,7 @@ footer img:hover {
   align-items: flex-start;
   text-align: left;
   height: 100%;
-  width: 30vw;
+  width: 150px;
   gap: 0.5em;
   padding: 0 0 0 7em;
 }
@@ -58,6 +58,7 @@ footer img:hover {
 .footer-links ul li {
   align-items: center;
   gap: 0.2em;
+  width: 150px;
   height: 2em;
 }
 .footer-links .to-top {
@@ -65,10 +66,12 @@ footer img:hover {
   border-radius: var(--border-radius-6px);
 }
 .footer-links .to-top .before-top-arrow {
-  padding-left: 2rem;
+  padding-left: 26px;
+  text-align: right;
 }
 .footer-links .to-top a {
   font-weight: 600;
+  white-space: nowrap;
   color: var(--color-black);
 }
 .footer-links a {
