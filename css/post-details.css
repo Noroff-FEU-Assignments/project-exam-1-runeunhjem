@@ -30,7 +30,6 @@ h1, h2, h3, h4 {
   border-bottom: var(--border-2px-gold);
   background-color: var(--color-burgundy);
   display: flex;
-  margin-bottom: 1em;
   flex-wrap: wrap;
 }
 
@@ -87,7 +86,7 @@ h1, h2, h3, h4 {
   width: 100vw;
 }
 
-.detail-instructions-container, .detail-ingredients-container {
+.detail-instructions-container {
   background-color: var(--color-black);
 }
 
@@ -118,6 +117,7 @@ h1, h2, h3, h4 {
   }
   .detail-ingredients-container {
     border-bottom: var(--border-1px-gold);
+    background-color: var(--color-black);
   }
   .detail-instructions-container {
     background-color: var(--color-burgundy);
