@@ -28,8 +28,10 @@ h1, h2, h3, h4 {
 .main-container {
   border-top: var(--border-2px-gold);
   border-bottom: var(--border-2px-gold);
-  display: flex;
   background-color: var(--color-burgundy);
+  display: flex;
+  margin-bottom: 1em;
+  flex-wrap: wrap;
 }
 
 .detail-image {
@@ -41,9 +43,10 @@ h1, h2, h3, h4 {
   background-repeat: no-repeat;
   width: 50vw;
   aspect-ratio: 16/9;
+  border-bottom: var(--border-1px-gold);
 }
 
-.detail-category-container {
+.detail-category-container, .detail-ingredients-container, .detail-instructions-container {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -54,7 +57,7 @@ h1, h2, h3, h4 {
   background-color: var(--color-burgundy);
 }
 
-.detail-category-title, .detail-tags-title, .detail-description-title {
+.detail-category-title, .detail-tags-title, .detail-description-title, .detail-recipe-title, .detail-instructions-title {
   font-size: 2vw;
   color: var(--color-gold);
 }
@@ -73,6 +76,21 @@ h1, h2, h3, h4 {
   font-size: 1vw;
 }
 
+.detail-category-container {
+  border-bottom: var(--border-1px-gold);
+  min-height: 200px;
+}
+
+.detail-recipe-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+
+.detail-instructions-container, .detail-ingredients-container {
+  background-color: var(--color-black);
+}
+
 @media screen and (max-width: 768px) {
   .main-container {
     flex-direction: column;
@@ -86,10 +104,10 @@ h1, h2, h3, h4 {
   .detail-short-description {
     font-size: 2.9vw;
   }
-  .detail-image, .detail-category-container {
+  .detail-image, .detail-category-container, .detail-recipe-container, .detail-ingredients-container, .detail-instructions-container {
     width: 100vw;
   }
-  .detail-category-title, .detail-tags-title, .detail-description-title {
+  .detail-category-title, .detail-tags-title, .detail-description-title, .detail-recipe-title, .detail-instructions-title {
     font-size: 3vw;
   }
   .detail-categories, .detail-tags, .detail-description {
@@ -97,6 +115,12 @@ h1, h2, h3, h4 {
   }
   .detail-added {
     font-size: 1.8vw;
+  }
+  .detail-ingredients-container {
+    border-bottom: var(--border-1px-gold);
+  }
+  .detail-instructions-container {
+    background-color: var(--color-burgundy);
   }
 }
 @media screen and (max-width: 468px) {
@@ -106,7 +130,7 @@ h1, h2, h3, h4 {
   .detail-short-description {
     font-size: 3.5vw;
   }
-  .detail-category-title, .detail-tags-title, .detail-description-title {
+  .detail-category-title, .detail-tags-title, .detail-description-title, .detail-recipe-title, .detail-instructions-title {
     font-size: 5vw;
   }
   .detail-categories, .detail-tags, .detail-description {

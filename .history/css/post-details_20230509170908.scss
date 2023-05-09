@@ -1,0 +1,137 @@
+.post-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  // max-width: 100%;
+  // max-width: 95vw;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+.detail-title {
+  font-size: 3.5vw;
+  text-align: center;
+  color: var(--color-gold);
+  margin-top:0.2em;
+  max-width: 100%;
+}
+
+.detail-short-description {
+  font-size: 2vw;
+  text-align: center;
+  color: var(--color-white);
+  margin: 0.2em 0em 0.6em 0em;
+  // max-width: 90%;
+}
+
+.main-container {
+  border-top: var(--border-2px-gold);
+  border-bottom: var(--border-2px-gold);
+  background-color: var(--color-burgundy);
+  display: flex;
+  margin-bottom: 1em;
+  flex-wrap: wrap;
+  // padding-top: 1em;
+  // max-width: 100vw;
+}
+
+.detail-image {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 50vw;
+  aspect-ratio: 16/9;
+  // height: 400px;
+  // max-width: 100%;
+}
+
+.detail-category-container, .detail-ingredients-container,.detail-instructions-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0.7em;
+  width: 50vw;
+  background-color: var(--color-burgundy);
+}
+
+.detail-category-title, .detail-tags-title, .detail-description-title {
+  font-size: 2vw;
+  color: var(--color-gold);
+}
+
+.detail-categories, .detail-tags, .detail-description {
+  font-size: 1.2vw;
+  font-family: var(--font-family-normal);
+  text-align: left;
+  color: var(--color-white);
+  margin: 0.2em 0em 0.6em 0em;
+}
+
+.detail-added {
+  position: absolute;
+  bottom: 10px;
+  font-size: 1vw;
+}
+
+.detail-category-container {
+  border-top: var(--border-1px-gold);
+}
+
+.detail-recipe-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+
+@media screen and (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+  }
+  .detail-title {
+    font-size: 4.5vw;
+  }
+  .detail-short-description {
+    font-size: 2.9vw;
+  }
+  .detail-image, .detail-category-container, .detail-recipe-container, .detail-ingredients-container, .detail-instructions-container {
+    width: 100vw;
+  }
+  .detail-category-title, .detail-tags-title, .detail-description-title {
+    font-size: 3vw;
+  }
+  .detail-categories, .detail-tags, .detail-description {
+    font-size: 2vw;
+  }
+  .detail-added {
+    font-size: 1.8vw;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .detail-title {
+    font-size: 5.5vw;
+  }
+  .detail-short-description {
+    font-size: 3.5vw;
+  }
+  .detail-category-title, .detail-tags-title, .detail-description-title {
+    font-size: 5vw;
+  }
+  .detail-categories, .detail-tags, .detail-description {
+    font-size: 4vw;
+  }
+  .detail-added {
+    font-size: 3.5vw;
+  }
+}
