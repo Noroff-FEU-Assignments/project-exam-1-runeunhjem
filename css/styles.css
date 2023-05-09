@@ -1,11 +1,11 @@
 @charset "UTF-8";
-@import url("out-of-view-menu-text.css");
 @import url("search-results.css");
+@import url("out-of-view-menu-text.css");
+@import url("loader.css");
 @import url("variables.css");
 @import url("header.css");
 @import url("cloned-nav.css");
 @import url("categories.css");
-@import url("loader.css");
 @import url("carousel.css");
 @import url("footer.css");
 @import url("modal.css");

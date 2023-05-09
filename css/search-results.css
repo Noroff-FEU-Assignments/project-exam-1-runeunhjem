@@ -16,13 +16,6 @@
   background-color: var(--color-burgundy);
 }
 
-.searching {
-  padding-left: 0;
-  width: 45vw;
-  margin: 0 auto;
-  text-align: center;
-}
-
 .search-result-count {
   display: flex;
   width: 60vw;
