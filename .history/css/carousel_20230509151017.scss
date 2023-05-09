@@ -40,13 +40,13 @@
   align-items: flex-start;
   gap: 1em;
   width: 63.5vw;
-}
-.carousel-home a {
-  text-decoration: none;
-  color: var(--color-white);
-}
-.carousel-home a:hover {
-  background-color: var(--color-burgundy);
+  a {
+    text-decoration: none;
+    color: var(--color-white);
+  }
+  a:hover {
+    background-color: var(--color-burgundy);
+  }
 }
 
 .post-container {
@@ -63,7 +63,6 @@
   border-radius: var(--border-radius-6px);
   box-shadow: 0 0 10px 0 var(--color-gold);
 }
-
 .post-image-container {
   max-width: 100%;
   width: 213px;
@@ -124,7 +123,12 @@
 }
 
 @media screen and (max-width: 768px) {
-  .carousel-home {
-    overflow: scroll;
+  .carousel-wrapper {
+    margin: 0.5em 0 0 0;
   }
-}/*# sourceMappingURL=carousel.css.map */
+  .carousel-home {
+    width: 100%;
+    gap: 0.5em;
+  }
+
+}
