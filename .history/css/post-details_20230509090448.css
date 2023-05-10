@@ -1,0 +1,9 @@
+.detail-image {
+  display: flex;
+  justify-content: center;
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 630vw;
+  height: 400px;
+}/*# sourceMappingURL=post-details_20230509090448.css.map */

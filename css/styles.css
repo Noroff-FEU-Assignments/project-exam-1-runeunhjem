@@ -154,6 +154,7 @@ h4 {
   }
   .carousel-home {
     gap: 1em;
+    overflow: scroll;
   }
   .post-container {
     max-width: 100%;

@@ -1,0 +1,11 @@
+.comments-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100vw;
+  height: 300px;
+}
+.comments-container .comment-title {
+  background-color: var(--color-gold);
+}/*# sourceMappingURL=comments_20230509175045.css.map */

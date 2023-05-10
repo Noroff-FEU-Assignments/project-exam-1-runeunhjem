@@ -1,0 +1,16 @@
+h1, h2, h3, h4 .detail-title {
+  font-size: 3.5rem;
+  height: 36px;
+  text-align: center;
+  color: var(--color-gold);
+}
+
+.detail-image {
+  display: flex;
+  justify-content: center;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 63.5vw;
+  height: 400px;
+}/*# sourceMappingURL=post-details_20230509092250.css.map */

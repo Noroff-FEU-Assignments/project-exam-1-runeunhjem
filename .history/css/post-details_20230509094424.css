@@ -1,0 +1,41 @@
+.post-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.detail-title {
+  font-size: 3.5rem;
+  text-align: center;
+  color: var(--color-gold);
+  margin: 0.2em auto;
+  max-width: 100%;
+}
+
+.detail-short-description {
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--color-white);
+  margin: 0.2em auto;
+  max-width: 100%;
+}
+
+.detail-image {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 63.5vw;
+  aspect-ratio: 16/9;
+  height: 400px;
+  max-height: 100%;
+}/*# sourceMappingURL=post-details_20230509094424.css.map */
