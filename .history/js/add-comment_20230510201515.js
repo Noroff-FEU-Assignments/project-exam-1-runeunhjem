@@ -25,7 +25,6 @@ commentForm.addEventListener("submit", async function (event) {
         author_name: commentName.value,
         author_email: commentEmail.value,
         content: commentContent.value,
-        status: "approve",
       }),
     });
 

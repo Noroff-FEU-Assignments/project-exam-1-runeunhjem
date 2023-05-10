@@ -25,12 +25,11 @@ commentForm.addEventListener("submit", async function (event) {
         author_name: commentName.value,
         author_email: commentEmail.value,
         content: commentContent.value,
-        status: "approve",
       }),
     });
 
     const data = await response.json();
-    console.log("data is: ", data);
+    console.log("data
   } catch (error) {
     console.log(error);
   } finally {
@@ -41,7 +40,6 @@ commentForm.addEventListener("submit", async function (event) {
 async function getComments() {
   try {
     const response = await fetch(`${commentApi}?post=${postId}`);
-    console.log("postId is: ", postId);
     const data = await response.json();
     console.log("data is: ", data);
 
