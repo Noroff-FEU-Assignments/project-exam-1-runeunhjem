@@ -4,18 +4,20 @@
   align-items: center;
   justify-content: flex-start;
   width: 100vw;
-}
-.comments-container .comment-title {
-  width: 100%;
-  max-width: 1600px;
-}
-.comments-container .comment-title .comments-header {
-  background-color: var(--color-gold);
-  color: var(--color-burgundy);
-  margin: 0;
-  padding: 0;
-  font-size: 3vw;
-  text-align: center;
+  // height: 300px;
+  .comment-title {
+    width: 100%;
+    max-width: 1600px;
+    .comments-header {
+      background-color: var(--color-gold);
+      color: var(--color-burgundy);
+      // width: 100%;
+      margin: 0;
+      padding: 0;
+      font-size: 3vw;
+      text-align: center;
+    }
+  }
 }
 
 .leave-comment-field {
@@ -33,8 +35,9 @@
   background-image: url(../images/leave-a-comment.png);
   background-size: contain;
   background-repeat: no-repeat;
-  height: 274.36px;
-  width: 177.84px;
+  height: calc(361px * 0.76);
+  width: calc(234px * 0.76);
+  // background-position: 50% 100%;
 }
 
 .leave-a-comment {
@@ -46,20 +49,17 @@
   background-color: var(--color-burgundy);
   min-width: 300px;
   width: 40vw;
-  height: 288.8px;
+  height: calc(361px * 0.8);
   border-radius: var(--border-radius-6px);
 }
-
 legend {
   text-align: center;
   font-size: 1.5rem;
   color: var(--color-gold);
 }
-
 .comment-form {
   width: 100%;
 }
-
 .comment-form div {
   display: flex;
   flex-direction: column;
@@ -78,7 +78,6 @@ legend {
   border: var(--border-2px-gold);
   border-radius: 4px;
 }
-
 .post-comment {
   width: 100%;
   padding: 6px;
@@ -87,11 +86,11 @@ legend {
   background-color: var(--color-black-60);
   font-weight: 600;
   color: var(--color-gold);
+  // font-family: var(--font-family-elegant);
   font-size: 1.2rem;
 }
-
 .post-comment:hover {
   background-color: var(--color-gold);
-  color: var(--color-burgundy);
+  color: var(--color-gold);
   cursor: pointer;
-}/*# sourceMappingURL=comments.css.map */
+}
