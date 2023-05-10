@@ -16,12 +16,10 @@ footer {
   }
 }
 .footer-wrapper {
-  width: 100vw;
+  // width: 100vw;
   max-width: 1600px;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
 }
 
 .footer-left,

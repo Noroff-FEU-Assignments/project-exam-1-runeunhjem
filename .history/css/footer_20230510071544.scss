@@ -1,9 +1,10 @@
 footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100vw;
   min-height: 20vw;
+
   background-color: var(--color-burgundy);
   color: var(--color-white);
   border-top: var(--border-2px-gold);
@@ -14,14 +15,6 @@ footer {
   img:hover {
     transform: scale(1.2);
   }
-}
-.footer-wrapper {
-  width: 100vw;
-  max-width: 1600px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
 }
 
 .footer-left,

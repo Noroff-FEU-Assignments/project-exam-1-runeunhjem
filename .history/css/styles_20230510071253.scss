@@ -11,10 +11,8 @@
 @import url("post-details.css");
 @import url("comments.css");
 
-body {
+html {
   display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 main {
   display: flex;
