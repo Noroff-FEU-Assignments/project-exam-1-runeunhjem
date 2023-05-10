@@ -126,6 +126,7 @@ img {
   border: var(--border-1px-gold);
   min-height: 24px;
   height: 2vw;
+  max-height: 42px;
   min-width: 250px;
   width: 30vw;
   border-radius: var(--border-radius-6px);
@@ -142,4 +143,5 @@ img {
 .show img {
   min-height: 24px;
   height: 2vw;
+  max-height: 42px;
 }/*# sourceMappingURL=header.css.map */

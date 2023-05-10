@@ -57,13 +57,14 @@ main {
 
 .hero-image {
   background-image: url(../images/hero-image.png);
-  background-size: cover;
-  background-size: 63.5vw;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: 50% 45%;
+  background-position: 50% 100%;
   width: 100vw;
   height: 17vw;
+  max-height: 300px;
   margin-top: 0;
+  max-width: 1200px;
 }
 
 h4 {
@@ -86,6 +87,7 @@ h4 {
   border-bottom: var(--border-2px-gold);
   margin: 0 0 0.5em 0;
   gap: 0.3em;
+  max-width: 1200px;
 }
 .thank-you-note h2 {
   margin: 0 auto;
@@ -105,6 +107,11 @@ h4 {
   text-align: left;
 }
 
+@media screen and (min-width: 1980px) {
+  .thank-you-note {
+    font-size: 1vw;
+  }
+}
 @media screen and (max-width: 1168px) {
   .show {
     max-width: 100%;

@@ -1,8 +1,13 @@
+.main-details {
+  max-width: 1600px;
+}
+
 .post-details-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  min-height: 100vh;
 }
 
 h1, h2, h3, h4 {
@@ -31,6 +36,7 @@ h1, h2, h3, h4 {
   background-color: var(--color-burgundy);
   display: flex;
   flex-wrap: wrap;
+  max-width: 1600px;
 }
 
 .detail-image {
@@ -40,7 +46,7 @@ h1, h2, h3, h4 {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  width: 50vw;
+  width: 50%;
   aspect-ratio: 16/9;
   border-bottom: var(--border-1px-gold);
 }
@@ -52,7 +58,7 @@ h1, h2, h3, h4 {
   align-items: flex-start;
   justify-content: flex-start;
   padding: 0.7em;
-  width: 50vw;
+  width: 50%;
   background-color: var(--color-burgundy);
 }
 
@@ -90,6 +96,14 @@ h1, h2, h3, h4 {
   background-color: var(--color-black);
 }
 
+@media screen and (min-width: 1600px) {
+  .detail-category-title, .detail-tags-title, .detail-description-title, .detail-recipe-title, .detail-instructions-title {
+    font-size: 1.2vw;
+  }
+  .detail-recipe-list, .detail-instructions-list {
+    font-size: 2rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .main-container {
     flex-direction: column;
