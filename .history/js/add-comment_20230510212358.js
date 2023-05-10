@@ -1,15 +1,3 @@
-const commentApi = "https://wordpress.runeunhjem.no/wp-json/wp/v2/comments";
-const queryString = window.location.search;
-const params = new URLSearchParams(queryString);
-const postId = parseInt(params.get("id"));
-console.log("postId comment is: ", postId);
-let comments = [];
-const userComments = document.getElementById("user-comments");
-const commentName = document.getElementById("name-input");
-const commentEmail = document.getElementById("email-input");
-const commentContent = document.getElementById("comment-input");
-const commentForm = document.getElementById("comment-form");
-
 commentForm.addEventListener("submit", async function (event) {
   event.preventDefault();
   try {
@@ -23,16 +11,20 @@ commentForm.addEventListener("submit", async function (event) {
         author_name: commentName.value,
         author_email: commentEmail.value,
         content: commentContent.value,
+        // status: "approve",
       }),
     });
+
     const data = await response.json();
     console.log("data is: ", data);
   } catch (error) {
     console.log(error);
   } finally {
-    location.reload();
     console.log("Success! Your comment is posted");
-  };
+    // Reload the comments list and update the UI
+    await getComments();
+    updateCommentsUI();
+  }
 });
 
 async function getComments() {
@@ -57,8 +49,23 @@ async function getComments() {
     return data;
   } catch (error) {
     console.log(error);
-  };
-};
+  }
+}
 
-export { getComments, comments };
+function updateCommentsUI() {
+  // Clear the existing comments list
+  userComments.innerHTML = "";
+  // Loop through the comments list and append each comment to the UI
+  for (const comment of comments) {
+    const commentDiv = document.createElement("div");
+    commentDiv.classList.add("comment");
+    commentDiv.innerHTML = `
+      <h4>${comment.commentName}</h4>
+      <p>${comment.commentContent}</p>
+      <span class="comment-date">${comment.postDate}</span>
+    `;
+    userComments.appendChild(commentDiv);
+  }
+}
 
+export { getComments, comments, updateCommentsUI };

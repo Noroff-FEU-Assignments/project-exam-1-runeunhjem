@@ -1,0 +1,13 @@
+function addComment(comment) {
+  comments.push(comment);
+  const commentHtml = `
+    <div class="comment">
+      <div class="comment-meta">
+        <span class="comment-author">${comment.commentName}</span>
+        <span class="comment-date">${comment.postDate}</span>
+      </div>
+      <div class="comment-content">${comment.commentContent}</div>
+    </div>
+  `;
+  userComments.insertAdjacentHTML("beforeend", commentHtml);
+}

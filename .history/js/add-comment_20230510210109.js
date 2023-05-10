@@ -5,9 +5,11 @@ const postId = parseInt(params.get("id"));
 console.log("postId comment is: ", postId);
 let comments = [];
 const userComments = document.getElementById("user-comments");
+// const jwtApi = "https://wordpress.runeunhjem.no/wp-json/jwt-auth/v1/token";
 const commentName = document.getElementById("name-input");
 const commentEmail = document.getElementById("email-input");
 const commentContent = document.getElementById("comment-input");
+// const postCommentButton = document.getElementById("post-comment");
 const commentForm = document.getElementById("comment-form");
 
 commentForm.addEventListener("submit", async function (event) {
@@ -23,14 +25,15 @@ commentForm.addEventListener("submit", async function (event) {
         author_name: commentName.value,
         author_email: commentEmail.value,
         content: commentContent.value,
+        
       }),
     });
+
     const data = await response.json();
     console.log("data is: ", data);
   } catch (error) {
     console.log(error);
   } finally {
-    location.reload();
     console.log("Success! Your comment is posted");
   };
 });
@@ -57,8 +60,9 @@ async function getComments() {
     return data;
   } catch (error) {
     console.log(error);
-  };
-};
+  }
+  window.location.reload();
+}
 
 export { getComments, comments };
 

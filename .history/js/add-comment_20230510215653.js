@@ -5,6 +5,7 @@ const postId = parseInt(params.get("id"));
 console.log("postId comment is: ", postId);
 let comments = [];
 const userComments = document.getElementById("user-comments");
+
 const commentName = document.getElementById("name-input");
 const commentEmail = document.getElementById("email-input");
 const commentContent = document.getElementById("comment-input");
@@ -25,11 +26,16 @@ commentForm.addEventListener("submit", async function (event) {
         content: commentContent.value,
       }),
     });
+
     const data = await response.json();
     console.log("data is: ", data);
+
+
+
   } catch (error) {
     console.log(error);
   } finally {
+    await getComments();
     location.reload();
     console.log("Success! Your comment is posted");
   };
@@ -57,8 +63,9 @@ async function getComments() {
     return data;
   } catch (error) {
     console.log(error);
-  };
-};
+  }
+  // window.location.reload();
+}
 
 export { getComments, comments };
 

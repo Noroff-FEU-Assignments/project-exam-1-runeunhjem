@@ -57,8 +57,8 @@ async function getComments() {
     return data;
   } catch (error) {
     console.log(error);
-  };
-};
+  }
+}
 
 export { getComments, comments };
 

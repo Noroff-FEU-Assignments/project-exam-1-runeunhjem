@@ -25,11 +25,14 @@ commentForm.addEventListener("submit", async function (event) {
         content: commentContent.value,
       }),
     });
+
     const data = await response.json();
     console.log("data is: ", data);
+
   } catch (error) {
     console.log(error);
   } finally {
+    await getComments();
     location.reload();
     console.log("Success! Your comment is posted");
   };
@@ -57,8 +60,9 @@ async function getComments() {
     return data;
   } catch (error) {
     console.log(error);
-  };
-};
+  }
+  // window.location.reload();
+}
 
 export { getComments, comments };
 

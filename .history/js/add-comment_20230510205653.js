@@ -5,10 +5,38 @@ const postId = parseInt(params.get("id"));
 console.log("postId comment is: ", postId);
 let comments = [];
 const userComments = document.getElementById("user-comments");
+// const jwtApi = "https://wordpress.runeunhjem.no/wp-json/jwt-auth/v1/token";
 const commentName = document.getElementById("name-input");
 const commentEmail = document.getElementById("email-input");
 const commentContent = document.getElementById("comment-input");
+// const postCommentButton = document.getElementById("post-comment");
 const commentForm = document.getElementById("comment-form");
+
+// commentForm.addEventListener("submit", async function (event) {
+//   event.preventDefault();
+//   try {
+//     const response = await fetch(`${commentApi}?post=${postId}`, {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify({
+//         post: postId,
+//         author_name: commentName.value,
+//         author_email: commentEmail.value,
+//         content: commentContent.value,
+//         status: "approve",
+//       }),
+//     });
+
+//     const data = await response.json();
+//     console.log("data is: ", data);
+//   } catch (error) {
+//     console.log(error);
+//   } finally {
+//     console.log("Success! Your comment is posted");
+//   };
+// });
 
 commentForm.addEventListener("submit", async function (event) {
   event.preventDefault();
@@ -23,20 +51,25 @@ commentForm.addEventListener("submit", async function (event) {
         author_name: commentName.value,
         author_email: commentEmail.value,
         content: commentContent.value,
+        status: "approve",
       }),
     });
+
     const data = await response.json();
     console.log("data is: ", data);
+
+    // Reload the page to get the newly added comment
+    location.reload();
   } catch (error) {
     console.log(error);
   } finally {
-    location.reload();
     console.log("Success! Your comment is posted");
-  };
+  }
 });
 
+
 async function getComments() {
-  try {
+try {
     const response = await fetch(`${commentApi}?post=${postId}`);
     console.log("postId is: ", postId);
     const data = await response.json();
@@ -57,8 +90,9 @@ async function getComments() {
     return data;
   } catch (error) {
     console.log(error);
-  };
-};
+  }
+
+}
 
 export { getComments, comments };
 

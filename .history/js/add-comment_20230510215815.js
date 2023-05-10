@@ -57,8 +57,9 @@ async function getComments() {
     return data;
   } catch (error) {
     console.log(error);
-  };
-};
+  }
+  // window.location.reload();
+}
 
 export { getComments, comments };
 

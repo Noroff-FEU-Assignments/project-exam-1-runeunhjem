@@ -30,6 +30,7 @@ commentForm.addEventListener("submit", async function (event) {
   } catch (error) {
     console.log(error);
   } finally {
+    await getComments();
     location.reload();
     console.log("Success! Your comment is posted");
   };
@@ -57,8 +58,9 @@ async function getComments() {
     return data;
   } catch (error) {
     console.log(error);
-  };
-};
+  }
+  // window.location.reload();
+}
 
 export { getComments, comments };
 
