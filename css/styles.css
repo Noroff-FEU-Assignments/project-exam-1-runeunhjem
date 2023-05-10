@@ -220,6 +220,9 @@ h4 {
   .back-to-top-button {
     padding: 5px;
   }
+  .leave-a-comment, .user-comments {
+    width: 80vw;
+  }
 }
 @media screen and (max-width: 468px) {
   .tablet {

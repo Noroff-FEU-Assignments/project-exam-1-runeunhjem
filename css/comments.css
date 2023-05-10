@@ -21,23 +21,13 @@
 .leave-comment-field {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: space-around;
+  align-items: flex-start;
   gap: 2em;
   margin: 1em auto;
-  width: 100%;
 }
 
-.leave-a-comment-image {
-  display: flex;
-  background-image: url(../images/leave-a-comment.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 274.36px;
-  width: 177.84px;
-}
-
-.leave-a-comment {
+.leave-a-comment, .user-comments {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,7 +36,7 @@
   background-color: var(--color-burgundy);
   min-width: 300px;
   width: 40vw;
-  height: 288.8px;
+  min-height: 288.8px;
   border-radius: var(--border-radius-6px);
 }
 
@@ -93,4 +83,34 @@ legend {
   background-color: var(--color-gold);
   color: var(--color-burgundy);
   cursor: pointer;
+}
+
+.user-comments {
+  height: auto;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.comment-container {
+  background-color: var(--color-burgundy-light);
+  box-shadow: 2px 2px 2px 2px var(--color-black-90);
+  text-align: left;
+  min-width: 260px;
+  width: 90%;
+  padding: 1em;
+  margin-bottom: 0.7em;
+  border-radius: var(--border-radius-6px);
+}
+
+.comment-title {
+  color: var(--color-burgundy);
+}
+
+.comment-content, .post-date {
+  color: var(--color-black);
+  font-family: var(--font-family-normal);
+}
+
+.post-date {
+  font-size: small;
 }/*# sourceMappingURL=comments.css.map */
