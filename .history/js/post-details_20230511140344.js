@@ -151,7 +151,7 @@ document.body.appendChild(modalContainer);
 
 const modalImage = new Image();
 modalImage.src = post.image;
-modalImage.classList.add("detail-modal-image");
+modalImage.classList.add("detailmodal-image");
 modalContainer.appendChild(modalImage);
 
 // Open the modal when clicking on the image

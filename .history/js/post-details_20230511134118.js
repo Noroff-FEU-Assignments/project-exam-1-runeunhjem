@@ -7,9 +7,12 @@ const detailContainer = document.getElementById("post-details-container");
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 const postId = parseInt(params.get("id"));
+
 const post = posts.find((p) => p.postId === parseInt(postId));
+// console.log("post is: ", post);
 
 document.title = `${post.title} | CHEF'S TABLE`;
+// console.log("post.title is: ", post.title);
 
 const titleContainer = document.createElement("div");
 titleContainer.classList.add("detail-header");
@@ -145,23 +148,3 @@ for (let i = 0; i < instructionsItems.length; i++) {
 };
 instructionsContainer.appendChild(instructionsList);
 
-const modalContainer = document.createElement("div");
-modalContainer.classList.add("modal");
-document.body.appendChild(modalContainer);
-
-const modalImage = new Image();
-modalImage.src = post.image;
-modalImage.classList.add("detail-modal-image");
-modalContainer.appendChild(modalImage);
-
-// Open the modal when clicking on the image
-imageContainer.addEventListener("click", function () {
-  modalContainer.style.display = "flex";
-});
-
-// Close the modal when clicking on the image or outside the modal
-modalContainer.addEventListener("click", function (event) {
-  if (event.target === modalContainer) {
-    modalContainer.style.display = "none";
-  }
-});
