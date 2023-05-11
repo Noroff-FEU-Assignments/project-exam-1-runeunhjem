@@ -91,25 +91,25 @@ function validateCommentForm() {
     const confirmSuccess = document.getElementById("comment-posted");
     confirmSuccess.style.display = "block";
     confirmSuccess.innerHTML = `
-        <p class="success">Your message was sent successfully</p>
+        <p>Your message was sent successfully</p>
       `;
-    // setTimeout(closeSuccessMessage, 4000); // RESET CONTACT FORM AFTER 4 SECONDS
+    setTimeout(closeSuccessMessage, 4000); // RESET CONTACT FORM AFTER 4 SECONDS
   }
 
-  // // RESET CONTACT FORM AFTER SET TIMEOUT
-  // function closeSuccessMessage() {
-  //   const confirmSuccess = document.querySelector(".message-sent");
-  //   confirmSuccess.style.display = "none";
-  //   commentName.value = "";
-  //   commentName.style.backgroundColor = "rgb(250, 235, 215)";
-  //   commentEmail.value = "";
-  //   commentEmail.style.backgroundColor = "rgb(250, 235, 215)";
-  //   commentContent.value = "";
-  //   commentContent.style.backgroundColor = "rgb(250, 235, 215)";
-  //   postCommentButton.style.backgroundColor = "#404040";
-  //   postCommentButton.style.color = "#f5c51880";
-  //   postCommentButton.innerText = "Post Comment";
-  // }
+  // RESET CONTACT FORM AFTER SET TIMEOUT
+  function closeSuccessMessage() {
+    const confirmSuccess = document.querySelector(".message-sent");
+    confirmSuccess.style.display = "none";
+    commentName.value = "";
+    commentName.style.backgroundColor = "rgb(250, 235, 215)";
+    commentEmail.value = "";
+    commentEmail.style.backgroundColor = "rgb(250, 235, 215)";
+    commentContent.value = "";
+    commentContent.style.backgroundColor = "rgb(250, 235, 215)";
+    postCommentButton.style.backgroundColor = "#404040";
+    postCommentButton.style.color = "#f5c51880";
+    postCommentButton.innerText = "Post Comment";
+  }
 
   // VALIDATE THE LENGTH OF COMMENT NAME, EMAIL & CONTENT
   function checkLength(value, len) {

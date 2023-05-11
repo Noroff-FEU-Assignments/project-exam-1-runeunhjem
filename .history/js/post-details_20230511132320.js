@@ -11,6 +11,7 @@ const post = posts.find((p) => p.postId === parseInt(postId));
 
 document.title = `${post.title} | CHEF'S TABLE`;
 
+
 const titleContainer = document.createElement("div");
 titleContainer.classList.add("detail-header");
 detailContainer.appendChild(titleContainer);

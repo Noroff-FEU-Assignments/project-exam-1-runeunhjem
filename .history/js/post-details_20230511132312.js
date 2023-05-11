@@ -7,9 +7,12 @@ const detailContainer = document.getElementById("post-details-container");
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 const postId = parseInt(params.get("id"));
+
 const post = posts.find((p) => p.postId === parseInt(postId));
 
+
 document.title = `${post.title} | CHEF'S TABLE`;
+// console.log("post.title is: ", post.title);
 
 const titleContainer = document.createElement("div");
 titleContainer.classList.add("detail-header");
