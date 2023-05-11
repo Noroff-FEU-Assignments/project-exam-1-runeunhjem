@@ -90,14 +90,35 @@ legend {
   font-weight: 600;
   color: var(--color-burgundy-light);
   margin-top: 7px;
-  box-shadow: -2px -2px 2px 1px var(--color-black-90);
+  box-shadow: 1px 1px 1px 2px var(--color-black-90);
 }
 
 .post-comment:hover {
-  box-shadow: 1px 1px 1px 2px var(--color-black-90);
   background-color: var(--color-black-60);
-  color: var(--color-gold);
+  color: var(--color-white);
+  cursor: default;
+}
+
+.buttonSuccess {
   cursor: pointer;
+}
+
+.post-comment:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.comment-form .error-message {
+  display: none;
+  color: var(--color-white);
+  font-family: var(--font-family-normal);
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.flex {
+  display: flex;
 }
 
 .user-comments {

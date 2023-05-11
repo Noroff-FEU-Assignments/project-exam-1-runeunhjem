@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Hotjar Tracking Code for CHEF'S TABLE -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:3468936,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Cooking, Chef, Table, Dinner, Dessert, Cuisine, Recipes, Food">
+    <meta name="description" content="A blog with recipes for only the best and juiciest dishes. Post details">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="js/main.js" type="module"></script>
+    <script src="js/searchbar.js" defer></script>
+    <script src="js/menu.js" defer></script>
+    <script src="js/post-details.js" type="module"></script>
+    <script src="js/make-comments-fields.js" type="module"></script>
+    <title>CHEF'S TABLE | Post Details</title>
+  </head>
+  <body>
+    <header class="header-desktop header-mobile" aria-label="Header">
+      <div class="header-container">
+        <div class="header-flame-logo head-item">
+          <a href="index.html" aria-label="Home">
+            <img src="images/logo-flame.svg" class="flame-logo" alt="Chef's Table Flame Logo">
+            <span class="out-of-view-menu-text">Home</span>
+          </a>
+        </div>
+        <div class="header-text-logo head-item">
+          <img src="images/mob-logo-text.svg" id="logo-text" alt="Chef's Table Text Logo">
+          <h1 class="out-of-view-menu-text">Chef's Table</h1>
+        </div>
+          <div class="search-and-menu header-icons head-item">
+            <div class="search-icon">
+              <img id="search-icon" src="images/ico-search.svg" alt="Search Icon">
+            </div>
+            <div class="menu-icon">
+              <img id="menu-icon" src="images/ico-menu.svg" alt="Menu Icon">
+            </div>
+          </div>
+      </div>
+      <nav class="main-navigation fly-in-menu" aria-label="Main Navigation">
+        <div class="nav-container">
+          <div class="desk-menu mob-menu menu">
+              <ul class="search-bar nav-bar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="all-posts.html">All Posts</a></li>
+                <li class="desktop-only tablet"><a href="latest-posts.html">Latest Posts</a></li>
+                <li class="desktop-only tablet"><a href="image-gallery.html">Image Gallery</a></li>
+                <li class="desktop-only"><a href="contact.html">Contact</a></li>
+                <li class="desktop-only"><a href="about.html">About</a></li>
+                <li class="desktop-only"><a href="add-new-post.html">Add New Post</a></li>
+              </ul>
+              <div class="search-container">
+                <form id="search-form" action="search-results.html" method="get">
+                  <input id="search-input" type="text" placeholder="Search..." aria-label="Search for recipes" name="query">
+                  <button type="submit" class="search-button" id="search-button">
+                    <span class="searchbar-icon">
+                      <img src="images/ico-search.svg" alt="Search Icon">
+                    </span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+      </nav>
+    </header>
+    <div id="loader" class="loader loader-recipes post-details"><p>Opening recipe</p><span class="loader-recipes"></span></div>
+    <main class="main-details" aria-label="Main Section">
+      <a href="#" alt="Go back to the top"><span class="out-of-view-menu-text">Back to top</span>
+        <div class="back-to-top-button"></div>
+      </a>
+      <div class="post-details-container" id="post-details-container" aria-label="Full post container"></div>
+      <section class="comments-container" id="comments-container" aria-label="Comments Section">
+        <div class="leave-comment-field">
+          <fieldset class="leave-a-comment">
+            <legend>Leave a comment</legend>
+            <form action="" class="comment-form" id="comment-form" method="post">
+              <div>
+                <label for="name-input">Name</label>
+                <input type="text" id="name-input" name="name" aria-required="true" aria-label="Name" placeholder="Your name">
+                <div class="error-message" id="name-input-error">Min. 1 letter</div>
+              </div>
+              <div>
+                <label for="email-input">Email</label>
+                <input type="email" id="email-input" name="email" aria-required="true" aria-label="Correctly formatted Email" placeholder="Email in correct format">
+                <div class="error-message" id="email-input-error">Email must be in correct format (</div>
+              </div>
+              <div>
+                <label for="comment-input">Comment</label>
+                <textarea id="comment-input" name="comment" aria-required="true" aria-label="Your comment should be minimum 10 characters" placeholder="Your comment should be minimum 10 characters"></textarea>
+              </div>
+              <button type="submit" class="post-comment" id="post-comment">Post Comment</button>
+            </form>
+          </fieldset>
+          <fieldset class="user-comments" id="user-comments">
+            <legend>User Comments</legend>
+            <div class="comments-container" id="comments-container"></div>
+          </fieldset>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-wrapper">
+        <div class="footer-left">
+          <div class="footer-links">
+            <nav class="footer-nav burger-nav" aria-label="Menu">
+              <ul class="search-bar nav-bar">
+                <li class="menu-header">
+                  <h4>Menu</h4>
+                </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="all-posts.html">All Posts</a></li>
+                <li class="desktop-only tablet"><a href="latest-posts.html">Latest Posts</a></li>
+                <li class="desktop-only tablet"><a href="image-gallery.html">Image Gallery</a></li>
+                <li class="desktop-only"><a href="contact.html">Contact</a></li>
+                <li class="desktop-only"><a href="about.html">About</a></li>
+                <li class="desktop-only"><a href="add-new-post.html">Add New Post</a></li>
+                <li class="to-top"><a href="#">Back to Top<span class="before-top-arrow">&#x25B2;</span></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="footer-center">
+          <div class="footer-center-top">
+          <h3 class="footer-header">Spread the love:</h3>
+            <div class="footer-icons">
+              <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><span  class="out-of-view-menu-text">Follow us on Facebook</span>
+                <img src="images/ico-facebook.svg" alt="Facebook Icon">
+              </a>
+              <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><span  class="out-of-view-menu-text">Follow us on Instagram</span>
+                <img src="images/ico-instagram.svg" alt="Instagram Icon">
+              </a>
+              <a href="https://www.youtube.com/" target="_blank" aria-label="Youtube"><span  class="out-of-view-menu-text">Follow us on Youtube</span>
+                <img src="images/ico-youtube.svg" alt="Youtube Icon">
+              </a>
+            </div>
+          </div>
+          <div class="footer-credits">
+            <p>All rights reserved © 2023 Chef's Table</p>
+          </div>
+        </div>
+        <div class="footer-right">
+          <div class="footer-logo">
+            <a href="index.html" aria-label="Home"><span  class="out-of-view-menu-text">Home</span>
+              <img src="images/logo-full-footer.png" alt="Chef's Table Full Logo">
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
