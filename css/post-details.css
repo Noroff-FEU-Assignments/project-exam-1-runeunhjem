@@ -1,8 +1,10 @@
 .main-details {
   max-width: 1600px;
+  position: relative;
 }
 
 .post-details-container {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;

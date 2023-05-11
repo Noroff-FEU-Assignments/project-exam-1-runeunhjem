@@ -111,6 +111,9 @@ h4 {
   .thank-you-note {
     font-size: 1vw;
   }
+  .loader {
+    font-size: 1.8vw;
+  }
 }
 @media screen and (max-width: 1168px) {
   .show {
@@ -149,10 +152,6 @@ h4 {
   }
   .hero-image {
     height: 16vw;
-  }
-  .loader {
-    font-size: 2.8vw;
-    padding-left: 34%;
   }
   .thank-you-note {
     width: 100vw;
@@ -240,10 +239,6 @@ h4 {
   .hero-image {
     background-size: 100vw;
     height: 32vw;
-  }
-  .loader {
-    font-size: 4.5vw;
-    padding-left: 24%;
   }
   .thank-you-note {
     padding: 0.4rem 3vw;
