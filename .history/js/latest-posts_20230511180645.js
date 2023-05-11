@@ -50,7 +50,7 @@ function displayPosts(numToShow) {
     latestPostsContainer.appendChild(postContainer);
     setTimeout(() => {
       postContainer.style.opacity = "1"; // Transition to full opacity
-    }, 10); // Adjust the delay as needed for the desired transition effect
+    }, 100); // Adjust the delay as needed for the desired transition effect
 
   });
 

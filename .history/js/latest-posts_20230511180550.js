@@ -48,10 +48,6 @@ function displayPosts(numToShow) {
     detailsContainer.appendChild(tags);
 
     latestPostsContainer.appendChild(postContainer);
-    setTimeout(() => {
-      postContainer.style.opacity = "1"; // Transition to full opacity
-    }, 10); // Adjust the delay as needed for the desired transition effect
-
   });
 
   if (numToShow >= posts.length) {

@@ -7,10 +7,10 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
-}
-.latest-posts-containers a {
-  text-decoration: none;
-  color: var(--color-white);
+  a {
+    text-decoration: none;
+    color: var(--color-white);
+  }
 }
 
 .show-more-button {
@@ -20,18 +20,11 @@
   border-radius: 0.5rem;
   border: 1px solid #000;
   background-color: var(--color-burgundy);
-  color: var(--color-gold);
-  border: var(--border-2px-gold);
-  margin: 1em auto;
+  color: var(--color-gold)
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
 }
-.show-more-button:hover {
-  background-color: #000;
-  color: #fff;
-}
-
-.search-post-container {
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}/*# sourceMappingURL=latest-posts.css.map */

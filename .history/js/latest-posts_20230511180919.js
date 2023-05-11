@@ -14,7 +14,7 @@ function displayPosts(numToShow) {
   postsToShow.forEach((post) => {
     const postContainer = document.createElement("a");
     postContainer.href = `post-details.html?id=${post.postId}`; // URL for post's individual page
-    postContainer.classList.add("search-post-container");
+    postContainer.classList.add("latest-post-container");
     postContainer.style.opacity = "0";
     latestPostsContainer.appendChild(postContainer);
 
@@ -50,7 +50,7 @@ function displayPosts(numToShow) {
     latestPostsContainer.appendChild(postContainer);
     setTimeout(() => {
       postContainer.style.opacity = "1"; // Transition to full opacity
-    }, 10); // Adjust the delay as needed for the desired transition effect
+    }, 1000); // Adjust the delay as needed for the desired transition effect
 
   });
 
