@@ -20,10 +20,6 @@
   position: relative;
 }
 
-.loader {
-  width: 50vw;
-}
-
 .search-result-count {
   display: flex;
   width: 60vw;

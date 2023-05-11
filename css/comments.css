@@ -37,7 +37,7 @@
   background-color: var(--color-burgundy);
   min-width: 300px;
   width: 40vw;
-  min-height: 288.8px;
+  min-height: 350px;
   border-radius: var(--border-radius-6px);
 }
 
@@ -77,19 +77,26 @@ legend {
   box-shadow: 1px 1px 1px 2px var(--color-black-90);
 }
 
+.comment-form textarea {
+  height: 109px;
+}
+
 .post-comment {
   width: 100%;
   padding: 6px;
-  border: var(--border-2px-gold);
+  border: var(--border-1px-gold);
   border-radius: 4px;
-  background-color: var(--color-black-60);
+  background-color: var(--color-burgundy);
   font-weight: 600;
-  color: var(--color-gold);
+  color: var(--color-burgundy-light);
+  margin-top: 7px;
+  box-shadow: -2px -2px 2px 1px var(--color-black-90);
 }
 
 .post-comment:hover {
-  background-color: var(--color-gold);
-  color: var(--color-burgundy);
+  box-shadow: 1px 1px 1px 2px var(--color-black-90);
+  background-color: var(--color-black-60);
+  color: var(--color-gold);
   cursor: pointer;
 }
 
