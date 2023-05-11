@@ -11,6 +11,7 @@
 @import url("modal.css");
 @import url("post-details.css");
 @import url("comments.css");
+@import url("latest-posts.css");
 body {
   display: flex;
   flex-direction: column;

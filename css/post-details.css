@@ -52,6 +52,10 @@ h1, h2, h3, h4 {
   border-bottom: var(--border-1px-gold);
 }
 
+.detail-image {
+  cursor: pointer;
+}
+
 .details-modal {
   position: absolute;
   top: 0;
@@ -70,6 +74,9 @@ h1, h2, h3, h4 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 1em;
+  border-radius: var(--border-radius-6px);
+  border: var(--border-2px-gold);
 }
 
 .detail-category-container, .detail-ingredients-container, .detail-instructions-container {
