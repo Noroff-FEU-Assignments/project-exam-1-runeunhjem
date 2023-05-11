@@ -1,0 +1,119 @@
+.comments-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100vw;
+}
+.comments-container .comment-title {
+  width: 100%;
+  max-width: 1600px;
+}
+.comments-container .comment-title .comments-header {
+  background-color: var(--color-gold);
+  color: var(--color-burgundy);
+  margin: 0;
+  padding: 0;
+  font-size: 3vw;
+  text-align: center;
+}
+
+.leave-comment-field {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 2em;
+  margin: 1em auto;
+  width: 100vw;
+}
+
+.leave-a-comment, .user-comments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border: var(--border-2px-gold);
+  background-color: var(--color-burgundy);
+  min-width: 300px;
+  width: 40vw;
+  min-height: 288.8px;
+  border-radius: var(--border-radius-6px);
+}
+
+legend {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--color-gold);
+}
+
+.comment-form {
+  width: 100%;
+}
+
+.comment-form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.comment-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--color-gold);
+}
+
+.comment-form input,
+.comment-form textarea {
+  padding: 5px;
+  border: var(--border-2px-gold);
+  border-radius: 4px;
+  background-color: var(--color-burgundy-light);
+  box-shadow: 1px 1px 1px 2px var(--color-black-90);
+}
+
+.post-comment {
+  width: 100%;
+  padding: 6px;
+  border: var(--border-2px-gold);
+  border-radius: 4px;
+  background-color: var(--color-black-60);
+  font-weight: 600;
+  color: var(--color-gold);
+}
+
+.post-comment:hover {
+  background-color: var(--color-gold);
+  color: var(--color-burgundy);
+  cursor: pointer;
+}
+
+.user-comments {
+  height: auto;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.comment-container {
+  background-color: var(--color-burgundy-light);
+  box-shadow: 2px 2px 2px 2px var(--color-black-90);
+  text-align: left;
+  min-width: 260px;
+  width: 90%;
+  padding: 1em;
+  margin-bottom: 0.7em;
+  border-radius: var(--border-radius-6px);
+}
+
+.comment-title {
+  color: var(--color-burgundy);
+}
+
+.comment-content, .post-date {
+  color: var(--color-black);
+  font-family: var(--font-family-normal);
+}
+
+.post-date {
+  font-size: small;
+}/*# sourceMappingURL=comments_20230511072507.css.map */

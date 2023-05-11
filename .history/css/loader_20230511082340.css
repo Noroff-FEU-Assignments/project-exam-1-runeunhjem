@@ -1,0 +1,53 @@
+.loader {
+  display: flnone;
+  z-index: 10;
+  justify-content: center;
+  align-items: baseline;
+  position: relative;
+  top: 5rem;
+  font-size: 1.5vw;
+  font-weight: bold;
+  padding: 0.6rem 0rem 0.6rem 0rem;
+  width: 70%;
+  color: var(--color-gold);
+  border-bottom: var(--border-2px-gold);
+  border-top: var(--border-2px-gold);
+  background-color: var(--color-burgundy);
+  text-indent: 0;
+  text-align: right;
+}
+.loader p {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 3vw;
+  width: 70%;
+  margin: 0;
+  padding: 0.2em 0em;
+}
+
+.loader.active {
+  display: block;
+}
+
+.loader::after {
+  content: "";
+  width: 40%;
+  animation: recipes 3s infinite;
+  text-align: left;
+  text-indent: 0;
+}
+
+@keyframes recipes {
+  10% {
+    content: ".";
+  }
+  35% {
+    content: "..";
+  }
+  60% {
+    content: "...";
+  }
+  85% {
+    content: "....";
+  }
+}/*# sourceMappingURL=loader_20230511082340.css.map */
