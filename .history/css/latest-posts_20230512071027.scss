@@ -1,0 +1,36 @@
+.latest-posts-containers {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  a {
+    text-decoration: none;
+    color: var(--color-white);
+  }
+}
+
+.show-more-button {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  border-radius: 0.5rem;
+  border: 1px solid #000;
+  background-color: var(--color-burgundy);
+  color: var(--color-gold);
+  border: var(--border-2px-gold);
+  margin: 1em auto;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: ;
+    color: #fff;
+  }
+}
+.search-post-container {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}

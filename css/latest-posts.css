@@ -25,10 +25,13 @@
   margin: 1em auto;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  box-shadow: 2px 2px 5px var(--color-gold);
+  font-weight: bold;
+  font-family: var(--font-family-elegant);
 }
 .show-more-button:hover {
-  background-color: #000;
-  color: #fff;
+  color: var(--color-black);
+  background-color: var(--color-gold);
 }
 
 .search-post-container {
