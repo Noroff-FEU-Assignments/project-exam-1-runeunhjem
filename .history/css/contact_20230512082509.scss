@@ -1,0 +1,55 @@
+/* Example CSS for styling the Contact Form 7 */
+#cf7-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+#cf7-form input,
+#cf7-form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#cf7-form textarea {
+  height: 120px;
+}
+
+#cf7-form input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+#cf7-form input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Example CSS for other elements on the contact page */
+.contact-image {
+  /* Add your styles for the contact image */
+}
+
+.thank-you-note {
+  /* Add your styles for the thank you note */
+}
+
+.so-god-to-see-you {
+  /* Add your styles for the "So good to see you..." heading */
+}
+
+.enjoy-note {
+  /* Add your styles for the enjoy note paragraph */
+}
+
+.check-latest-posts-note {
+  /* Add your styles for the "Check out these latest recipes" paragraph */
+}
+
+/* Add your styles for the back-to-top button and other elements as needed */

@@ -86,6 +86,7 @@ h4 {
   padding: 0.3em 10rem;
   border-top: var(--border-2px-gold);
   border-bottom: var(--border-2px-gold);
+  border-radius: var(--border-radius-6px);
   margin: 0 0 0.5em 0;
   gap: 0.3em;
   max-width: 1200px;
