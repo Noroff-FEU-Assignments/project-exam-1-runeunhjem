@@ -3,6 +3,7 @@
 }
 
 .carousel-wrapper {
+  transition: all ease-in-out 0.3s;
   display: flex;
   flex-shrink: 2;
   justify-content: center;
@@ -40,13 +41,13 @@
   align-items: flex-start;
   gap: 1em;
   width: 63.5vw;
-}
-.carousel-home a {
-  text-decoration: none;
-  color: var(--color-white);
-}
-.carousel-home a:hover {
-  background-color: var(--color-burgundy);
+  a {
+    text-decoration: none;
+    color: var(--color-white);
+  }
+  a:hover {
+    background-color: var(--color-burgundy);
+  }
 }
 
 .post-container {
@@ -61,8 +62,8 @@
   border: var(--border-1px-gold);
   background-color: var(--color-burgundy);
   border-radius: var(--border-radius-6px);
+  // transform: scale(0.98);
 }
-
 .post-image-container {
   max-width: 100%;
   width: 213px;
@@ -121,7 +122,6 @@
   border-radius: var(--border-radius-6px);
   width: 100px;
 }
-
 .hide {
   display: none;
 }
@@ -130,4 +130,4 @@
   .carousel-home {
     overflow: scroll;
   }
-}/*# sourceMappingURL=carousel.css.map */
+}
