@@ -9,6 +9,10 @@ img {
   max-height: 100%;
 }
 
+#logo-text {
+  height: 100px;
+}
+
 .header-container {
   display: flex;
   justify-content: space-around;

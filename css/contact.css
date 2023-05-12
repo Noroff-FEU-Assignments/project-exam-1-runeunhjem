@@ -19,9 +19,11 @@ header {
   margin: 2em auto;
   width: 40vw;
   padding: 1rem 2rem;
+  max-width: 600px;
 }
 
 .contact-fieldset {
+  max-width: 600px;
   margin-bottom: 2em;
 }
 
