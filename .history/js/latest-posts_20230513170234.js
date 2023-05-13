@@ -15,7 +15,7 @@ async function displayPosts(numToShow) {
     const postContainer = document.createElement("a");
     postContainer.href = `post-details.html?id=${post.postId}`; // URL for post's individual page
     postContainer.classList.add("search-post-container");
-    postContainer.classList.add("latest-post-container");
+    postContainer.classList.add("search-post-container");
     postContainer.style.opacity = "0";
     latestPostsContainer.appendChild(postContainer);
 
