@@ -1,0 +1,40 @@
+.loader {
+  display: flex;
+  z-index: 10;
+  justify-content: flex-end;
+  align-items: baseline;
+  position: relative;
+  top: 5rem;
+}
+.loader span {
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.loader.active {
+  display: flex;
+}
+
+.loader::after {
+  content: ".";
+  width: 30%;
+  animation: recipes 3s infinite;
+  text-align: left;
+  text-indent: 0;
+}
+
+@keyframes recipes {
+  10% {
+    content: ".";
+  }
+  35% {
+    content: "..";
+  }
+  60% {
+    content: "...";
+  }
+  85% {
+    content: "....";
+  }
+}/*# sourceMappingURL=loader_20230512074204.css.map */

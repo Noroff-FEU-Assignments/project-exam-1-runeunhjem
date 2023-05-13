@@ -1,0 +1,50 @@
+.contact {
+  position: relative;
+  background-color: var(--color-black);
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/contact-bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  opacity: 0.5; /* Set the opacity value between 0 (fully transparent) and 1 (fully opaque) */
+}
+
+/* Example CSS for styling the Contact Form 7 */
+#cf7-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+#cf7-form input,
+#cf7-form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#cf7-form textarea {
+  height: 120px;
+}
+
+#cf7-form input[type=submit] {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+#cf7-form input[type=submit]:hover {
+  background-color: #45a049;
+}/*# sourceMappingURL=contact_20230512090722.css.map */

@@ -1,0 +1,49 @@
+.loader {
+  display: flex;
+  z-index: 10;
+  justify-content: center;
+  align-items: baseline;
+  position: relative;
+  top: 5rem;
+  width: 50vw;
+  border-bottom: var(--border-2px-gold);
+  border-top: var(--border-2px-gold);
+  background-color: var(--color-burgundy);
+}
+.loader p {
+  width: 50%;
+  display: flex;
+  margin: 0 auto;
+}
+.loader span {
+  display: flex;
+  width: 50%;
+  justify-content: flex-start;
+}
+
+.loader.active {
+  display: flex;
+}
+
+.loader::after {
+  content: ".";
+  width: 30%;
+  animation: recipes 3s infinite;
+  text-align: left;
+  text-indent: 0;
+}
+
+@keyframes recipes {
+  10% {
+    content: ".";
+  }
+  35% {
+    content: "..";
+  }
+  60% {
+    content: "...";
+  }
+  85% {
+    content: "....";
+  }
+}/*# sourceMappingURL=loader_20230512074525.css.map */
