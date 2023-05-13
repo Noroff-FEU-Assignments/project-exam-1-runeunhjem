@@ -99,6 +99,10 @@ h4 {
   color: var(--color-white);
 }
 
+#latest-posts-note {
+  margin-top: 2em;
+}
+
 .newest-posts {
   display: flex;
   flex-direction: column;
@@ -154,12 +158,26 @@ h4 {
   }
   .hero-image {
     height: 16vw;
+    font-size: 4.5vw;
+  }
+  .loader {
+    width: 100%;
+    top: 6rem;
+  }
+  .loader p {
+    font-size: 3.5vw;
+  }
+  .loader::after {
+    font-size: 3.5vw;
   }
   .thank-you-note {
     width: 100vw;
     padding: 0.2rem 16vw;
     margin-top: 0;
     font-size: 2.3vw;
+  }
+  #latest-posts-note {
+    width: 90%;
   }
   .carousel-wrapper .carousel-left, .carousel-wrapper .carousel-right {
     width: 12vw;
@@ -227,6 +245,9 @@ h4 {
   #contact-note {
     width: 80vw;
   }
+  .categories {
+    display: none;
+  }
 }
 @media screen and (max-width: 468px) {
   .tablet {
@@ -244,6 +265,15 @@ h4 {
   #logo-text {
     height: 85px;
   }
+  .loader {
+    width: 100%;
+  }
+  .loader p {
+    font-size: 4.5vw;
+  }
+  .loader::after {
+    font-size: 4.5vw;
+  }
   .hero-image {
     background-size: 100vw;
     height: 32vw;
@@ -251,6 +281,9 @@ h4 {
   .thank-you-note {
     padding: 0.4rem 3vw;
     font-size: 3.2vw;
+  }
+  .latest-posts-note {
+    margin-top: 2em;
   }
   .carousel-left {
     left: -3.4rem;

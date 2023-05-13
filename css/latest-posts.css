@@ -1,6 +1,7 @@
 .latest-posts {
-  background-image: url(../images/contact-bg.jpg);
+  background-image: url(../images/latest-posts-bg.jpg);
   background-size: cover;
+  background-position: left bottom;
 }
 
 header {
