@@ -31,6 +31,9 @@ header {
   text-decoration: none;
   color: var(--color-white);
 }
+.latest-posts-containers a:hover {
+  background-color: var(--color-burgundy);
+}
 
 .show-more-button {
   padding: 0.5rem 1rem;
