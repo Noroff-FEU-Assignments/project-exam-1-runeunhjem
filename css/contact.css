@@ -22,6 +22,9 @@ header {
   max-width: 600px;
   text-align: center;
 }
+.contact-note p {
+  text-align: left;
+}
 
 .contact-fieldset {
   max-width: 600px;
