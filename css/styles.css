@@ -120,6 +120,9 @@ h4 {
   .loader {
     font-size: 1.8vw;
   }
+  .footer-icons img {
+    height: 3vw;
+  }
 }
 @media screen and (max-width: 1168px) {
   .show {
@@ -138,6 +141,9 @@ h4 {
   }
   .footer-links {
     padding: 0 0 0 0em;
+  }
+  .footer-icons img {
+    height: 6vw;
   }
 }
 @media screen and (max-width: 768px) {
@@ -226,7 +232,7 @@ h4 {
     padding: 0 0 0 0em;
   }
   .footer-icons img {
-    height: 12vw;
+    height: 10vw;
   }
   .footer-header {
     font-size: 6.5vw;

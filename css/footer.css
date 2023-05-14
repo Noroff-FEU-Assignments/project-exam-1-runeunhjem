@@ -47,7 +47,7 @@ footer img:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 8em;
+  margin-bottom: 10vw;
 }
 
 .footer-links {
@@ -145,11 +145,6 @@ footer img:hover {
   color: var(--color-gold);
 }
 
-.footer-credits {
-  width: 100%;
-  margin-top: auto;
-}
-
 .footer-right {
   display: flex;
   flex-direction: column;
@@ -160,6 +155,17 @@ footer img:hover {
   padding: 0 0 2em 0;
 }
 
-.footer-logo {
-  max-height: 60%;
+.footer-logo-image {
+  width: 60%;
+}
+
+@media screen and (min-width: 1168px) {
+  .footer-center-top {
+    margin-bottom: 2vw;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .footer-center-top {
+    margin-bottom: 1vw;
+  }
 }/*# sourceMappingURL=footer.css.map */
