@@ -16,15 +16,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Cooking, Chef, Table, Dinner, Dessert, Cuisine, Recipes, Food">
-    <meta name="description" content="A blog with recipes for only the best and juiciest dishes. Post details">
+    <meta name="description" content="A blog with recipes for only the best and juiciest dishes. Contact us.">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/out-of-view-menu-text.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="js/main.js" type="module"></script>
     <script src="js/searchbar.js" defer></script>
     <script src="js/menu.js" defer></script>
-    <script src="js/post-details.js" type="module"></script>
-    <script src="js/make-comments-fields.js" type="module"></script>
-    <title>CHEF'S TABLE | Post Details</title>
+    <script src="js/contact.js" type="module"></script>
+    <title>CHEF'S TABLE | Contact</title>
   </head>
   <body>
     <header class="header-desktop header-mobile" aria-label="Header">
@@ -57,7 +58,7 @@
                 <li><a href="all-posts.html">All Posts</a></li>
                 <li class="desktop-only tablet"><a href="latest-posts.html">Latest Posts</a></li>
                 <li class="desktop-only tablet"><a href="image-gallery.html">Image Gallery</a></li>
-                <li class="desktop-only"><a href="contact.html">Contact</a></li>
+                <li class="desktop-only"><a href="contact.html" class="active">Contact</a></li>
                 <li class="desktop-only"><a href="about.html">About</a></li>
                 <li class="desktop-only"><a href="add-new-post.html">Add New Post</a></li>
               </ul>
@@ -75,42 +76,44 @@
           </div>
       </nav>
     </header>
-    <div id="loader" class="loader loader-recipes post-details"><p>Opening recipe</p><span class="loader-recipes"></span></div>
-    <main class="main-details" aria-label="Main Section">
-      <a href="#" alt="Go back to the top"><span class="out-of-view-menu-text">Back to top</span>
-        <div class="back-to-top-button"></div>
-      </a>
-      <div class="post-details-container" id="post-details-container" aria-label="Full post container"></div>
-      <section class="comments-container" id="comments-container" aria-label="Comments Section">
-        <div class="leave-comment-field">
-          <fieldset class="leave-a-comment">
-            <legend>Leave a comment</legend>
-            <form action="" class="comment-form" id="comment-form" method="post">
-              <div>
-                <label for="name-input">Name</label>
-                <input type="text" id="name-input" name="name" aria-required="true" aria-label="Name" placeholder="Your name">
-                <div class="error-message" id="name-input-error">Minimum 2 characters</div>
-              </div>
-              <div>
-                <label for="email-input">Email</label>
-                <input type="email" id="email-input" name="email" aria-required="true" aria-label="Correctly formatted Email" placeholder="Email in correct format">
-                <div class="error-message" id="email-input-error">Email must be in correct format</div>
-              </div>
-              <div>
-                <label for="comment-input">Comment</label>
-                <textarea id="comment-input" name="comment" aria-required="true" aria-label="Your comment should be minimum 10 characters" placeholder="Your comment should be minimum 10 characters"></textarea>
-                <div class="error-message" id="comment-input-error">Minimum 10 characters</div>
-              </div>
-              <button type="button" class="post-comment" id="post-comment">Fill out form before posting the comment</button>
-              <div class="success comment-posted" id="comment-posted"></div>
-            </form>
-          </fieldset>
-          <fieldset class="user-comments" id="user-comments">
-            <legend>User Comments</legend>
-            <div class="comments-container" id="comments-container"></div>
-          </fieldset>
+    <main class="contact" aria-label="Main Section">
+      <!-- <div class="contact-image-overlay" id="contact-image-overlay"> -->
+        <a href="#" alt="Go back to the top"><span class="out-of-view-menu-text">Back to top</span>
+          <div class="back-to-top-button"></div>
+        </a>
+        <div class="thank-you-note contact-note" id="contact-note">
+          <h2 class="so-god-to-see-you">We'd love to hear from you</h2>
+          <p class="enjoy-note">Have a problem? Have feedback? Have questions?</p>
+          <p class="check-latest-posts-note">Please let us know:</p>
         </div>
-      </section>
+        <!-- [contact-form-7 id="158" title="Chef's Teable Contact Form"] -->
+      <fieldset class="leave-a-comment contact-fieldset">
+        <legend>Contact us</legend>
+        <form action="" class="contact-form" id="contact-form" method="post">
+          <div>
+            <label for="your-name">Your name</label>
+            <input type="text" id="your-name" name="your-name" aria-required="true" aria-label="Name" placeholder="Your name">
+            <div class="error-message" id="name-input-error">Minimum 2 characters</div>
+          </div>
+          <div>
+            <label for="your-email">Your email</label>
+            <input type="email" id="your-email" name="your-email" aria-required="true" aria-label="Correctly formatted Email" placeholder="Email in correct format">
+            <div class="error-message" id="email-input-error">Email must be in correct format</div>
+          </div>
+          <div>
+            <label for="your-subject">Subject</label>
+            <input type="text" id="your-subject" name="your-subject" aria-required="true" aria-label="Subject" placeholder="Subject">
+            <div class="error-message" id="subject-input-error">Minimum 4 characters</div>
+          </div>
+          <div>
+            <label for="your-message">Your message</label>
+            <textarea id="your-message" name="your-message" aria-required="true" aria-label="Your message should be minimum 10 characters" placeholder="Your message should be minimum 10 characters"></textarea>
+            <div class="error-message" id="message-input-error">Minimum 10 characters</div>
+          </div>
+          <button type="button" class="post-comment" id="send-message" name="Submit">Fill out form before sending the message</button>
+          <div class="success comment-posted" id="message-sent"></div>
+        </form>
+      </fieldset>
     </main>
     <footer class="footer">
       <div class="footer-wrapper">

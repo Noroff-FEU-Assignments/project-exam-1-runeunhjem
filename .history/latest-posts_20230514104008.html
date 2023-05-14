@@ -16,17 +16,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Cooking, Chef, Table, Dinner, Dessert, Cuisine, Recipes, Food">
-    <meta name="description" content="A blog with recipes for only the best and juiciest dishes. Post details">
+    <meta name="description" content="A blog with recipes for only the best and juiciest dishes. Latest posts">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/out-of-view-menu-text.css">
+    <link rel="stylesheet" href="css/search-results.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="js/main.js" type="module"></script>
     <script src="js/searchbar.js" defer></script>
     <script src="js/menu.js" defer></script>
-    <script src="js/post-details.js" type="module"></script>
-    <script src="js/make-comments-fields.js" type="module"></script>
-    <title>CHEF'S TABLE | Post Details</title>
+    <script src="js/latest-posts.js" type="module"></script>
+    <title>CHEF'S TABLE | Latest posts</title>
   </head>
-  <body>
+  <body class="latest-posts">
     <header class="header-desktop header-mobile" aria-label="Header">
       <div class="header-container">
         <div class="header-flame-logo head-item">
@@ -55,7 +56,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="categories.html">Categories</a></li>
                 <li><a href="all-posts.html">All Posts</a></li>
-                <li class="desktop-only tablet"><a href="latest-posts.html">Latest Posts</a></li>
+                <li class="desktop-only tablet"><a href="latest-posts.html" class="active">Latest Posts</a></li>
                 <li class="desktop-only tablet"><a href="image-gallery.html">Image Gallery</a></li>
                 <li class="desktop-only"><a href="contact.html">Contact</a></li>
                 <li class="desktop-only"><a href="about.html">About</a></li>
@@ -75,42 +76,17 @@
           </div>
       </nav>
     </header>
-    <div id="loader" class="loader loader-recipes post-details"><p>Opening recipe</p><span class="loader-recipes"></span></div>
-    <main class="main-details" aria-label="Main Section">
+    <main class="main-latest-posts" aria-label="Latest posts' main Section">
+      <div class ="thank-you-note latest-posts-note" id="latest-posts-note">
+        <h2 class="so-god-to-see-you">Our newest additions...</h2>
+        <p class="enjoy-note">Feel free to add your own personal favourite recipe. Until then...</p>
+        <p class="check-latest-posts-note">Check out these latest recipes:</p>
+      </div>
+      <div id="loader" class="loader loader-recipes searching"><p>Searching recipes</p><span class="loader-recipes"></span></div>
       <a href="#" alt="Go back to the top"><span class="out-of-view-menu-text">Back to top</span>
         <div class="back-to-top-button"></div>
       </a>
-      <div class="post-details-container" id="post-details-container" aria-label="Full post container"></div>
-      <section class="comments-container" id="comments-container" aria-label="Comments Section">
-        <div class="leave-comment-field">
-          <fieldset class="leave-a-comment">
-            <legend>Leave a comment</legend>
-            <form action="" class="comment-form" id="comment-form" method="post">
-              <div>
-                <label for="name-input">Name</label>
-                <input type="text" id="name-input" name="name" aria-required="true" aria-label="Name" placeholder="Your name">
-                <div class="error-message" id="name-input-error">Minimum 2 characters</div>
-              </div>
-              <div>
-                <label for="email-input">Email</label>
-                <input type="email" id="email-input" name="email" aria-required="true" aria-label="Correctly formatted Email" placeholder="Email in correct format">
-                <div class="error-message" id="email-input-error">Email must be in correct format</div>
-              </div>
-              <div>
-                <label for="comment-input">Comment</label>
-                <textarea id="comment-input" name="comment" aria-required="true" aria-label="Your comment should be minimum 10 characters" placeholder="Your comment should be minimum 10 characters"></textarea>
-                <div class="error-message" id="comment-input-error">Minimum 10 characters</div>
-              </div>
-              <button type="button" class="post-comment" id="post-comment">Fill out form before posting the comment</button>
-              <div class="success comment-posted" id="comment-posted"></div>
-            </form>
-          </fieldset>
-          <fieldset class="user-comments" id="user-comments">
-            <legend>User Comments</legend>
-            <div class="comments-container" id="comments-container"></div>
-          </fieldset>
-        </div>
-      </section>
+      <div class="latest-posts-containers" id="latest-posts-container"></div>
     </main>
     <footer class="footer">
       <div class="footer-wrapper">

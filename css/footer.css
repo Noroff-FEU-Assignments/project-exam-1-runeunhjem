@@ -159,6 +159,12 @@ footer img:hover {
   width: 60%;
 }
 
+.footer-credits {
+  width: 100%;
+  background-color: var(--color-black);
+  text-align: center;
+}
+
 @media screen and (min-width: 1168px) {
   .footer-center-top {
     margin-bottom: 2vw;
