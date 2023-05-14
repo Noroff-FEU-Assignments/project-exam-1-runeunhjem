@@ -81,11 +81,9 @@ async function init() {
     // Display number of search results
     const resultCount = document.createElement("div");
     resultCount.classList.add("search-result-count");
-    if (matchingPosts.length === 1) {
-      resultCount.textContent = `Found ${matchingPosts.length} recipe:`;
-    } else {
-      resultCount.textContent = `Found ${matchingPosts.length} recipes:`;
-    }
+    
+    resultCount.textContent = `Found ${matchingPosts.length} recipes:`;
+    resultCount.textContent = `Found ${matchingPosts.length} recipes:`;
     searchResults.prepend(resultCount);
   };
   loader.classList.remove("active");
