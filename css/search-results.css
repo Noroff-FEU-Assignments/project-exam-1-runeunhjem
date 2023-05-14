@@ -107,6 +107,7 @@ header {
     padding: 1em 0em 1em 0em;
   }
   .results-wrapper {
-    max-width: 90%;
+    max-width: 95%;
+    width: 100vw;
   }
 }/*# sourceMappingURL=search-results.css.map */
