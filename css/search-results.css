@@ -31,7 +31,7 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 1em 0 1em 0;
+  margin: 0.1em 0 1em 0;
   position: relative;
   text-align: left;
   color: var(--color-white);
@@ -96,6 +96,7 @@ header {
     transform: scale(0.9);
     position: relative;
     top: -40px;
+    margin: 2.5em 0 1em 0;
   }
   .search-post-container {
     width: 95%;
