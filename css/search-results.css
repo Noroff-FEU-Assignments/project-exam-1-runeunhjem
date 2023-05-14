@@ -91,6 +91,10 @@ header {
   margin: 0;
 }
 
+.searching {
+  top: 5.2rem;
+}
+
 @media screen and (max-width: 768px) {
   .search-results {
     transform: scale(0.9);

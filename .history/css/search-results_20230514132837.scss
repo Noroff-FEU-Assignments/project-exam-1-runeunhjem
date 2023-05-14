@@ -89,7 +89,9 @@ header {
   margin: 0;
 }
 .searching {
-  top: 5.2rem;
+  top: 4.7r;
+  display: flex;
+  align-self: center;
 }
 @media screen and (max-width: 768px) {
   .search-results {
