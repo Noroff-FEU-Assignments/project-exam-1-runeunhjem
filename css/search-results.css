@@ -98,6 +98,9 @@ header {
     position: relative;
     top: -40px;
   }
+  .search-post-container {
+    width: 95%;
+  }
   .search-result-count {
     font-size: 1.2rem;
     width: 100vw;
