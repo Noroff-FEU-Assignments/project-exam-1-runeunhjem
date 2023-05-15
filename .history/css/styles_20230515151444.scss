@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("search-results.css");
 @import url("out-of-view-menu-text.css");
 @import url("loader.css");
@@ -12,12 +11,12 @@
 @import url("post-details.css");
 @import url("comments.css");
 @import url("latest-posts.css");
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 main {
   display: flex;
   flex-direction: column;
@@ -44,9 +43,8 @@ main {
 }
 
 .back-to-top-button::before {
-  content: "▲";
+  content: "\25B2";
 }
-
 .back-to-top-button:hover {
   background-color: var(--color-gold);
   color: var(--color-burgundy);
@@ -90,21 +88,22 @@ h4 {
   margin: 0 0 0.5em 0;
   gap: 0.3em;
   max-width: 1200px;
-}
-.thank-you-note h2 {
-  margin: 0 auto;
-}
-.thank-you-note p {
-  margin: 0;
-  color: var(--color-white);
+  h2 {
+    margin: 0 auto;
+  }
+  p {
+    margin: 0;
+    color: var(--color-white);
+  }
 }
 
 #latest-posts-note {
   margin-top: 2em;
 }
-
-.latest-posts-note .check-latest-posts-note {
-  margin-bottom: 1em;
+.latest-posts-note {
+  .check-latest-posts-note {
+    margin-bottom: 1em;
+  }
 }
 
 .newest-posts {
@@ -119,28 +118,29 @@ h4 {
 
 @media screen and (min-width: 1980px) {
   .thank-you-note {
-    font-size: 1vw;
+    font-size: 1.0vw;
   }
   .loader {
-    font-size: 1.8vw;
-  }
-  .footer-icons img {
-    height: 3vw;
-  }
-  .footer-header {
-    font-size: 4rem;
+      font-size: 1.8vw;
+
+    }
+    .footer-icons {
+    img {
+      height: 3vw;
+    }
   }
 }
 @media screen and (max-width: 1168px) {
+
   .show {
     max-width: 100%;
-  }
-  .show form {
-    padding-left: 2.4em;
-  }
-  .show form input {
-    width: 55vw;
-    max-width: 450px;
+    form {
+      padding-left: 2.4em;
+      input {
+        width: 55vw;
+        max-width: 450px;
+      }
+    }
   }
   .thank-you-note {
     font-size: 1.5vw;
@@ -149,107 +149,126 @@ h4 {
   .footer-links {
     padding: 0 0 0 0em;
   }
-  .footer-icons img {
-    height: 6vw;
+  .footer-icons {
+    img {
+      height: 6vw;
+    }
   }
 }
+
 @media screen and (max-width: 768px) {
   .desktop-only {
     display: none;
   }
   .tablet {
     display: block;
-  }
-  .show {
+    }
+    .show {
     max-width: 100%;
-  }
-  .show form {
-    padding-left: 1.5em;
-  }
-  .show form input {
-    width: 60vw;
+    form {
+      padding-left: 1.5em;
+      input {
+        width: 60vw;
+      }
+    }
   }
   .hero-image {
-    height: 16vw;
-    font-size: 4.5vw;
+      height: 16vw;
+      font-size: 4.5vw;;
   }
   .loader {
     width: 100%;
     top: 6rem;
-  }
-  .loader p {
-    font-size: 3.5vw;
+    p {
+      font-size: 3.5vw;
+    }
   }
   .loader::after {
     font-size: 3.5vw;
   }
+
   .thank-you-note {
     width: 100vw;
     padding: 0.2rem 16vw;
     margin-top: 0;
     font-size: 2.3vw;
   }
+
   #latest-posts-note {
     width: 90%;
   }
-  .carousel-wrapper .carousel-left, .carousel-wrapper .carousel-right {
-    width: 12vw;
-  }
+
   .carousel-wrapper {
-    justify-content: center;
+    .carousel-left, .carousel-right {
+        width: 12vw;
+    }
   }
+
+  .carousel-wrapper {
+      justify-content: center;
+  }
+
   .carousel-home {
-    gap: 1em;
-    overflow: scroll;
+      gap: 1em;
+      overflow: scroll;
   }
+
   .post-container {
-    max-width: 100%;
+      max-width: 100%;
   }
   .post-image-container {
-    width: 159.75px;
-    height: 82.5px;
-    background-size: cover;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      width: calc(213px * 0.75);
+      height: calc(110px * 0.75);
+      background-size: cover;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
   }
+
   .post-title {
-    font-size: 1rem;
-    height: 36px;
+      font-size: 1rem;
+      height: 36px;
   }
+
   .post-tagline {
-    font-size: 0.8rem;
-    height: 42px;
+      font-size: 0.8rem;
+      height: 42px;
   }
+
   .post-tags {
-    font-size: 0.7rem;
-    height: 72px;
+      font-size: 0.7rem;
+      height: 72px;
   }
+
   .post-added {
-    font-size: 0.7rem;
+      font-size: 0.7rem;
   }
   footer {
+    ul {
+      padding: 0;
+    }
     width: 100%;
     height: 100%;
     flex-direction: column;
     align-items: center;
+    .footer-links {
+      padding: 0 0 0 0em;
+    }
   }
-  footer ul {
-    padding: 0;
-  }
-  footer .footer-links {
-    padding: 0 0 0 0em;
-  }
-  .footer-icons img {
-    height: 10vw;
+  .footer-icons {
+    img {
+      height: 10vw;
+    }
   }
   .footer-header {
-    font-size: 2rem;
+    font-size: 3vw;
   }
   .footer-left,
+  // .footer-center,
   .footer-right {
     width: 100%;
   }
   .back-to-top-button {
     padding: 5px;
+
   }
   .leave-a-comment, .user-comments {
     width: 80vw;
@@ -264,55 +283,60 @@ h4 {
     width: 100%;
   }
 }
+
 @media screen and (max-width: 468px) {
-  .tablet {
-    display: none;
-  }
-  .show {
-    max-width: 100%;
-  }
-  .show form {
-    padding-left: 1em;
-  }
-  .show form input {
-    width: 50vw;
-  }
-  #logo-text {
-    height: 85px;
-  }
-  .loader {
-    width: 100%;
-  }
-  .loader p {
-    font-size: 4.5vw;
-  }
-  .loader::after {
-    font-size: 4.5vw;
-  }
-  .hero-image {
-    background-size: 100vw;
-    height: 32vw;
-  }
-  .thank-you-note {
-    padding: 0.4rem 3vw;
-    font-size: 3.2vw;
-  }
-  .thank-you-note h2 {
-    font-size: 1rem;
-  }
-  .latest-posts-note {
-    margin-top: 2em;
-  }
-  .carousel-left {
-    left: -3.4rem;
-  }
-  .carousel-right {
-    right: -3.4rem;
-  }
-  .carousel-wrapper .carousel-left, .carousel-wrapper .carousel-right {
-    width: 10vw;
-  }
-  .post-container {
-    max-width: 100%;
-  }
-}/*# sourceMappingURL=styles.css.map */
+    .tablet {
+      display: none;
+    }
+    .show {
+      max-width: 100%;
+      form {
+        padding-left: 1em;
+        input {
+          width: 50vw;
+        }
+      }
+    }
+    #logo-text {
+      height: 85px;
+    }
+    .loader {
+      width: 100%;
+      p {
+        font-size: 4.5vw;
+      }
+    }
+    .loader::after {
+      font-size: 4.5vw;
+    }
+    .hero-image {
+      background-size: 100vw;
+      height: 32vw;
+    }
+
+    .thank-you-note {
+        padding: 0.4rem 3vw;
+        font-size: 3.2vw;
+        h2 {
+          font-size: 1rem;
+        }
+    }
+    .latest-posts-note {
+      margin-top: 2em;;
+    }
+
+    .carousel-left {
+        left: -3.4rem;
+    }
+    .carousel-right {
+        right: -3.4rem;
+    }
+    .carousel-wrapper {
+      .carousel-left, .carousel-right {
+          width: 10vw;
+      }
+    }
+    .post-container {
+        max-width: 100%;
+    }
+}
