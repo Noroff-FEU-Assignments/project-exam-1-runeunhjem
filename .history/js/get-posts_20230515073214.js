@@ -25,6 +25,7 @@ async function getPosts() {
           .match(/<p>(.*?)<\/p>/)[1]
           .trim()
           .replace(/&amp;/g, "&"),
+
         tags: tags,
         date: new Date(item.modified),
         categories: categories,
