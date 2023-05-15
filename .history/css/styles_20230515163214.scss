@@ -343,6 +343,9 @@ h4 {
         max-width: 100%;
     }
     .searching {
+      display: flex;
+      font-size: 1.0vw;
+      width: 100%;
       p {
         width: 100%;
       }

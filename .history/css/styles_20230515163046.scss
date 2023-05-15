@@ -343,8 +343,8 @@ h4 {
         max-width: 100%;
     }
     .searching {
-      p {
-        width: 100%;
-      }
+      display: flex;
+      font-size: 1.0vw;
+      width: 100%;
     }
 }

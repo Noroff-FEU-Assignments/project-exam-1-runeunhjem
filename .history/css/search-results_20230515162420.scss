@@ -54,7 +54,7 @@ header {
   justify-content: center;
   padding: 1em;
   color: var(--color-gold);
-  border-bottom: var(--border-2px-gold);
+  border-bottom: var(--border-2px-gold;)
 }
 .search-post-container {
   display: flex;
@@ -91,7 +91,6 @@ header {
 }
 .searching {
   top: 4.8rem;
-  width: 50%;
 }
 @media screen and (max-width: 768px) {
   .search-results {
@@ -114,4 +113,3 @@ header {
     width: 100vw;
   }
 }
-
