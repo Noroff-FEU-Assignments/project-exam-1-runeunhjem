@@ -1,0 +1,54 @@
+
+.latest-posts-containers {
+  margin-top: 0em;
+}
+.filter-section {
+  display: flex;
+  // flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: calc(63.5vw - 1em);
+  padding: 1em auto;
+  margin: 2em 0 0 0;
+  background-color: var(--color-burgundy);
+}
+
+.filter-section .choose-category,
+.filter-section .choose-tags,
+.filter-section .choose-sort {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-bottom: 1em;
+}
+
+.filter-section label {
+  margin-bottom: 0.2em;
+}
+
+.filter-section select {
+  width: 100%;
+  max-width: 300px;
+}
+.post-published {
+  margin: 0;
+  text-align: left;;
+}
+.filter-section label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--color-gold);
+}
+
+.filter-section select,
+.filter-section textarea {
+  padding: 5px;
+  border: var(--border-1px-black);
+  border-radius: 4px;
+  background-color: var(--color-burgundy-light);
+  box-shadow: 1px 1px 1px 1px var(--color-black-90);
+}
+.filter-section input:hover,
+.filter-section textarea:hover {
+  box-shadow: 1px 1px 1px 2px var(--color-black-90);
+}

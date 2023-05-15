@@ -1,0 +1,10 @@
+.filter-section {
+  display: flex;
+  justify-content: space-evenly;
+  width: calc(63.5vw - 1em);
+  width: 95vw;
+  flex-wrap: wrap;
+  padding: 1em auto;
+  margin: 0 auto;
+  background-color: var(--color-burgundy);
+}
