@@ -3,6 +3,7 @@ footer {
   justify-content: center;
   align-items: center;
   width: 100vw;
+  min-height: 20vw;
   background-color: var(--color-burgundy);
   color: var(--color-white);
   border-top: var(--border-2px-gold);
@@ -41,7 +42,7 @@ footer {
   display: flex;
   align-items: flex-start;
   margin: 0.4em 0 0.5em 0;
-  font-size: 1.9vw;
+  font-size: 2vw;
 }
 
 .footer-center-top {

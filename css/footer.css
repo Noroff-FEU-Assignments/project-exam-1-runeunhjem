@@ -3,7 +3,6 @@ footer {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  min-height: 20vw;
   background-color: var(--color-burgundy);
   color: var(--color-white);
   border-top: var(--border-2px-gold);
@@ -18,7 +17,7 @@ footer img:hover {
 
 .footer-wrapper {
   width: 100vw;
-  max-width: 1600px;
+  max-width: 1200px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -26,20 +25,22 @@ footer img:hover {
 }
 
 .footer-left,
-.footer-center,
 .footer-right {
   display: flex;
-  justify-content: center;
   flex-grow: 1;
   text-align: center;
-  width: 33.33%;
+  max-width: 33.33%;
+}
+
+.footer-center {
+  width: 2%;
 }
 
 .footer-header {
   display: flex;
   align-items: flex-start;
   margin: 0.4em 0 0.5em 0;
-  font-size: 2vw;
+  font-size: 1.9vw;
 }
 
 .footer-center-top {
