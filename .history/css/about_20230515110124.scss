@@ -1,0 +1,53 @@
+body {
+  background-image: url(../images/contact-bg.jpg);
+  background-size: cover;
+  background-position: left bottom;
+}
+header {
+  background-color: var(--color-black);
+}
+.about {
+  background-color: var(--color-black-60);
+  width: 100%;
+  max-width: none;
+  padding: 2em auto;
+}
+
+.person-images {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2em;
+  padding: 0.5em;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 380px;
+  min-width: 300px;
+  max-width: 1200px;
+  background-color: var(--color-black-60);
+  gap: 1em;
+}
+
+.image-frame {
+  background-color: var(--color-burgundy);
+  height: 100%;
+  width: 280px;
+  background-size: cover;
+  border-radius: var(--border-radius-6px);
+}
+.person1 {
+  background-image: url("../images/person1.jpg");
+}
+.person2 {
+  background-image: url("../images/person2.jpg");
+}
+.person3 {
+  background-image: url("../images/person3.jpg");
+}
+
+.about-us {
+  max-width: 890px;
+  margin: 0 auto;
+  padding: 0.5em;
+  background-color: var(--color-black-60);
+  border-radius: var(--border-radius-6px);
+}

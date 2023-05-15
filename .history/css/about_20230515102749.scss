@@ -1,0 +1,11 @@
+.person-images {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5em;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 200px;
+  min-width: 300px;
+  max-width: 1200px;
+  background-color: var(--color-black-60);
+}

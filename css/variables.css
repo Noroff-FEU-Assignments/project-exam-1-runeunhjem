@@ -7,6 +7,8 @@
   --color-gold: rgb(198, 167, 119);
   --color-red: #A60033;
   --color-burgundy: #5E0A24;
+  --color-burgundy-60: rgb(94, 10, 36, 0.6);
+  --color-burgundy-90: rgb(94, 10, 36, 0.9);
   --color-burgundy-see-through: rgba(94, 10, 36, 0.6);
   --color-burgundy-light: rgb(233, 172, 168);
   --border-radius-50: 50%;
