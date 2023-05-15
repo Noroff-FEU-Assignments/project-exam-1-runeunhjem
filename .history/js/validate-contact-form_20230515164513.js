@@ -32,7 +32,7 @@ function validateContactForm() {
     contactSubject.placeholder = "What's the subject?";
   });
   contactContent.addEventListener("focus", function () {
-    contactContent.placeholder = "Min 25 characters";
+    contactContent.placeholder = "Min 10 characters";
   });
   contactContent.addEventListener("blur", function () {
     contactContent.placeholder = "Your Message";

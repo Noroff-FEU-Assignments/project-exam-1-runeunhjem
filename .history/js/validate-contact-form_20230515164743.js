@@ -88,6 +88,7 @@ function validateContactForm() {
       sendMessageButton.setAttribute("type", "submit");
       sendMessageButton.style.cursor = "pointer";
       sendMessageButton.innerText = "Send Message";
+      
       sendMessageButton.classList.add("buttonSuccess");
       sendMessageButton.addEventListener("click", successMessage);
     } else {

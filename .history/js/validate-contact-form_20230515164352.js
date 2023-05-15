@@ -14,7 +14,7 @@ function validateContactForm() {
 
   // CHANGE PLACEHOLDERS TO INPUT TIPS ON FOCUS
   contactName.addEventListener("focus", function () {
-    contactName.placeholder = "Min 5 characters";
+    contactName.placeholder = "Min 2 characters";
   });
   contactName.addEventListener("blur", function () {
     contactName.placeholder = "Your Name";
@@ -26,13 +26,13 @@ function validateContactForm() {
     contactEmail.placeholder = "Your Email";
   });
   contactSubject.addEventListener("focus", function () {
-    contactSubject.placeholder = "Min 10 characters";
+    contactSubject.placeholder = "Min 4 characters";
   });
   contactSubject.addEventListener("blur", function () {
     contactSubject.placeholder = "What's the subject?";
   });
   contactContent.addEventListener("focus", function () {
-    contactContent.placeholder = "Min 25 characters";
+    contactContent.placeholder = "Min 10 characters";
   });
   contactContent.addEventListener("blur", function () {
     contactContent.placeholder = "Your Message";
@@ -82,7 +82,7 @@ function validateContactForm() {
     if (
       checkLength(contactName.value, 4) &&
       validateEmail(contactEmail.value) &&
-      checkLength(contactSubject.value, 14) &&
+      checkLength(contactSubject.value, 3) &&
       checkLength(contactContent.value, 24)
     ) {
       sendMessageButton.setAttribute("type", "submit");

@@ -26,13 +26,13 @@ function validateContactForm() {
     contactEmail.placeholder = "Your Email";
   });
   contactSubject.addEventListener("focus", function () {
-    contactSubject.placeholder = "Min 10 characters";
+    contactSubject.placeholder = "Min 4 characters";
   });
   contactSubject.addEventListener("blur", function () {
     contactSubject.placeholder = "What's the subject?";
   });
   contactContent.addEventListener("focus", function () {
-    contactContent.placeholder = "Min 25 characters";
+    contactContent.placeholder = "Min 10 characters";
   });
   contactContent.addEventListener("blur", function () {
     contactContent.placeholder = "Your Message";
