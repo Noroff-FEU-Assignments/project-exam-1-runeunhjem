@@ -2,7 +2,34 @@ import { getPosts, posts } from "./get-posts.js";
 let filteredAndSortedPosts = [];
 let numToShow = 10;
 
+async function fetchAndRenderPosts() {
+  await getPosts();
+  populateCategorySelector(); // Call a new function to populate the category selector
+  renderPostsOnPageLoad();
+}
 
+function populateCategorySelector() {
+  const categorySelector = document.getElementById("category-filter");
+
+  // Get all unique categories from the posts
+  const categories = Array.from(new Set(posts.flatMap(post => post.categories)));
+
+  // Clear existing options
+  categorySelector.innerHTML = "";
+
+  // Create and append new options
+  const allOption = document.createElement("option");
+  allOption.value = "";
+  allOption.textContent = "All";
+  categorySelector.appendChild(allOption);
+
+  categories.forEach(category => {
+    const option = document.createElement("option");
+    option.value = category;
+    option.textContent = category;
+    categorySelector.appendChild(option);
+  });
+}
 async function applySort() {
   const selectedSort = sortFilter.value;
 
@@ -136,96 +163,7 @@ let selectedTag = null;
 
 async function fetchAndRenderPosts() {
   await getPosts();
-  populateCategorySelector();
-  populateTagsSelector();
   renderPostsOnPageLoad();
-}
-function populateCategorySelector() {
-  const categorySelector = document.getElementById("category-filter");
-
-  // Get all unique categories from the posts
-  const categories = Array.from(new Set(posts.flatMap((post) => post.categories)));
-
-  // Sort the categories alphabetically
-  categories.sort();
-
-  // Clear existing options
-  categorySelector.innerHTML = "";
-
-  // Create and append new options
-  const allOption = document.createElement("option");
-  allOption.value = "";
-  allOption.textContent = "All";
-  categorySelector.appendChild(allOption);
-
-  categories.forEach((category) => {
-    const option = document.createElement("option");
-    option.value = category;
-    option.textContent = category;
-    categorySelector.appendChild(option);
-  });
-}
-
-// function populateTagsSelector() {
-//   const tagsSelector = document.getElementById("tags-filter");
-//   const selectedCategory = categoryFilter.value;
-
-//   // Get all unique tags from the posts that belong to the selected category
-//   const tags = Array.from(
-//     new Set(posts.filter((post) => post.categories.includes(selectedCategory)).flatMap((post) => post.tags))
-//   );
-
-//   // Sort the tags alphabetically
-//   tags.sort();
-
-//   // Clear existing options
-//   tagsSelector.innerHTML = "";
-
-//   // Create and append new options
-//   const allOption = document.createElement("option");
-//   allOption.value = "";
-//   allOption.textContent = "All";
-//   tagsSelector.appendChild(allOption);
-
-//   tags.forEach((tag) => {
-//     const option = document.createElement("option");
-//     option.value = tag;
-//     option.textContent = tag;
-//     tagsSelector.appendChild(option);
-//   });
-// }
-
-// // Add event listener to the category filter element
-// categoryFilter.addEventListener("change", () => {
-//   populateTagsSelector();
-// });
-
-
-
-function populateTagsSelector() {
-  const tagsSelector = document.getElementById("tags-filter");
-
-  // Get all unique tags from the posts
-  const tags = Array.from(new Set(posts.flatMap((post) => post.tags)));
-
-  // Sort the tags alphabetically
-  tags.sort();
-
-  // Clear existing options
-  tagsSelector.innerHTML = "";
-
-  // Create and append new options
-  const allOption = document.createElement("option");
-  allOption.value = "";
-  allOption.textContent = "All";
-  tagsSelector.appendChild(allOption);
-
-  tags.forEach((tag) => {
-    const option = document.createElement("option");
-    option.value = tag;
-    option.textContent = tag;
-    tagsSelector.appendChild(option);
-  });
 }
 
 fetchAndRenderPosts();

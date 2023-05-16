@@ -1,23 +1,20 @@
+
 .latest-posts-containers {
   margin-top: 0em;
 }
-
 .all-posts {
   background-image: url(../images/all-posts-bg.jpg);
   background-size: cover;
   background-position: left bottom;
 }
-
 header {
   background-color: var(--color-black);
 }
-
 .main-all-posts {
   background-color: var(--color-black-60);
   width: 100%;
   max-width: none;
 }
-
 .filter-section {
   display: flex;
   justify-content: space-around;
@@ -32,8 +29,7 @@ header {
   background-color: var(--color-burgundy);
   border-radius: var(--border-radius-6px);
 }
-
-.all-posts-note p {
+.all-posts-note {
   font-family: var(--font-family-normal);
 }
 
@@ -41,26 +37,21 @@ header {
 .filter-section .choose-tags,
 .filter-section .choose-sort {
   display: flex;
-  max-width: 100%;
   flex-direction: column;
-  align-items: center;
-  text-align: left;
+  align-items: left;
   margin-bottom: 0.3em;
 }
 
 .filter-section select {
-  max-width: 90%;
+  max-width: 100%;
   width: 280px;
   font-weight: 600;
 }
-
 .post-published {
   margin: 0;
-  text-align: left;
+  text-align: left;;
 }
-
 .filter-section label {
-  width: 90%;
   font-weight: bold;
   margin-bottom: 0.4em;
   color: var(--color-gold);
@@ -73,22 +64,8 @@ header {
   background-color: var(--color-burgundy-light);
   box-shadow: 1px 1px 1px 1px var(--color-black-90);
 }
-
-.filter-section select:hover {
+.filter-section select:hover{
   background-color: var(--color-gold);
   color: var(--color-burgundy);
-}
 
-@media screen and (max-width: 768px) {
-  .filter-section .choose-category,
-  .filter-section .choose-tags,
-  .filter-section .choose-sort {
-    width: 100%;
-  }
-  .filter-section {
-    width: 90%;
-  }
-  .filter-section select {
-    width: 90%;
-  }
-}/*# sourceMappingURL=all-posts.css.map */
+}

@@ -202,31 +202,31 @@ function populateCategorySelector() {
 
 
 
-function populateTagsSelector() {
-  const tagsSelector = document.getElementById("tags-filter");
+// function populateTagsSelector() {
+//   const tagsSelector = document.getElementById("tags-filter");
 
-  // Get all unique tags from the posts
-  const tags = Array.from(new Set(posts.flatMap((post) => post.tags)));
+//   // Get all unique tags from the posts
+//   const tags = Array.from(new Set(posts.flatMap((post) => post.tags)));
 
-  // Sort the tags alphabetically
-  tags.sort();
+//   // Sort the tags alphabetically
+//   tags.sort();
 
-  // Clear existing options
-  tagsSelector.innerHTML = "";
+//   // Clear existing options
+//   tagsSelector.innerHTML = "";
 
-  // Create and append new options
-  const allOption = document.createElement("option");
-  allOption.value = "";
-  allOption.textContent = "All";
-  tagsSelector.appendChild(allOption);
+//   // Create and append new options
+//   const allOption = document.createElement("option");
+//   allOption.value = "";
+//   allOption.textContent = "All";
+//   tagsSelector.appendChild(allOption);
 
-  tags.forEach((tag) => {
-    const option = document.createElement("option");
-    option.value = tag;
-    option.textContent = tag;
-    tagsSelector.appendChild(option);
-  });
-}
+//   tags.forEach((tag) => {
+//     const option = document.createElement("option");
+//     option.value = tag;
+//     option.textContent = tag;
+//     tagsSelector.appendChild(option);
+//   });
+// }
 
 fetchAndRenderPosts();
 
