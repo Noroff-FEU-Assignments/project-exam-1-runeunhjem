@@ -1,0 +1,15 @@
+.image-galler-containers {
+display: flex;
+flex-wrap: wrap;
+gap: 1em;
+}
+.image-post-container {
+  width: 280px;
+  aspect-ratio: 16/9;
+}
+.image-gallery-image-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
