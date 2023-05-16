@@ -9,7 +9,7 @@
   padding: 1em;
   border-radius: var(--border-radius-6px);
   border: var(--border-1px-gold);
-  background-color: var(--color-burgundy-light);
+  background-color: var(--color-gold);
   box-shadow: 1px 1px 1px 1px var(--color-black-90);
   align-items: center;
   .show-more-button {
@@ -17,7 +17,6 @@
     width: 280px;
     max-height: 55px;
     margin: 0 1em;
-    box-shadow: 3px 3px 3px 2px var(--color-black-60);
   }
 }
 .image-post-container {
@@ -25,12 +24,10 @@
   aspect-ratio: 16/9;
   max-height: 100%;
   // border: var(--border-1px-gold);
-  box-shadow: 2px 3px 2px 3px var(--color-black-60);
-  border-radius: var(--border-radius-6px);
+  box-shadow: 1px 1px 4px 6px var(--color-black-90);
 }
 .image-gallery-image-container {
   margin: 0em;
-  border-radius: var(--border-radius-6px);
   background-size: cover;
   background-position: center center;
   width: 100%;
