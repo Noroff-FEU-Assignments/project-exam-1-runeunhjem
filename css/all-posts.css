@@ -87,4 +87,7 @@ header {
   .filter-section select {
     width: 90%;
   }
+}
+.hide {
+  display: none;
 }/*# sourceMappingURL=all-posts.css.map */

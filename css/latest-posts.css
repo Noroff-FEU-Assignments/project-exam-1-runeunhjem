@@ -46,7 +46,7 @@ header {
   border: var(--border-2px-gold);
   margin: 1em auto;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
   box-shadow: 2px 2px 5px var(--color-gold);
   font-weight: bold;
   font-family: var(--font-family-elegant);
@@ -59,6 +59,10 @@ header {
 .latest-post-container {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+}
+
+.hide {
+  display: none;
 }
 
 @media screen and (max-width: 768px) {
