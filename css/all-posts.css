@@ -33,10 +33,6 @@ header {
   border-radius: var(--border-radius-6px);
 }
 
-.all-posts-note p {
-  font-family: var(--font-family-normal);
-}
-
 .filter-section .choose-category,
 .filter-section .choose-tags,
 .filter-section .choose-sort {
