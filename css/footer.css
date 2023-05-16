@@ -33,14 +33,11 @@ footer img:hover {
   width: 33.33%;
 }
 
-.footer-center {
-  width: 2%;
-}
-
 .footer-header {
   display: flex;
   align-items: flex-start;
-  font-size: 2.9vw;
+  margin: 0.35em 0 0.5em 0;
+  font-size: 2rem;
 }
 
 .footer-center-top {
@@ -132,7 +129,7 @@ footer img:hover {
   margin-top: 0.5em;
 }
 .footer-icons img {
-  height: 3.5vw;
+  height: 2.5vw;
   border: var(--border-1px-gold);
   border-radius: var(--border-radius-50);
   transition: all 0.2s ease-in-out;
