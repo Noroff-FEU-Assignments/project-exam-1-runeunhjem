@@ -17,7 +17,7 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  overflow-x: hidden;
+  
 }
 main {
   display: flex;
@@ -26,7 +26,6 @@ main {
   align-items: center;
   min-height: 50vh;
   max-width: 1600px;
-  width: 100vw;
 }
 label {
   min-width: 100px;
