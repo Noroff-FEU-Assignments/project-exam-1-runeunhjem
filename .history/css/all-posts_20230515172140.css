@@ -1,0 +1,9 @@
+.filter-section {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 1200px;
+  width: 95vw;
+  flex-wrap: wrap;
+  padding: 1em auto;
+  margin: 0 auto;
+}/*# sourceMappingURL=all-posts_20230515172140.css.map */
