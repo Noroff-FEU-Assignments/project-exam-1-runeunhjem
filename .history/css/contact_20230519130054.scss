@@ -1,0 +1,108 @@
+body {
+  background-image: url(../images/contact-bg.jpg);
+  background-size: cover;
+  background-position: left bottom;
+}
+header {
+  background-color: var(--color-black);
+}
+.contact {
+  background-color: var(--color-black-60);
+  width: 100%;
+  max-width: none;
+}
+.contact-note {
+  border-radius: var(--border-radius-6px);
+  margin: 2em auto;
+  width: 40vw;
+  padding: 1rem 2rem;
+  max-width: 600px;
+  text-align: center;
+  p {
+    text-align: left;
+  }
+}
+
+.contact-fieldset {
+  max-width: 600px;
+  margin-bottom: 2em;
+}
+.contact-form {
+  width: 100%;
+}
+.contact-form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.contact-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--color-gold);
+}
+.label-error-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background-color: var()
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 5px;
+  border: var(--border-1px-black);
+  border-radius: 4px;
+  background-color: var(--color-burgundy-light);
+  box-shadow: -1px -1px 1px 2px var(--color-black-90);
+}
+.contact-form input:hover,
+.contact-form textarea:hover {
+  box-shadow: 1px 1px 1px 2px var(--color-black-90);
+}
+.contact-form textarea {
+  height: 109px;
+}
+.contact-form .error-message {
+  display: none;
+  color: var(--color-white);
+  font-family: var(--font-family-normal);
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+#cf7-form {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--color-burgundy);
+  border-radius: 6px;
+  border: var(--border-2px-gold);
+}
+
+#cf7-form input,
+#cf7-form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: var(--border-1px-gold);
+  border-radius: var(--border-radius-6px);
+  background-color: var(--color-burgundy-light);
+}
+
+#cf7-form textarea {
+  height: 120px;
+}
+
+#cf7-form input[type="submit"] {
+  background-color: var(--color-gold);
+  color: white;
+  cursor: pointer;
+}
+
+#cf7-form input[type="submit"]:hover {
+  background-color: #45a049;
+}

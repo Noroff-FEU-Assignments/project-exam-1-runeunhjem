@@ -1,0 +1,137 @@
+body {
+  background-image: url(../images/about-bg.jpg);
+  background-size: cover;
+  background-position: left bottom;
+}
+header {
+  background-color: var(--color-black);
+}
+.about-main {
+  background-color: var(--color-black-60);
+  width: 100%;
+  max-width: none;
+  padding-bottom: 2em;
+}
+
+.person-images {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2em;
+  padding: 0.5em;
+  justify-content: space-around;
+  align-items: flex-start;
+  min-width: 300px;
+  max-width: 1200px;
+  border-radius: var(--border-radius-6px);
+  gap: 1.5em;
+}
+
+.image-frame {
+  display: flex;
+  justify-content: center;
+  border: var(--border-2px-gold);
+  height: 100%;
+  min-height: 380px;
+  width: 280px;
+  max-width: 90%;
+  background-size: cover;
+  border-radius: var(--border-radius-6px);
+  p {
+    margin-top: 0.5em;
+    height: 40px;
+  }
+}
+.person1 {
+  background-image: url("../images/person2.jpg");
+}
+.person2 {
+  background-image: url("../images/person1.jpg");
+}
+.person3 {
+  background-image: url("../images/person3.jpg");
+}
+.name {
+  display: flex;
+  justify-content: center;
+  color: var(--color-gold);
+  font-size: 1.4rem;
+  margin: 0;
+  padding: 0.3em;
+  font-weight: 600;
+  text-align: center;
+  border-radius: var(--border-radius-6px);
+  top: 5px;
+  width: 50%;
+  border
+  background-color: var(--color-black-90);
+}
+.about-us {
+  width: 95vw;
+  max-width: 890px;
+  // margin: 0 auto;
+  padding: 0.5em 1em;
+  background-color: var(--color-burgundy-90);
+  border: var(--border-2px-gold);
+  border-radius: var(--border-radius-6px);
+  h2 {
+    color: var(--color-gold);
+  }
+  p {
+    font-family: var(--font-family-normal);
+    line-height: 1.3;
+    padding: 0 1em 0 0;
+  }
+  .p-after-image {
+    margin: 0em 0em 0em 1em;
+  }
+  .direction {
+    margin: 0em 0em 0em 0em;
+  }
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.who-are-we-img {
+  height: 80px;
+  width: 580px;
+  max-width: 100%;
+  background-size: cover;
+  background-position: center center;
+  border-radius: var(--border-radius-6px);
+  margin: 0.2em 0em 1em 0;
+  // padding: 0.5em;
+}
+.direction {
+  flex-direction: row-reverse;
+  margin: 0.2em 1em 1em 0em;
+  .who-are-we-img2 {
+    margin: 0.2em 1em 1em 0;
+  }
+}
+
+.who-are-we-img1 {
+  background-image: url("../images/who-are-we-img1.jpg");
+}
+.who-are-we-img2 {
+  background-image: url("../images/who-are-we-img2.jpg");
+}
+.who-are-we-img3 {
+  background-image: url("../images/who-are-we-img3.jpg");
+}
+
+@media screen and (max-width: 468px) {
+  .flex {
+    flex-wrap: wrap;
+  }
+  .about-us {
+    .p-after-image {
+      margin: 0em 0em 0em 0em;
+    }
+    .who-are-we-img2 {
+      background-position: center 60%;
+    }
+  }
+}

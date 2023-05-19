@@ -102,6 +102,14 @@ footer .footer-icons img:hover {
   width: 150px;
   color: var(--color-gold);
 }
+.footer-links .menu-header {
+  height: 20px;
+}
+.footer-links .menu-header h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+}
 .footer-links .menu-header:hover, .footer-links .active:hover {
   border: none;
   text-indent: 0px;

@@ -16,6 +16,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
 }
 
 main {
@@ -25,6 +26,10 @@ main {
   align-items: center;
   min-height: 50vh;
   max-width: 1600px;
+}
+
+label {
+  min-width: 100px;
 }
 
 .back-to-top-button {
@@ -76,31 +81,38 @@ h4 {
 
 .thank-you-note {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: left;
   font-family: var(--font-family-elegant);
   font-size: 1.2vw;
   width: calc(63.5vw - 1em);
   color: var(--color-gold);
   background-color: var(--color-burgundy);
-  padding: 0.3em 10rem;
+  padding: 1.3em 0 1.3em 0;
   border-top: var(--border-2px-gold);
   border-bottom: var(--border-2px-gold);
   border-radius: var(--border-radius-6px);
-  margin: 0 0 0.5em 0;
+  margin: 2em 0 0.5em 0;
   gap: 0.3em;
   max-width: 1200px;
 }
 .thank-you-note h2 {
-  margin: 0 auto;
+  text-align: center;
+  padding: 0.5em 0em 0.5em 0em;
+  width: 100%;
 }
 .thank-you-note p {
+  display: flex;
+  justify-content: flex-start;
   margin: 0;
+  padding: 0;
+  text-align: left;
+  width: 80%;
   color: var(--color-white);
 }
-
-#latest-posts-note {
-  margin-top: 2em;
+.thank-you-note .check-latest-posts-note {
+  text-align: left;
 }
 
 .latest-posts-note .check-latest-posts-note {
@@ -115,6 +127,10 @@ h4 {
   margin: 0.5em 0 1em 0;
   position: relative;
   text-align: left;
+}
+
+.home-hero {
+  margin-top: 0;
 }
 
 @media screen and (min-width: 1980px) {
@@ -191,6 +207,7 @@ h4 {
   }
   #latest-posts-note {
     width: 90%;
+    margin: 2em auto;
   }
   .carousel-wrapper .carousel-left, .carousel-wrapper .carousel-right {
     width: 12vw;

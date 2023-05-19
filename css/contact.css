@@ -67,11 +67,13 @@ header {
 
 .contact-form .error-message {
   display: none;
-  color: var(--color-white);
+  color: var(--color-red);
   font-family: var(--font-family-normal);
   font-weight: bold;
   font-size: 0.8rem;
   margin-top: 0.5rem;
+  padding: 2px;
+  background-color: var(--color-white);
 }
 
 #cf7-form {
@@ -107,4 +109,20 @@ header {
 
 #cf7-form input[type=submit]:hover {
   background-color: #45a049;
+}
+
+#label-error-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+}
+#label-error-wrapper .error-message {
+  margin-left: 1em;
+  border-radius: var(--border-radius-6px);
+  padding: 4px 1em;
 }/*# sourceMappingURL=contact.css.map */

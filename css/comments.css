@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: flex-start;
   width: 100vw;
+  max-width: 1600px;
 }
 .comments-container .comment-title {
   width: 100%;
@@ -25,7 +26,8 @@
   align-items: flex-start;
   gap: 2em;
   margin: 1em auto;
-  width: 100vw;
+  width: 100%;
+  max-width: 1600px;
 }
 
 .leave-a-comment, .user-comments {
@@ -36,7 +38,8 @@
   border: var(--border-2px-gold);
   background-color: var(--color-burgundy);
   min-width: 300px;
-  width: 40vw;
+  max-width: 100%;
+  width: 700px;
   min-height: 350px;
   border-radius: var(--border-radius-6px);
 }
@@ -82,25 +85,32 @@ legend {
 }
 
 .post-comment {
-  width: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
   padding: 6px;
-  border: var(--border-1px-gold);
   border-radius: 4px;
   background-color: var(--color-burgundy);
   font-weight: 600;
-  color: var(--color-burgundy-light);
-  margin-top: 7px;
+  color: var(--color-grey-dark);
+  margin: 2em auto 0px auto;
   box-shadow: 1px 1px 1px 2px var(--color-black-90);
 }
 
 .post-comment:hover {
-  background-color: var(--color-black-60);
-  color: var(--color-white);
   cursor: default;
 }
 
 .buttonSuccess {
   cursor: pointer;
+  background-color: var(--color-burgundy-light);
+  color: var(--color-burgundy);
+}
+
+.buttonNotReady {
+  cursor: not-allowed;
+  background-color: var(--color-black-60);
+  color: var(--color-grey);
 }
 
 .post-comment:disabled {
@@ -110,11 +120,29 @@ legend {
 
 .comment-form .error-message {
   display: none;
-  color: var(--color-white);
+  color: var(--color-red);
   font-family: var(--font-family-normal);
   font-weight: bold;
   font-size: 0.8rem;
   margin-top: 0.5rem;
+  padding: 2px;
+  background-color: var(--color-white);
+}
+
+#label-error-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+}
+#label-error-wrapper .error-message {
+  margin-left: 1em;
+  border-radius: var(--border-radius-6px);
+  padding: 4px 1em;
 }
 
 .success {
