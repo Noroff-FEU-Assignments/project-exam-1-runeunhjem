@@ -16,20 +16,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Cooking, Chef, Table, Dinner, Dessert, Cuisine, Recipes, Food">
-    <meta name="description" content="A blog with recipes for only the best and juiciest dishes. Image Gallery">
+    <meta name="description" content="A blog with recipes for only the best and juiciest dishes">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/out-of-view-menu-text.css">
-    <link rel="stylesheet" href="css/search-results.css">
-    <link rel="stylesheet" href="css/all-posts.css">
-    <link rel="stylesheet" href="css/image-gallery.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="js/main.js" type="module"></script>
     <script src="js/searchbar.js" defer></script>
+    <script src="js/make-carousel-cards.js" type="module"></script>
     <script src="js/menu.js" defer></script>
-    <script src="js/image-gallery.js" type="module"></script>
-    <title>CHEF'S TABLE | Image Gallery</title>
+    <!-- <script src="js/search-and-filter.js" type="module"></script> -->
+    <title>CHEF'S TABLE | Home</title>
   </head>
-  <body class="all-posts">
+  <body>
     <header class="header-desktop header-mobile" aria-label="Header">
       <div class="header-container">
         <div class="header-flame-logo head-item">
@@ -55,14 +53,12 @@
         <div class="nav-container">
           <div class="desk-menu mob-menu menu">
               <ul class="search-bar nav-bar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="categories.html">Categories</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="all-posts.html">All Posts</a></li>
                 <li class="desktop-only tablet"><a href="latest-posts.html">Latest Posts</a></li>
-                <li class="desktop-only tablet"><a href="image-gallery.html" class="active">Image Gallery</a></li>
-                <li class="desktop-only"><a href="contact.html">Contact</a></li>
+                <li class="desktop-only tablet"><a href="image-gallery.html">Image Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <li class="desktop-only"><a href="about.html">About</a></li>
-                <li class="desktop-only"><a href="add-new-post.html">Add New Post</a></li>
               </ul>
               <div class="search-container">
                 <form id="search-form" action="search-results.html" method="get">
@@ -78,41 +74,39 @@
           </div>
       </nav>
     </header>
-    <main class="main-all-posts" aria-label="Latest posts' main Section">
-      <div id="loader" class="loader searching"><p>Loading images</p><span class="loader-recipes"></span></div>
-      <div class ="thank-you-note all-posts-note" id="latest-posts-note">
-        <h2 class="so-god-to-see-you">Looking for inspiration maybe?</h2>
-        <p class="enjoy-note">Browse through our images until you see that special one that makes your mouth watery.</p>
-        <p class="check-latest-posts-note">Click your favourite for details...</p>
-      </div>
+    <main class="index" aria-label="Main Section">
       <a href="#" alt="Go back to the top"><span class="out-of-view-menu-text">Back to top</span>
         <div class="back-to-top-button"></div>
       </a>
-      <div class="filter-section">
-        <div class="choose-category" id="choose-category">
-          <label for="category-filter">Category</label>
-          <select id="category-filter" name="category-filter">
-            <option value="">Category</option>
-          </select>
-        </div>
-        <div class="choose-tags" id="choose-tags">
-          <label for="tags-filter">Tags</label>
-          <select id="tags-filter" name="tags-filter">
-            <option value="">Tags</option>
-          </select>
-        </div>
-        <div class="choose-sort" id="choose-sort">
-          <label for="sort">Sort</label>
-          <select id="sort" name="sort">
-            <option value="">Sort by</option>
-            <option value="Release Date (Newest First)">Published Date (Newest First)</option>
-            <option value="Release Date (Oldest First)">Published Date (Oldest First)</option>
-            <option value="Name (A to Z)">Name (A to Z)</option>
-            <option value="Name (Z to A)">Name (Z to A)</option>
-          </select>
-        </div>
+      <div class="hero-image post-preview" id="post-preview"></div>
+      <div class ="thank-you-note">
+        <h2 class="so-god-to-see-you">So good to see you...</h2>
+        <p class="enjoy-note">We try to make food for every pallet, every skill set and every age, so we hope you find that perfect dish and enjoy making it as much as we do.</p>
+        <p class="check-latest-posts-note">Check out these latest recipes:</p>
       </div>
-      <div class="image-gallery-containers" id="image-gallery-containers"></div>
+      <section class="newest-posts" aria-label="Newest Posts">
+        <div id="loader" class="loader loader-carousel"><p>Loading recipes</p><span class="loader-carousel"></span></div>
+        <div class="carousel-wrapper">
+          <button class="carousel-left">
+            <img src="images/ico-carousel-arrow-left.svg" alt="Carousel Arrow Left">
+          </button>
+          <div class="carousel-home" id="carousel-home">
+          </div>
+          <button class="carousel-right">
+            <img src="images/ico-carousel-arrow-right.svg" alt="Carousel Arrow right">
+          </button>
+        </div>
+        <div id="modal" class="modal">
+          <div class="modal-content" id="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-image" class="modal-image" src="images/hero-image.png" alt="Recipe Image">
+          </div>
+        </div>
+        <div class="carousel-indicator">
+          <span id="current-slide">1</span> / <span id="total-slides">4</span>
+        </div>
+      </section>
+      
     </main>
     <footer class="footer">
       <div class="footer-wrapper">
@@ -123,15 +117,12 @@
                 <li class="menu-header">
                   <h4>Menu</h4>
                 </li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="categories.html">Categories</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="all-posts.html">All Posts</a></li>
                 <li class="desktop-only tablet"><a href="latest-posts.html">Latest Posts</a></li>
-                <li class="desktop-only tablet"><a href="image-gallery.html" class="active">Image Gallery</a></li>
-                <li class="desktop-only"><a href="contact.html">Contact</a></li>
+                <li class="desktop-only tablet"><a href="image-gallery.html">Image Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <li class="desktop-only"><a href="about.html">About</a></li>
-                <li class="desktop-only"><a href="add-new-post.html">Add New Post</a></li>
-                <li class="to-top"><a href="#">Back to Top<span class="before-top-arrow">&#x25B2;</span></a></li>
               </ul>
             </nav>
           </div>

@@ -10,10 +10,8 @@ footer {
   img {
     transition: all 0.2s ease-in-out;
   }
-  .footer-icons {
-    img:hover {
-      transform: scale(1.2);
-    }
+  img:hover {
+    transform: scale(1.2);
   }
 }
 .footer-wrapper {
@@ -165,7 +163,7 @@ footer {
 }
 .footer-logo-image {
   width: 60%;
-  max-height: 180px;
+  max-height: 120px;
 }
 .footer-credits {
   width: 100%;
