@@ -31,13 +31,11 @@ header {
 .image-frame {
   display: flex;
   justify-content: center;
-  border: var(--border-2px-gold);
   height: 100%;
   min-height: 380px;
   width: 280px;
   max-width: 90%;
   background-size: cover;
-  box-shadow: 4px 4px 12px 2px var(--color-gold);
   border-radius: var(--border-radius-6px);
 }
 .image-frame p {
@@ -70,7 +68,7 @@ header {
   top: 5px;
   width: 60%;
   box-shadow: inset 2px 2px 7px 2px var(--color-black-90);
-  background-color: var(--color-burgundy-light);
+  background-color: var(--color-gold);
 }
 
 .about-us {
