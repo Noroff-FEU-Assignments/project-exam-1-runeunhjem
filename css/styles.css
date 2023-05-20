@@ -132,6 +132,7 @@ h4 {
 
 .home-hero {
   margin-top: 0;
+  padding-top: 0;
 }
 
 @media screen and (min-width: 1980px) {
