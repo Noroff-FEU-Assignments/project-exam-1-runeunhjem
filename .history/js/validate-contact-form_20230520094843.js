@@ -92,6 +92,7 @@ function validateContactForm() {
       confirmSuccess.style.display = "none";
     }
   }
+  // contactForm.addEventListener("submit", function (event) {
   contactForm.addEventListener("submit", function (event) {
     formSubmitted = true;
     validateForm(event);
@@ -101,7 +102,6 @@ function validateContactForm() {
   contactEmail.addEventListener("input", validateForm);
   contactSubject.addEventListener("input", validateForm);
   contactContent.addEventListener("input", validateForm);
-  sendMessageButton.addEventListener("click", validateForm);
 
   function successMessage() {
     const confirmSuccess = document.getElementById("message-sent");
