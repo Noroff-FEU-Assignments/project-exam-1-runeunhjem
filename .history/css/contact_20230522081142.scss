@@ -3,17 +3,14 @@ body {
   background-size: cover;
   background-position: left bottom;
 }
-
 header {
   background-color: var(--color-black);
 }
-
 .contact {
   background-color: var(--color-black-60);
   width: 100%;
   max-width: none;
 }
-
 .contact-note {
   border-radius: var(--border-radius-6px);
   margin: 2em auto;
@@ -21,31 +18,28 @@ header {
   padding: 1rem 2rem;
   max-width: 600px;
   text-align: center;
+  p {
+    text-align: left;
+  }
 }
-.contact-note p {
-  text-align: left;
-}
-
 .contact-fieldset {
   max-width: 600px;
   margin-bottom: 2em;
 }
-
 .contact-form {
   width: 100%;
 }
-
-.form-label-error {
+.contact-form div {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
-  align-items: flex-start;
 }
 
 .contact-form label {
   font-weight: bold;
   margin-bottom: 5px;
   color: var(--color-gold);
+  
 }
 
 .contact-form input,
@@ -55,18 +49,14 @@ header {
   border-radius: 4px;
   background-color: var(--color-burgundy-light);
   box-shadow: -1px -1px 1px 2px var(--color-black-90);
-  width: 100%;
 }
-
 .contact-form input:hover,
 .contact-form textarea:hover {
   box-shadow: 1px 1px 1px 2px var(--color-black-90);
 }
-
 .contact-form textarea {
   height: 109px;
 }
-
 .contact-form .error-message {
   display: none;
   color: var(--color-red);
@@ -77,11 +67,11 @@ header {
   padding: 2px;
   background-color: var(--color-white);
 }
-
 #cf7-form {
   display: flex;
   flex-direction: column;
   min-width: 300px;
+
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
@@ -103,13 +93,13 @@ header {
   height: 120px;
 }
 
-#cf7-form input[type=submit] {
+#cf7-form input[type="submit"] {
   background-color: var(--color-gold);
   color: white;
   cursor: pointer;
 }
 
-#cf7-form input[type=submit]:hover {
+#cf7-form input[type="submit"]:hover {
   background-color: #45a049;
 }
 
@@ -122,10 +112,9 @@ header {
   margin: 0;
   width: 100%;
   text-align: left;
+  .error-message {
+    margin-left: 1em;
+    border-radius: var(--border-radius-6px);
+    padding: 4px 1em;
+  }
 }
-.label-error-wrapper .error-message {
-  margin-left: 1em;
-  margin-bottom: 10px;
-  border-radius: var(--border-radius-6px);
-  padding: 4px 1em;
-}/*# sourceMappingURL=contact.css.map */

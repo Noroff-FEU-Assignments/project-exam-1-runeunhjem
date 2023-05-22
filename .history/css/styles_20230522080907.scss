@@ -132,7 +132,21 @@ h4 {
   margin-top: 0;
   padding-top: 0;
 }
-
+.label-error-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+  .error-message {
+    margin-left: 1em;
+    border-radius: var(--border-radius-6px);
+    padding: 4px 1em;
+  }
+}
 
 @media screen and (min-width: 1980px) {
   .thank-you-note {
