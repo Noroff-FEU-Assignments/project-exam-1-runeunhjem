@@ -60,7 +60,7 @@ header {
 .name {
   display: flex;
   justify-content: center;
-  color: var(--color-burgundy);
+  color: var(--color-gold);
   font-size: 1.4rem;
   margin: 0;
   padding: 0.3em;
@@ -69,8 +69,7 @@ header {
   border-radius: var(--border-radius-6px);
   top: 5px;
   width: 60%;
-  box-shadow: inset 2px 2px 7px 2px var(--color-black-90);
-  background-color: var(--color-gold);
+  background-color: var(--color-black);
 }
 
 .about-us {
