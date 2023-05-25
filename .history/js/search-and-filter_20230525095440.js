@@ -1,9 +1,9 @@
 import { getPosts, posts } from "./get-posts.js";
 
-const resultsWrapper = document.querySelector(".results-wrapper");
-resultsWrapper.classList.add("hide");
 const loader = document.getElementById("loader");
 
+const resultsWrapper = document.querySelector(".results-wrapper");
+resultsWrapper.classList.add("hide");
 async function init() {
   const searchResults = document.querySelector(".search-results");
   searchResults.classList.add("hide");

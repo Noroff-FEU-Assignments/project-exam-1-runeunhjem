@@ -7,13 +7,11 @@ const latestPostsContainer = document.getElementById("latest-posts-container");
 async function fetchAndRenderPosts() {
   loader.classList.add("active");
   postsNote.classList.add("hide");
-  latestPostsContainer.classList.add("hide");
 
   await getPosts();
 
   loader.classList.remove("active");
   postsNote.classList.remove("hide");
-  latestPostsContainer.classList.remove("hide");
 
   displayPosts(numToShow);
 }

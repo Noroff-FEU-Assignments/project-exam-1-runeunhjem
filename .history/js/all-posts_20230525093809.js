@@ -131,7 +131,6 @@ let selectedCategory = null;
 let selectedTag = null;
 
 async function fetchAndRenderPosts() {
-  const latestPostsContainer = document.getElementById("latest-posts-container");
   loader.classList.add("active");
   postsNote.classList.add("hide");
   latestPostsContainer.classList.add("hide");

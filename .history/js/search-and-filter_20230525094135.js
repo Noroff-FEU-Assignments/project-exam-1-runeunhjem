@@ -1,13 +1,11 @@
 import { getPosts, posts } from "./get-posts.js";
 
-const resultsWrapper = document.querySelector(".results-wrapper");
-resultsWrapper.classList.add("hide");
 const loader = document.getElementById("loader");
 
 async function init() {
   const searchResults = document.querySelector(".search-results");
-  searchResults.classList.add("hide");
   loader.classList.add("active");
+  searchResults.classList.add("hide");
 
   await getPosts();
   const queryString = document.location.search;
@@ -78,7 +76,5 @@ async function init() {
     searchResults.prepend(resultCount);
   };
   loader.classList.remove("active");
-  resultsWrapper.classList.remove("hide");
-  searchResults.classList.remove("hide");
 };
 init();

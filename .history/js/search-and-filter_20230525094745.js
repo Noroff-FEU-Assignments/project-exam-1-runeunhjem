@@ -1,12 +1,14 @@
 import { getPosts, posts } from "./get-posts.js";
 
-const resultsWrapper = document.querySelector(".results-wrapper");
-resultsWrapper.classList.add("hide");
 const loader = document.getElementById("loader");
+const resultsWrapper = document.querySelector(".results-wrapper");
+const searchResults = document.querySelector(".search-results");
+const mainSearchResults = document.querySelector(".main-search-results");
+resultsWrapper.classList.add("hide");
+searchResults.classList.add("hide");
+mainSearchResults.classList.add("hide");
 
 async function init() {
-  const searchResults = document.querySelector(".search-results");
-  searchResults.classList.add("hide");
   loader.classList.add("active");
 
   await getPosts();

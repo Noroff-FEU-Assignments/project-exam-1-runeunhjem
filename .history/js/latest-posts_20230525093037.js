@@ -13,7 +13,6 @@ async function fetchAndRenderPosts() {
 
   loader.classList.remove("active");
   postsNote.classList.remove("hide");
-  latestPostsContainer.classList.remove("hide");
 
   displayPosts(numToShow);
 }

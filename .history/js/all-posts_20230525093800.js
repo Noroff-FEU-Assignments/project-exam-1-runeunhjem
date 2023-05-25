@@ -129,9 +129,8 @@ sortFilter.addEventListener("change", handleSortFilter);
 
 let selectedCategory = null;
 let selectedTag = null;
-
 async function fetchAndRenderPosts() {
-  const latestPostsContainer = document.getElementById("latest-posts-container");
+  latestPostsContainer.classList.add("hide");
   loader.classList.add("active");
   postsNote.classList.add("hide");
   latestPostsContainer.classList.add("hide");

@@ -131,7 +131,6 @@ let selectedCategory = null;
 let selectedTag = null;
 
 async function fetchAndRenderPosts() {
-  const latestPostsContainer = document.getElementById("latest-posts-container");
   loader.classList.add("active");
   postsNote.classList.add("hide");
   latestPostsContainer.classList.add("hide");
@@ -142,7 +141,6 @@ async function fetchAndRenderPosts() {
   renderPostsOnPageLoad();
   loader.classList.remove("active");
   postsNote.classList.remove("hide");
-  latestPostsContainer.classList.remove("hide");
   filterSection.classList.remove("hide");
 }
 function populateCategorySelector() {
