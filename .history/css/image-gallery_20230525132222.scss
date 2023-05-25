@@ -7,11 +7,11 @@
   flex-wrap: wrap;
   gap: 2.5em;
   margin: 2em auto;
-  padding: 2em;
+  padding: 2.5em;
   border-radius: var(--border-radius-6px);
   border: var(--border-1px-gold);
   background-color: var(--color-burgundy-light);
-  box-shadow: 3px 3px 18px 4px var(--color-black-90);
+  box-shadow: 1px 1px 1px 1px var(--color-black-90);
   align-items: center;
   .show-more-button {
     justify-self: flex-end;
@@ -25,7 +25,7 @@
   width: 270px;
   aspect-ratio: 16/9;
   max-height: 100%;
-  box-shadow: 2px 3px 13px 3px var(--color-black-60);
+  box-shadow: 2px 3px 2px 3px var(--color-black-60);
   border-radius: var(--border-radius-6px);
   position: relative;
 }
