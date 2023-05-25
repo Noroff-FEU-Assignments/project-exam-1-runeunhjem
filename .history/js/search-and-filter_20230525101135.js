@@ -1,6 +1,6 @@
 import { getPosts, posts } from "./get-posts.js";
 
-const main = document.querySelector("body");
+const main = document.querySelector("main");
 const resultsWrapper = document.querySelector(".results-wrapper");
 resultsWrapper.classList.add("hide");
 const loader = document.getElementById("loader");
