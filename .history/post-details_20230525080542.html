@@ -16,16 +16,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Cooking, Chef, Table, Dinner, Dessert, Cuisine, Recipes, Food">
-    <meta name="description" content="A blog with recipes for only the best and juiciest dishes. Contact us.">
+    <meta name="description" content="A blog with recipes for only the best and juiciest dishes. Post details">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/out-of-view-menu-text.css">
-    <link rel="stylesheet" href="css/contact.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="js/main.js" type="module"></script>
     <script src="js/searchbar.js" defer></script>
     <script src="js/menu.js" defer></script>
-    <script src="js/contact.js" type="module"></script>
-    <title>CHEF'S TABLE | Contact</title>
+    <script src="js/post-details.js" type="module"></script>
+    <script src="js/make-comments-fields.js" type="module"></script>
+    <title>CHEF'S TABLE | Post Details</title>
   </head>
   <body>
     <header class="header-desktop header-mobile" aria-label="Header">
@@ -57,7 +56,7 @@
                 <li><a href="all-posts.html">All Posts</a></li>
                 <li class="desktop-only tablet"><a href="latest-posts.html">Latest Posts</a></li>
                 <li class="desktop-only tablet"><a href="image-gallery.html">Image Gallery</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <li class="desktop-only"><a href="about.html">About</a></li>
               </ul>
               <div class="search-container">
@@ -74,51 +73,50 @@
           </div>
       </nav>
     </header>
-    <main class="contact" aria-label="Main Section">
-        <a href="#" aria-label="Go back to the top"><span class="out-of-view-menu-text">Back to top</span>
-          <div class="back-to-top-button"></div>
-        </a>
-        <div class="thank-you-note contact-note" id="contact-note">
-          <h2 class="so-god-to-see-you">We'd love to hear from you</h2>
-          <p class="enjoy-note">Have a problem? Have feedback? Have questions?</p>
-          <p class="check-latest-posts-note">Please let us know:</p>
+    <div id="loader" class="loader loader-recipes post-details"><p>Loading recipe</p><span class="loader-recipes"></span></div>
+    <main class="main-details" aria-label="Main Section">
+      <a href="#" aria-label="Go back to the top"><span class="out-of-view-menu-text">Back to top</span>
+        <div class="back-to-top-button"></div>
+      </a>
+      <div class="post-details-container" id="post-details-container">
+        <span class="out-of-view-menu-text">Post details</span>
+      </div>
+      <section class="comments-container" aria-label="Comments Section">
+        <div class="leave-comment-field">
+          <fieldset class="leave-a-comment">
+            <legend>Leave a comment</legend>
+            <form class="comment-form" id="comment-form" method="post">
+              <div class="form-label-error">
+                <div class="label-error-wrapper">
+                <label for="name-input">Name</label>
+                <div class="error-message" id="name-input-error">Name must be minimum 2 characters</div>
+                </div>
+                <input type="text" id="name-input" name="name" aria-required="true" aria-label="Name" placeholder="Your name">
+              </div>
+              <div class="form-label-error">
+                <div class="label-error-wrapper">
+                  <label for="email-input">Email</label>
+                  <div class="error-message" id="email-input-error">Email must be in correct format</div>
+                </div>
+                <input type="email" id="email-input" name="email" aria-required="true" aria-label="Correctly formatted Email" placeholder="Email in correct format ">
+              </div>
+              <div class="form-label-error">
+                <div class="label-error-wrapper">
+                  <label for="comment-input">Comment</label>
+                  <div class="error-message" id="comment-input-error">Comment must be minimum 10 characters</div>
+                </div>
+                <textarea id="comment-input" name="comment" aria-required="true" aria-label="Your comment should be minimum 10 characters" placeholder="Your comment should be minimum 10 characters"></textarea>
+              </div>
+              <button type="button" class="post-comment" id="post-comment">Post Comment</button>
+              <div class="success comment-posted" id="comment-posted"></div>
+            </form>
+          </fieldset>
+          <fieldset class="user-comments" id="user-comments">
+            <legend>User Comments</legend>
+            <div class="comments-container"></div>
+          </fieldset>
         </div>
-      <!-- [contact-form-7 id="158" title="Chef's Teable Contact Form"] -->
-      <fieldset class="leave-a-comment contact-fieldset">
-        <legend>Contact us</legend>
-        <form class="contact-form" id="contact-form" method="post">
-          <div class="form-label-error">
-            <div class="label-error-wrapper">
-              <label for="your-name">Your name</label>
-              <div class="error-message" id="name-input-error">Your name must be minimum 5 characters</div>
-            </div>
-            <input type="text" id="your-name" name="your-name" aria-required="true" aria-label="Name" placeholder="Your name must be minimum 5 characters">
-          </div>
-          <div class="form-label-error">
-            <div class="label-error-wrapper">
-              <label for="your-email">Your email</label>
-              <div class="error-message" id="email-input-error">Email must be in correct format</div>
-            </div>
-            <input type="email" id="your-email" name="your-email" aria-required="true" aria-label="Correctly formatted Email" placeholder="Email in correct format (john.doe@mail.com)">
-          </div>
-          <div class="form-label-error">
-            <div class="label-error-wrapper">
-              <label for="your-subject">Subject</label>
-              <div class="error-message" id="subject-input-error">Subject must be minimum 15 characters</div>
-            </div>
-            <input type="text" id="your-subject" name="your-subject" aria-required="true" aria-label="Subject" placeholder="Subject must be minimum 15 characters">
-          </div>
-          <div class="form-label-error">
-            <div class="label-error-wrapper">
-              <label for="your-message">Your message</label>
-              <div class="error-message" id="message-input-error">Message must be minimum 25 characters</div>
-            </div>
-            <textarea id="your-message" name="your-message" aria-required="true" aria-label="Your message should be minimum 25 characters" placeholder="Your message should be minimum 25 characters"></textarea>
-          </div>
-          <button type="submit" class="post-comment" id="send-message" name="Submit">Send message</button>
-          <div class="success comment-posted" id="message-sent"></div>
-        </form>
-      </fieldset>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer-wrapper">
@@ -133,7 +131,7 @@
                 <li><a href="all-posts.html">All Posts</a></li>
                 <li class="desktop-only tablet"><a href="latest-posts.html">Latest Posts</a></li>
                 <li class="desktop-only tablet"><a href="image-gallery.html">Image Gallery</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <li class="desktop-only"><a href="about.html">About</a></li>
               </ul>
             </nav>
