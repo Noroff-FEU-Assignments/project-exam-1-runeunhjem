@@ -5,18 +5,18 @@
   justify-content: flex-start;
   width: 100vw;
   max-width: 1600px;
-  .comment-title {
-    width: 100%;
-    max-width: 1600px;
-    .comments-header {
-      background-color: var(--color-gold);
-      color: var(--color-burgundy);
-      margin: 0;
-      padding: 0;
-      font-size: 3vw;
-      text-align: center;
-    }
-  }
+}
+.comments-container .comment-title {
+  width: 100%;
+  max-width: 1600px;
+}
+.comments-container .comment-title .comments-header {
+  background-color: var(--color-gold);
+  color: var(--color-burgundy);
+  margin: 0;
+  padding: 0;
+  font-size: 3vw;
+  text-align: center;
 }
 
 .leave-comment-field {
@@ -43,15 +43,18 @@
   min-height: 350px;
   border-radius: var(--border-radius-6px);
 }
+
 legend {
   text-align: center;
   font-size: 1.5rem;
   color: var(--color-gold);
   margin: 0 auto;
 }
+
 .comment-form {
   width: 100%;
 }
+
 .form-label-error {
   display: flex;
   flex-direction: column;
@@ -73,13 +76,16 @@ legend {
   box-shadow: -1px -1px 1px 2px var(--color-black-90);
   font-family: var(--font-family-normal);
 }
+
 .comment-form input:hover,
 .comment-form textarea:hover {
   box-shadow: 1px 1px 1px 2px var(--color-black-90);
 }
+
 .comment-form textarea {
   height: 109px;
 }
+
 .post-comment {
   width: 50%;
   display: flex;
@@ -92,23 +98,28 @@ legend {
   margin: 2em auto 0px auto;
   box-shadow: 1px 1px 1px 2px var(--color-black-90);
 }
+
 .post-comment:hover {
   cursor: default;
 }
+
 .buttonSuccess {
   cursor: pointer;
   background-color: var(--color-burgundy-light);
   color: var(--color-burgundy);
 }
+
 .buttonNotReady {
   cursor: not-allowed;
   background-color: var(--color-black-60);
   color: var(--color-grey);
 }
+
 .post-comment:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
+
 .comment-form .error-message {
   display: none;
   color: var(--color-red);
@@ -119,6 +130,7 @@ legend {
   padding: 2px;
   background-color: var(--color-white);
 }
+
 .label-error-wrapper {
   display: flex;
   flex-wrap: nowrap;
@@ -128,13 +140,14 @@ legend {
   margin: 0;
   width: 100%;
   text-align: left;
-  .error-message {
-    margin-left: 1em;
-    margin-bottom: 10px;
-    border-radius: var(--border-radius-6px);
-    padding: 4px 1em;
-  }
 }
+.label-error-wrapper .error-message {
+  margin-left: 1em;
+  margin-bottom: 10px;
+  border-radius: var(--border-radius-6px);
+  padding: 4px 1em;
+}
+
 .success {
   text-align: center;
 }
@@ -144,6 +157,7 @@ legend {
   gap: 1em;
   margin-bottom: 1em;
 }
+
 .comment-container {
   background-color: var(--color-burgundy-light);
   box-shadow: 2px 2px 2px 2px var(--color-black-90);
@@ -158,10 +172,12 @@ legend {
 .comment-title {
   color: var(--color-burgundy);
 }
+
 .comment-content, .post-date {
   color: var(--color-black);
   font-family: var(--font-family-normal);
 }
+
 .post-date {
   font-size: small;
-}
+}/*# sourceMappingURL=comments_20230525082048.css.map */
