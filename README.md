@@ -1,67 +1,232 @@
-## Project Exam 1
+<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+<a name="readme-top"></a>
+<!--
+*** Thanks for checking out the Best-README-Template. If you have a suggestion
+*** that would make this better, please fork the repo and create a pull request
+*** or simply open an issue with the tag "enhancement".
+*** Don't forget to give the project a star!
+*** Thanks again! Now go create something AMAZING! :D
+-->
 
-## Goal
 
-To put into practice the skills learned over your first year of studies.
 
-## Brief
-You have been tasked with creating a blog site. You can choose the design and topics covered on the blog, but it should have at least the following pages:
--	Home page
--	About page
--	List of blog posts
--	Blog post specific pages
--	Contact page.
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-### Home Page
-The home page should have a ‘Latest Posts’ section which uses a carousel (slider) for users to click to view more posts. For example, by default the user can see four posts, then they can click an arrow on the right to view the next four posts, and click it again to view the next four posts. The user can also click back to view results they had previously seen. This must be implemented for desktop at least, but if you want a simpler layout for mobile, you can change it from being in a carousel.
 
-### Blog Page
 
-The blog posts page should show the first 10 blogs, and the user should click to view more results which then show underneath the first 10 blogs.
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/runeunhjem/07-ru-project-exam-1-chefs-table">
+    <img src="images/logo-full-footer.jpg" alt="Logo" width="120" height="120">
+  </a>
 
-### Blog Specific Page
+<h3 align="center">Portfolio 1 - Course Assignment</h3>
 
-The content of the blog specific page should be dynamically built using a query string parameter based on whatever link the user clicked. The title of the blog specific page should change based on the blog that has been clicked on e.g. “My Blog | An Article I Wrote”.
+  <p align="center">
+    Project Exam 1. Make a blog for a fictional restaurant. The site should be responsive, and the audience is assumed to be people who are interested in food and cooking. Made with HTML, CSS, and JS. No libraries or frameworks were used.
+    <br />
+    <a href="https://github.com/runeunhjem/07-ru-project-exam-1-chefs-table"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
 
-If images on the blog post page are clicked, a modal should appear giving the user a bigger view of that image. Clicking outside the image should hide the modal.
+  </p>
+</div>
 
-### Contact page
 
-Create a contact us page, there should be 4 textboxes on this page.
--	Name (Should be more than 5 characters long)
--	Email address (Must be a valid email address)
--	Subject (Should be more than 15 characters long)
--	Message content (Should be more than 25 characters long)
 
-Please use JavaScript for validation, show error messages if the values in the textboxes do not meet the requirements.
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">Screenshot of the Project</a>
+      <ul>
+        <li><a href="#built-with">Tools used on the projects</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-### WordPress
 
-The content for your website will be stored on a WordPress installation used as a Headless CMS. It’s important to note that we are only using WordPress to provide an API and add content for the blog. You should not submit a link to a WordPress site, but build your website using HTML, CSS and JavaScript and making a call to the WordPress REST API to fetch the data. 
 
-The project has two aspects:
--	API from your WordPress installation
--	Your website built with HTML, CSS and JavaScript
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-You will need to add at least 12 blogs for your website. You can use lorem ipsum for paragraphs if you need, but headings, images etc. should all make sense.
+[![Product Name Screen Shot][product-screenshot]](https://ru-project-exam-1.netlify.app)
 
-Note that this is an exam, and therefore tutor support will be limited as per the study plan.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Level 1 Process
 
-1.	Decide on the theme for the blog you’re going to make
-2.	Create a prototype of the website
-3.	Install WordPress on your web host and add the blogs on the admin panel. 
-4.	Use the GitHub repo created by GitHub Classroom for your files and deploy to Netlify
-5.	Build your website using HTML, CSS and JavaScript making a call to the WordPress REST API to fetch your data.
-6.	Install Hotjar on your website.
-7.	Ask users to test your website, and adjust based on their feedback and any insights from Hotjar.
-8.	Write a report documenting your project (template provided in this repository).
-9.	Submit your report as a PDF and a link to both your Netlify deployment and your GitHub repo.
- 
-## Level 2 Process (optional)
 
-1.	You can try adding a sort, filter, or search to the blog posts page allowing users to find the blog post more easily that they’re looking for. 
-2.	Post the data from the contact form to WordPress so you have the details saved.
-3.	Allow users to submit comments on a blog post, and post this data to WordPress
+### Tools used in the project
+
+![Adobe Photoshop](https://img.shields.io/badge/adobe%20photoshop-%2331A8FF.svg?style=for-the-badge&logo=adobe%20photoshop&logoColor=white) ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white) ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7) ![WordPress](https://img.shields.io/badge/WordPress-%23117AC9.svg?style=for-the-badge&logo=WordPress&logoColor=white) ![Microsoft Office](https://img.shields.io/badge/Microsoft_Office-D83B01?style=for-the-badge&logo=microsoft-office&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+
+### Languages used in the project
+
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+Clone the repo, load it into VSC and use Live Server to go live locally
+
+### Prerequisites
+
+In order to edit and work with the site locally, you need a code editor.
+* Visual Studio Code is highly recommended
+  - Recommended plugins:
+    - Live Server
+    - Live SASS Compiler
+    - Prettier
+    - Emmet-JSS
+    - Web Accessability
+    - GitHub Copilot
+    - ESLint
+    - Auto Rename Tag
+    - Lorem Ipsum
+    - Markdown Preview Enhanced
+    - vscode-icons
+
+### Installation
+
+1. Install VSC and desired plugins
+2. Clone the repo
+   ```sh
+   git clone https://github.com/runeunhjem/07-ru-project-exam-1-chefs-table.git
+   ```
+3. Start working
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+Food blog with recipes to food for every pallet, every skill set and every age, so we hope you find that perfect dish and enjoy making it as much as we do.
+
+Find the latest and greatest version of the site at [https://ru-project-exam-1.netlify.app](https://ru-project-exam-1.netlify.app)
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- ROADMAP -->
+## Roadmap to this project
+
+- [ ] Make the Header
+- [ ] Make the Footer
+- [ ] Added latest posts carousel
+- [ ] Added all posts and post specific pages
+- [ ] Image gallery
+- [ ] About us section
+    -  Personal information
+    -  History
+    -  Hobbies
+    -  Goals
+- [ ] Contact section
+
+See the [open issues](https://github.com/runeunhjem/07-ru-project-exam-1-chefs-table/issues) for a full list of proposed features (and known issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- CONTACT -->
+## Contact
+Project Link: [https://github.com/runeunhjem/07-ru-project-exam-1-chefs-table](https://github.com/runeunhjem/07-ru-project-exam-1-chefs-table)
+
+Call me - [+47 93 26 76 11](tel:+4793267611)
+Mail - runeunhjem@gmail.com
+##### Social media
+Facebook - [Rune Unhjem](https://www.facebook.com/runeunhjem/)
+Twitter - [@runeunhjem](https://twitter.com/runeunhjem)
+Instagram - [@runeunhjem](https://www.instagram.com/runeunhjem/)
+GitHub - [runeunhjem](https://github.com/runeunhjem)
+##### Other projects
+My music project on Spotify - [Rune Unhjem | -=ThE rUnIcOrN=-](https://open.spotify.com/user/1116127880?si=8e9e9e8f3b5c4e9d)
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+
+* [Unsplash.com](https://unsplash.com/)
+* [Logomaker](https://looka.com/)
+* [Iconfinder.com](https://www.iconfinder.com/)
+* [Othneil Drew | README.md template](https://github.com/othneildrew)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/runeunhjem/07-ru-project-exam-1-chefs-table.svg?style=for-the-badge
+[contributors-url]: https://github.com/runeunhjem/07-ru-project-exam-1-chefs-table/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/runeunhjem/07-ru-project-exam-1-chefs-table.svg?style=for-the-badge
+[forks-url]: https://github.com/runeunhjem/07-ru-project-exam-1-chefs-table/network/members
+[stars-shield]: https://img.shields.io/github/stars/runeunhjem/07-ru-project-exam-1-chefs-table.svg?style=for-the-badge
+[stars-url]: https://github.com/runeunhjem/07-ru-project-exam-1-chefs-table/stargazers
+[issues-shield]: https://img.shields.io/github/issues/runeunhjem/07-ru-project-exam-1-chefs-table.svg?style=for-the-badge
+[issues-url]: https://github.com/runeunhjem/07-ru-project-exam-1-chefs-table/issues
+[license-shield]: https://img.shields.io/github/license/runeunhjem/07-ru-project-exam-1-chefs-table.svg?style=for-the-badge
+[license-url]: https://github.com/runeunhjem/07-ru-project-exam-1-chefs-table/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/runeunhjem
+[product-screenshot]: images/screenshot.jpg
 
